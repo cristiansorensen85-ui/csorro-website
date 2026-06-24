@@ -1,0 +1,45 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const navLinks = [
+  { label: 'About', href: '/#about' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Contact', href: '/#contact' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-border/30 bg-background/92 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <div class="flex items-center flex-shrink-0">
+      <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity duration-200">
+        <img src="https://cdn.b12.io/client_media/ZR0anEA3/298edde1-6fc1-11f1-a274-0242ac110002-C_Sorro_Logo_Full_Top.png" alt="Cristian Sorensen" class="h-8 drop-shadow-md" />
+      </a>
+    </div>
+
+    <div class="hidden md:flex items-center gap-10">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="text-sm font-semibold text-foreground/75 hover:text-accent transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a
+        href="/cv.pdf"
+        download="Cristian_Sorensen_CV.pdf"
+        class="px-4 py-2 text-sm font-semibold border border-accent/70 text-accent hover:border-accent hover:bg-accent/10 transition-all duration-200 rounded-lg shadow-lg shadow-accent/5 hover:shadow-lg hover:shadow-accent/10"
+      >
+        CV
+      </a>
+    </div>
+  </nav>
+</header>

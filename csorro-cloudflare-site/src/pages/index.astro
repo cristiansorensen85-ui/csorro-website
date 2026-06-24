@@ -1,0 +1,597 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import RequiredB12HeadScripts from '../components/RequiredB12HeadScripts.astro';
+import RequiredB12FooterScripts from '../components/RequiredB12FooterScripts.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cristian Sorensen - Production Manager & Technical Operations Lead</title>
+    <meta name="description" content="Premium portfolio of Cristian Sorensen—Production Manager, Technical Project Manager, and Gaming Operations Specialist. 12+ years leading production, technical operations, and infrastructure delivery at scale." />
+    <RequiredB12HeadScripts />
+    <style>
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes glow {
+        0%, 100% { text-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1); }
+        50% { text-shadow: 0 0 30px rgba(245, 158, 11, 0.5), 0 0 60px rgba(245, 158, 11, 0.2); }
+      }
+      .animate-fade-in-down {
+        animation: fadeInDown 0.6s ease-out;
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+      }
+      .animate-slide-in-right {
+        animation: slideInRight 0.6s ease-out;
+      }
+      .glow-text {
+        animation: glow 3s ease-in-out infinite;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background text-foreground">
+    <Header />
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background to-card/20">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-40 right-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-40 left-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="text-center lg:text-left">
+            <div class="mb-8 animate-fade-in-down">
+              <img src="https://cdn.b12.io/client_media/ZR0anEA3/298edde1-6fc1-11f1-a274-0242ac110002-C_Sorro_Logo_Full_Top.png" alt="C Sorro" class="h-20 mx-auto lg:mx-0 drop-shadow-lg hover:drop-shadow-xl transition-all duration-300" />
+            </div>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-foreground mb-4 animate-fade-in-down tracking-tight leading-tight">
+              Cristian Sorensen
+            </h1>
+            <p class="text-xl md:text-2xl text-accent font-semibold mb-6 animate-fade-in-up">
+              Production Manager • Technical Project Manager • Gaming Operations Specialist
+            </p>
+            <p class="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl animate-fade-in-up">
+              Production Manager, Technical Project Manager, and Gaming Operations Specialist with over 12 years of experience delivering large-scale content productions, multiplayer gaming infrastructure, live service operations, and community-driven projects. Helping creators, gaming communities, and technical teams transform ambitious ideas into successful products and experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-in-right">
+              <a href="/cv.pdf" download="Cristian_Sorensen_CV.pdf" class="px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:shadow-xl hover:shadow-accent/40 transition-all duration-300 transform hover:scale-105 text-center">
+                Download CV
+              </a>
+              <a href="/#experience" class="px-8 py-4 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent/10 transition-all duration-300 text-center">
+                View Experience
+              </a>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex justify-center items-center animate-slide-in-right">
+            <div class="relative w-full max-w-lg">
+              <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-2xl"></div>
+              <img src="https://cdn.b12.io/client_media/ZR0anEA3/86e64149-6fc8-11f1-9050-0242ac110002-me.png" alt="Cristian Sorensen" class="relative w-full rounded-2xl shadow-2xl shadow-accent/20" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-24 md:py-32 bg-card/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">The person behind the projects</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2 space-y-6">
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              I'm Cristian Sorensen — a Production Manager, Technical Project Manager, and Gaming Operations Specialist with over 12 years of experience delivering content, communities, and technical infrastructure at scale. My journey spans content creation, production management, multiplayer gaming infrastructure, and community building across international teams.
+            </p>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              From managing YouTube productions reaching millions of viewers to designing and operating large-scale gaming infrastructure, technical systems, and online communities, I specialise in turning ambitious ideas into structured, successful projects. I've coordinated production teams across multiple time zones, built and scaled multiplayer gaming environments supporting large creator-led communities, and developed operational frameworks that helped communities grow into structured, sustainable ecosystems.
+            </p>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              My career combines leadership, technical problem-solving, project delivery, and community growth. Whether coordinating content teams, managing infrastructure, overseeing live service operations, or launching large-scale gaming initiatives, I focus on creating systems that work and experiences people remember. I'm passionate about helping creators, gaming communities, and technical teams scale their ambitions into reality.
+            </p>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Beyond my professional work, I'm actively involved in football, community projects, and media discussions. As a contributor to the <span class="text-accent font-semibold">To Hull And Back Podcast</span>, I regularly discuss Hull City AFC, football culture, and supporter perspectives. Through podcasting, public discussions, and occasional media appearances, I've developed strong communication and broadcasting experience alongside my technical and production background.
+            </p>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Outside of work, I'm a husband and father who enjoys football, travel, gaming, technology, and exploring new cultures. Working with international teams across different countries and time zones has given me valuable experience communicating with diverse groups of people and building successful remote collaborations. I thrive where creativity, technology, and people meet.
+            </p>
+            <p class="text-lg text-foreground font-semibold italic">
+              Leadership • Production • Technical Excellence • Community Building
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {[
+              { title: "Production Management", icon: "📹" },
+              { title: "Community Leadership", icon: "👥" },
+              { title: "Technical Infrastructure", icon: "⚙️" },
+              { title: "Project Delivery", icon: "🎯" }
+            ].map((item) => (
+              <div class="p-4 bg-card/50 border border-accent/30 rounded-lg hover:border-accent hover:bg-card transition-all duration-300 group cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl group-hover:scale-125 transition-transform duration-300">{item.icon}</span>
+                  <p class="font-bold text-foreground group-hover:text-accent transition-colors duration-300">{item.title}</p>
+                </div>
+              </div>
+            ))}
+
+            <div class="pt-4 border-t border-accent/20">
+              <p class="text-xs text-accent font-bold uppercase tracking-widest mb-4">Featured In</p>
+              <img src="https://cdn.b12.io/client_media/ZR0anEA3/645bfd19-6fc8-11f1-811b-0242ac110002-tohullandback.png" alt="To Hull And Back Podcast" class="w-full rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Highlights Section -->
+    <section id="highlights" class="relative py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Career Highlights</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { stat: "12+", label: "Years", description: "Content Creation, Gaming & Operations" },
+            { stat: "20M+", label: "Video Views", description: "Across Supported Productions" },
+            { stat: "100+", label: "Projects", description: "Projects & Multiplayer Events" },
+            { stat: "Technical", label: "Leadership", description: "Infrastructure & Operations" }
+          ].map((item) => (
+            <div class="group relative bg-gradient-to-br from-card to-card/50 border border-accent/30 rounded-2xl p-8 hover:border-accent hover:shadow-xl hover:shadow-accent/10 transition-all duration-300 transform hover:-translate-y-2">
+              <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative z-10">
+                <h3 class="text-4xl md:text-5xl font-black text-accent mb-2 group-hover:text-white transition-colors duration-300">{item.stat}</h3>
+                <p class="text-sm font-bold text-foreground mb-1">{item.label}</p>
+                <p class="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Media & Community Engagement Section -->
+    <section id="media" class="relative py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Media & Community Engagement</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Beyond production and operations, I'm actively engaged in community media, sports commentary, and public discussions. My media experience includes podcast hosting, panel discussions, radio interviews, and broadcasting—developing strong communication skills that complement my technical and production expertise.
+            </p>
+
+            <div class="space-y-4">
+              {[
+                { title: "Podcast Contributor", desc: "Regular contributor to To Hull And Back Podcast discussing Hull City AFC and football culture" },
+                { title: "Live Broadcasting", desc: "Experience with live discussion panels, radio interviews, and community engagement" },
+                { title: "Community Leadership", desc: "Active participation in supporter communities and media discussions" },
+                { title: "Audience Engagement", desc: "Strong communication skills developed through public appearances and discussions" }
+              ].map((item) => (
+                <div class="flex gap-4 items-start">
+                  <div class="flex-shrink-0 w-2 h-2 mt-2 bg-accent rounded-full"></div>
+                  <div>
+                    <h4 class="font-bold text-foreground">{item.title}</h4>
+                    <p class="text-sm text-muted-foreground">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="rounded-xl overflow-hidden border border-accent/30 hover:border-accent/50 transition-colors duration-300">
+              <img src="https://cdn.b12.io/client_media/ZR0anEA3/b65b903a-6fca-11f1-b4f7-0242ac110002-tohullandback.png" alt="To Hull And Back Podcast" class="w-full h-auto" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-accent/30 hover:border-accent/50 transition-colors duration-300">
+              <img src="https://cdn.b12.io/client_media/ZR0anEA3/b1c8d1b8-6fca-11f1-b755-0242ac110002-tohullandbackme.png" alt="Podcast Discussion" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Experience Section -->
+    <section id="experience" class="relative py-24 md:py-32 bg-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Featured Experience</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Timeline Item 1 -->
+          <div class="group relative pl-8 border-l-2 border-accent/30 hover:border-accent transition-colors duration-300 py-6">
+            <div class="absolute left-0 top-8 w-4 h-4 bg-accent rounded-full transform -translate-x-2.5 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-accent/50"></div>
+            <h3 class="text-2xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">RyanNotBrian</h3>
+            <p class="text-accent font-semibold text-sm mb-4">Content Production Manager & Operations Lead</p>
+            <p class="text-muted-foreground leading-relaxed mb-4">
+              Led end-to-end production operations for a major YouTube gaming creator, supporting millions of viewers and multiple viral productions. Managed large-scale multiplayer events, production workflows, technical infrastructure, international team coordination, and live service operations across multiple platforms and time zones.
+            </p>
+            <div class="space-y-3">
+              <div class="rounded-lg overflow-hidden border border-accent/20 hover:border-accent/50 transition-colors duration-300">
+                <img src="https://cdn.b12.io/client_media/ZR0anEA3/a7d7b06d-6fca-11f1-86ec-0242ac110002-ryannotbriann.png" alt="RyanNotBrian Production Content" class="w-full h-auto" />
+              </div>
+              <div class="rounded-lg overflow-hidden border border-accent/20 hover:border-accent/50 transition-colors duration-300">
+                <img src="https://cdn.b12.io/client_media/ZR0anEA3/a2086183-6fca-11f1-abc4-0242ac110002-ryannotbriannvideos.png" alt="RyanNotBrian Video Production" class="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+
+<!-- Timeline Item 2 -->
+
+<div class="group relative pl-8 border-l-2 border-accent/30 hover:border-accent transition-colors duration-300 py-6"> <div class="absolute left-0 top-8 w-4 h-4 bg-accent rounded-full transform -translate-x-2.5 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-accent/50"></div>
+
+<h3 class="text-2xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300"> BlackShores Ltd </h3>
+
+<p class="text-accent font-semibold text-sm mb-4"> Project Manager • Creator Production & Operations </p>
+
+<p class="text-muted-foreground leading-relaxed"> Hired as a Project Manager by BlackShores Ltd, supporting creator-led productions and online entertainment projects. Responsible for coordinating project delivery, production workflows, team communication, operational planning, and technical support across multiple initiatives. Contributed to projects including The Surviving Ryan, helping ensure content productions were delivered efficiently while maintaining strong collaboration between creators, production teams, and technical staff. </p> </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="group relative pl-8 border-l-2 border-accent/30 hover:border-accent transition-colors duration-300 py-6">
+            <div class="absolute left-0 top-8 w-4 h-4 bg-accent rounded-full transform -translate-x-2.5 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-accent/50"></div>
+            <h3 class="text-2xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">Community Building & Operations</h3>
+            <p class="text-accent font-semibold text-sm mb-4">Governance & Leadership</p>
+            <p class="text-muted-foreground leading-relaxed">
+              Built and managed thriving gaming communities from the ground up. Established governance frameworks, engagement programs, moderation systems, and scalable infrastructure for sustainable community growth.
+            </p>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="group relative pl-8 border-l-2 border-accent/30 hover:border-accent transition-colors duration-300 py-6">
+            <div class="absolute left-0 top-8 w-4 h-4 bg-accent rounded-full transform -translate-x-2.5 group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-accent/50"></div>
+            <h3 class="text-2xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">Technical Leadership & Infrastructure</h3>
+            <p class="text-accent font-semibold text-sm mb-4">Operations & Architecture</p>
+            <p class="text-muted-foreground leading-relaxed">
+              Designed and maintained technical infrastructure for gaming systems and operational platforms. Built multiplayer backends, monitoring systems, and deployment infrastructure supporting projects and content viewed by millions of users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Areas of Expertise Section -->
+    <section id="expertise" class="relative py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Areas of Expertise</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "Production Management", desc: "End-to-end content and project coordination delivering measurable results" },
+            { title: "Project Management", desc: "Strategic planning and execution from concept to launch" },
+            { title: "Technical Operations", desc: "Live service operations, monitoring, and operational excellence" },
+            { title: "Gaming Infrastructure", desc: "Multiplayer systems design, backend operations, and platform management" },
+            { title: "Community Operations", desc: "Governance, moderation, engagement, and scalable community systems" },
+            { title: "Content Production", desc: "YouTube and multimedia content strategy and workflow optimization" },
+            { title: "Server Infrastructure", desc: "Deployment, optimization, and management of multiplayer environments" },
+            { title: "Project Delivery", desc: "Cross-functional coordination and on-time, on-budget execution" },
+            { title: "Leadership & Team Coordination", desc: "Team building, mentoring, and organizational development" }
+          ].map((item) => (
+            <div class="group relative bg-gradient-to-br from-card/50 to-card/30 border border-accent/30 rounded-xl p-6 hover:border-accent hover:from-card hover:to-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 transform hover:-translate-y-1">
+              <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <h3 class="text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">{item.title}</h3>
+                <p class="text-sm text-muted-foreground">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms & Technologies Section -->
+    <section id="platforms" class="relative py-24 md:py-32 bg-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Platforms & Technologies</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Infrastructure -->
+          <div class="group">
+            <h3 class="text-xl font-bold text-accent mb-4 group-hover:text-white transition-colors duration-300">Infrastructure</h3>
+            <ul class="space-y-2">
+              {['Linux', 'Docker', 'Pterodactyl', 'Networking', 'Proxy Systems', 'Hosting Infrastructure'].map((item) => (
+                <li class="text-muted-foreground group-hover:text-foreground transition-colors duration-300 flex items-start">
+                  <span class="text-accent mr-3">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Gaming Platforms -->
+          <div class="group">
+            <h3 class="text-xl font-bold text-accent mb-4 group-hover:text-white transition-colors duration-300">Gaming Platforms</h3>
+            <ul class="space-y-2">
+              {['Minecraft', 'Hytale', 'Mohist', 'Paper', 'Spigot', 'Forge', 'Fabric'].map((item) => (
+                <li class="text-muted-foreground group-hover:text-foreground transition-colors duration-300 flex items-start">
+                  <span class="text-accent mr-3">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Development -->
+          <div class="group">
+            <h3 class="text-xl font-bold text-accent mb-4 group-hover:text-white transition-colors duration-300">Development</h3>
+            <ul class="space-y-2">
+              {['Java', 'JSON', 'Datapacks', 'Plugin Architecture', 'API Integrations', 'Configuration Systems'].map((item) => (
+                <li class="text-muted-foreground group-hover:text-foreground transition-colors duration-300 flex items-start">
+                  <span class="text-accent mr-3">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Operations -->
+          <div class="group">
+            <h3 class="text-xl font-bold text-accent mb-4 group-hover:text-white transition-colors duration-300">Operations</h3>
+            <ul class="space-y-2">
+              {['Production Management', 'Team Leadership', 'Community Governance', 'Live Service Operations', 'Project Delivery', 'Workflow Design'].map((item) => (
+                <li class="text-muted-foreground group-hover:text-foreground transition-colors duration-300 flex items-start">
+                  <span class="text-accent mr-3">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Major Projects & Initiatives Section -->
+    <section id="projects" class="relative py-24 md:py-32 bg-card/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Major Projects & Initiatives</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Production Operations",
+              subtitle: "RyanNotBrian Creator Ecosystem",
+              role: "Production & Operations Lead",
+              description: "Large-scale YouTube content production supporting millions of viewers. Led team coordination, live event management, multiplayer infrastructure, community engagement, cross-platform content delivery, and international operations management.",
+              icon: "🎬"
+            },
+            {
+              title: "Community Platforms",
+              subtitle: "Ultimate Platform Suite & Systems",
+              role: "Technical Architecture & Product Lead",
+              description: "Complete ecosystem of operational tools and systems for multiplayer gaming communities. Designed access control, progression systems, events framework, moderation infrastructure, community governance, and scalable operational platforms.",
+              icon: "🏗️"
+            },
+            {
+              title: "Multiplayer Infrastructure",
+              subtitle: "Server Network & Backend Architecture",
+              role: "Infrastructure Architect & Operations",
+              description: "Design, deployment, optimization, and management of large-scale multiplayer server environments. Built backend systems, monitoring infrastructure, live service operations, and technical infrastructure supporting large-scale communities and content viewed by millions.",
+              icon: "⚙️"
+            },
+            {
+              title: "Gaming Operations",
+              subtitle: "Project Delivery & Event Management",
+              role: "Operations & Project Leadership",
+              description: "Large-scale gaming project management spanning infrastructure design, operations coordination, technical delivery, content production, live event orchestration, and international community management at scale.",
+              icon: "🎮"
+            },
+            {
+              title: "Live Service Management",
+              subtitle: "Operations Excellence & Monitoring",
+              role: "Technical Project Manager & Operations Lead",
+              description: "End-to-end live service operations, technical project delivery, and platform architecture for multiplayer gaming systems. Managed deployment pipelines, monitoring systems, support operations, and 24/7 operational excellence.",
+              icon: "🚀"
+            },
+            {
+              title: "Technical Project Delivery",
+              subtitle: "Infrastructure & Team Coordination",
+              role: "Project Manager & Technical Lead",
+              description: "Coordinating cross-functional teams, managing project timelines, overseeing infrastructure deployment, quality assurance, and operational execution. Delivered complex technical projects on schedule and within scope.",
+              icon: "✓"
+            }
+          ].map((project) => (
+            <div class="group relative bg-card/60 border border-border/50 rounded-xl p-6 hover:border-accent/50 hover:bg-card transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 transform hover:-translate-y-2">
+              <div class="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300 inline-block">{project.icon}</div>
+              <h3 class="text-xl font-bold text-foreground mb-1 group-hover:text-accent transition-colors duration-300">{project.title}</h3>
+              <p class="text-accent font-semibold text-xs mb-2 opacity-80">{project.subtitle}</p>
+              <p class="text-muted-foreground font-semibold text-xs mb-3">{project.role}</p>
+              <p class="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-24 md:py-32 bg-card/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-5xl md:text-6xl font-black text-foreground mb-4">Let's Connect</h2>
+          <div class="h-1 w-24 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2">
+            <p class="text-lg text-muted-foreground mb-10 leading-relaxed">
+              I'm always interested in connecting with gaming studios, production companies, content creators, and technical partners. Whether you're looking to discuss production challenges, explore collaboration opportunities, or share insights on gaming infrastructure, I'd love to hear from you.
+            </p>
+
+            <form class="space-y-6" data-form-id="3bf40880-0a13-4ba7-8554-0b20e6ebec4b">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-foreground mb-3">
+                  Name <span class="text-accent">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 bg-card border border-border/50 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-semibold text-foreground mb-3">
+                  Email <span class="text-accent">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 bg-card border border-border/50 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-semibold text-foreground mb-3">
+                  Message <span class="text-accent">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  required
+                  class="w-full px-4 py-3 bg-card border border-border/50 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none"
+                  placeholder="Tell me about your project, opportunity, or just say hi..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:shadow-xl hover:shadow-accent/40 transition-all duration-300 transform hover:scale-105"
+              >
+                Send Message
+              </button>
+            </form>
+
+            <div id="b12-form-done-3bf40880-0a13-4ba7-8554-0b20e6ebec4b" hidden class="mt-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 font-semibold">
+              ✓ Thank you! I'll get back to you soon.
+            </div>
+
+            <div id="b12-form-error-3bf40880-0a13-4ba7-8554-0b20e6ebec4b" hidden class="mt-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 font-semibold">
+              ✗ Something went wrong. Please try again or email me directly.
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-sm font-bold text-accent mb-4 uppercase tracking-widest">Email</h3>
+              <a href="mailto:contact@csorro.co.uk" class="text-lg text-foreground hover:text-accent transition-colors duration-200 font-semibold break-all">
+                contact@csorro.co.uk
+              </a>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-bold text-accent mb-4 uppercase tracking-widest">Website</h3>
+              <a href="https://www.csorro.co.uk" target="_blank" rel="noopener noreferrer" class="text-lg text-foreground hover:text-accent transition-colors duration-200 font-semibold break-all">
+                www.csorro.co.uk
+              </a>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-bold text-accent mb-4 uppercase tracking-widest">Connect</h3>
+              <div class="space-y-3">
+                <a
+                  href="https://www.linkedin.com/in/cristian-sorensen-671367177/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors duration-200 group"
+                >
+                  <svg class="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.81 0-9.728h3.554v1.375c.426-.658 1.189-1.592 2.894-1.592 2.114 0 3.695 1.38 3.695 4.342v5.603zM5.337 8.855a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zm1.782 11.597H3.555V9.724h3.564v10.728zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                  </svg>
+                  <span class="font-semibold">LinkedIn</span>
+                </a>
+                <a
+                  href="https://youtube.com/@sorroplayz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors duration-200 group"
+                >
+                  <svg class="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span class="font-semibold">YouTube @sorroplayz</span>
+                </a>
+                <a
+                  href="https://discord.gg/drsQSNBrDZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors duration-200 group"
+                >
+                  <svg class="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.445.864-.607 1.251a18.27 18.27 0 0 0-5.487 0c-.162-.387-.399-.876-.607-1.251a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 6.01 3.05.084.084 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994.021-.036.001-.08-.037-.092a13.107 13.107 0 0 1-1.873-.892.083.083 0 0 1-.008-.138c.125-.093.25-.19.369-.287a.077.077 0 0 1 .08-.01c3.928 1.793 8.18 1.793 12.062 0a.077.077 0 0 1 .083.011c.119.098.245.195.369.287a.083.083 0 0 1-.006.137 12.299 12.299 0 0 1-1.873.892.084.084 0 0 0-.037.092c.353.699.764 1.365 1.225 1.994a.083.083 0 0 0 .084.028 19.963 19.963 0 0 0 6.02-3.05.083.083 0 0 0 .032-.055c.44-4.467-.74-8.551-3.13-12.073a.064.064 0 0 0-.031-.028zm-12.514 9.753c-1.042 0-1.901-.955-1.901-2.129 0-1.175.84-2.129 1.901-2.129 1.073 0 1.92.954 1.901 2.129 0 1.174-.84 2.129-1.901 2.129zm8.42 0c-1.042 0-1.901-.955-1.901-2.129 0-1.175.84-2.129 1.901-2.129 1.073 0 1.92.954 1.901 2.129 0 1.174-.828 2.129-1.901 2.129z"/>
+                  </svg>
+                  <span class="font-semibold">Discord</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <RequiredB12FooterScripts />
+  </body>
+</html>
