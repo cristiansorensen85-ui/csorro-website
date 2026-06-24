@@ -62,12 +62,12 @@ h1 { font-size: clamp(3rem, 7vw, 6.8rem); line-height: .94; margin: 0 0 22px; le
 .pill-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .pill { padding: 9px 12px; border: 1px solid var(--line); background: rgba(255,255,255,.055); border-radius: 999px; color: #d7ddec; font-size: .92rem; }
 .hero-card {
-  position: relative; padding: 18px; border-radius: 34px;
+  position: relative; padding: 18px 18px 70px; border-radius: 34px;
   background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.045));
   border: 1px solid var(--line); box-shadow: var(--shadow);
 }
 .hero-card img { border-radius: 24px; aspect-ratio: 4/5; object-fit: cover; width: 100%; }
-.float-card { position: absolute; left: -22px; bottom: 34px; max-width: 300px; padding: 18px; border-radius: 20px; background: rgba(8,12,28,.86); border: 1px solid var(--line); backdrop-filter: blur(16px); box-shadow: var(--shadow); color: var(--muted); }
+.float-card { position: absolute; left: 28px; right: 28px; bottom: 18px; max-width: none; padding: 16px 18px; border-radius: 20px; background: rgba(8,12,28,.90); border: 1px solid var(--line); backdrop-filter: blur(16px); box-shadow: var(--shadow); color: var(--muted); }
 .float-card strong { display:block; font-size: 1.7rem; color: var(--gold); line-height: 1; margin-bottom: 6px; }
 .section { padding: 76px 0; }
 .compact-section { padding-top: 30px; }
@@ -105,7 +105,7 @@ h2 { font-size: clamp(2rem, 4.6vw, 4.15rem); line-height: 1; letter-spacing: -.0
 .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .secondary-testimonials { margin-top: 18px; }
 .testimonial { background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; min-height: 110px; }
-.testimonial img { width: 100%; height: 100%; object-fit: cover; }
+.testimonial img { width: 100%; height: 100%; object-fit: contain; background: rgba(20, 8, 28, .65); }
 .philosophy-card { padding: clamp(34px, 6vw, 76px); border-radius: 34px; background: linear-gradient(135deg, rgba(255,191,91,.16), rgba(124,156,255,.10)); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .philosophy-card p { max-width: 890px; color: #d7dce8; font-size: 1.16rem; margin: 0; }
 .contact-card { text-align:center; padding: clamp(34px, 6vw, 72px); }
@@ -117,6 +117,7 @@ h2 { font-size: clamp(2rem, 4.6vw, 4.15rem); line-height: 1; letter-spacing: -.0
   .hero-grid, .story-grid, .grid-2, .image-duo { grid-template-columns: 1fr; }
   .grid-3, .stats, .testimonial-grid, .logo-strip { grid-template-columns: 1fr; }
   .hero { padding-top: 56px; }
+  .hero-card { padding-bottom: 18px; }
   .float-card { position: static; margin-top: 14px; max-width: none; }
   .stat { min-height: auto; }
 }
