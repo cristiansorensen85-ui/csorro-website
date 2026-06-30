@@ -30,7 +30,7 @@
           <p class="lead">I'm Cristian Sorensen — a creative operations and technical project manager helping creators, communities and teams bring complex projects to life through planning, people, systems and delivery.</p>
           <div class="button-row">
             <a class="btn primary" href="#work">View case studies</a>
-            <a class="btn" href="/cv.pdf">Download CV</a>
+            <a class="btn" href="#contact">Let’s talk</a>
           </div>
           <div class="tag-row" aria-label="Skills">
             <span>Production Management</span><span>Operations Management</span><span>Technical Project Management</span><span>Community Leadership</span><span>World Design</span>
@@ -201,13 +201,54 @@
       </section>
 
       <section class="about-life section-pad grid-two">
-        <div class="reveal"><p class="eyebrow">Away from the screen</p><h2>Family, football and always building something.</h2><p>When I'm not planning productions, debugging servers or talking Hull City, I'm usually with my wife and family, watching football, exploring new ideas or thinking about the next ambitious project.</p></div>
+        <div class="reveal">
+          <p class="eyebrow">Beyond the projects</p>
+          <h2>The person you’ll be working with.</h2>
+          <p>The productions and technology are a huge part of my career, but they are not the whole story. Outside of work I’m usually with family and friends, at a Hull City home game, playing golf at the weekend, carp fishing, cooking, travelling or planning the next idea.</p>
+          <p>I’ve been lucky enough to visit and work across places including Switzerland, the United States, Spain, Crete, Italy and Japan. Travel, football, food and community have shaped how I think about people — and people are at the centre of every successful project I’ve worked on.</p>
+          <div class="interest-grid" aria-label="Personal interests">
+            <span>⚽ Hull City home games</span>
+            <span>🏌️ Weekend golf</span>
+            <span>🎣 Carp fishing</span>
+            <span>✈️ Travel & culture</span>
+            <span>🍜 Asian food</span>
+            <span>🥘 Mediterranean cooking</span>
+          </div>
+        </div>
         <div class="life-grid reveal delay-1"><img src="/images/wife_photo.jpg" alt="Cristian with his wife" /><img src="/images/about.jpg" alt="Cristian casual portrait" /></div>
       </section>
 
       <section id="contact" class="contact section-pad">
         <div class="contact-card reveal">
-          <div><p class="eyebrow">Let's build something</p><h2>Have an ambitious project that needs organising, building and delivering?</h2><p>I am open to production management, technical project management, creator operations, gaming projects, podcast/media work and consultancy — especially projects where creative ideas need structure, people and technical delivery.</p><div class="button-row"><a class="btn primary" href="mailto:cristian.sorensen85@gmail.com">Email me</a><a class="btn" href="/cv.pdf">Download CV</a></div></div>
+          <div class="contact-copy">
+            <p class="eyebrow">Let’s build something</p>
+            <h2>Have an ambitious idea that needs structure, people and delivery?</h2>
+            <p>I’m open to production management, technical project management, creator operations, gaming projects, podcast/media work and consultancy — especially projects where creative ideas need someone to organise the moving parts and make them real.</p>
+
+            <form class="contact-form" id="contactForm">
+              <label>
+                <span>Subject</span>
+                <input id="contactSubject" name="subject" type="text" placeholder="Project, opportunity or collaboration" />
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me what you’re building, what stage it’s at and where you need help."></textarea>
+              </label>
+              <p class="form-note">Attachments are best sent by email after the first message.</p>
+              <button class="btn primary" type="submit">Send message</button>
+            </form>
+
+            <div class="connect-panel">
+              <p class="connect-title">Connect with me</p>
+              <div class="social-buttons" aria-label="Future CSorro social links">
+                <span class="social-pill disabled">Discord <small>Coming soon</small></span>
+                <span class="social-pill disabled">YouTube <small>Coming soon</small></span>
+                <span class="social-pill disabled">Instagram <small>Coming soon</small></span>
+                <a class="social-pill" href="mailto:cristian.sorensen85@gmail.com">Email <small>Available now</small></a>
+              </div>
+              <p class="cv-note">Need a traditional CV? I’m happy to send one over on request.</p>
+            </div>
+          </div>
           <img src="/images/contact.jpg" alt="Cristian Sorensen portrait" />
         </div>
       </section>
@@ -222,6 +263,17 @@
         });
       }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const subject = document.getElementById('contactSubject').value.trim() || 'Project enquiry from csorro.co.uk';
+          const message = document.getElementById('contactMessage').value.trim();
+          const body = message || 'Hi Cristian, I would like to talk about a project or opportunity.';
+          window.location.href = `mailto:cristian.sorensen85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+      }
     </script>
   </body>
 </html>

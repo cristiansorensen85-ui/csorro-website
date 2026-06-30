@@ -182,3 +182,105 @@ footer img { width: 220px; }
 .person-story h2 { font-weight: 800; letter-spacing: -.045em; }
 .creator-grid img { object-position: center; background:#0b0d13; }
 @media (max-width: 760px) { .person-story .story-text p { font-size: 16px; } }
+
+
+/* V3.2 release candidate additions */
+.interest-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.interest-grid span {
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.06);
+  color: var(--soft);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.contact-copy { min-width: 0; }
+.contact-form {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+  max-width: 720px;
+}
+.contact-form label { display: grid; gap: 8px; }
+.contact-form span {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 11px;
+  font-weight: 900;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(5,7,17,.58);
+  color: var(--text);
+  padding: 15px 16px;
+  font: inherit;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(255,159,45,.62);
+  box-shadow: 0 0 0 4px rgba(255,159,45,.12);
+}
+.contact-form textarea { resize: vertical; min-height: 148px; }
+.form-note,
+.cv-note {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.connect-panel {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.connect-title {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 900;
+}
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.social-pill {
+  min-width: 132px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.07);
+  color: var(--text);
+  font-weight: 900;
+}
+.social-pill small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+.social-pill.disabled {
+  opacity: .72;
+  cursor: not-allowed;
+}
+.cv-note { margin-top: 16px; }
+
+@media (max-width: 760px) {
+  .interest-grid { grid-template-columns: 1fr; }
+  .contact-form textarea { min-height: 130px; }
+  .social-pill { flex: 1 1 130px; }
+}
