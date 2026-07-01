@@ -8,3 +8,9 @@ This version fixes the V4.1 deployment issues:
 - Keeps the stronger world-building copy focused on lore, immersion, player behaviour, recording flow and evolving gameplay.
 
 Upload the contents of this ZIP to the branch, not the folder itself.
+
+
+V4.3 fixes:
+- Removed rust-sunset fallback background so the carousel no longer jumps back to sunset between slides.
+- Adjusted carousel timing for a cleaner loop.
+- Filled contact profile dead space with a branded 12+ years statement and moved portrait into better balance.
