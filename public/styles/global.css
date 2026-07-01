@@ -695,3 +695,47 @@ footer img { width: 220px; }
   .profile-statement { margin-top: 64px; }
   .profile-photo { height: auto; aspect-ratio: 4/5; }
 }
+
+/* V4.4 contact layout fix: remove profile overlap and dead space */
+.v4-contact {
+  align-items: start !important;
+}
+.contact-profile {
+  min-height: 0 !important;
+  height: auto !important;
+  align-content: start !important;
+  grid-template-rows: auto auto auto !important;
+  gap: 18px !important;
+  align-self: start !important;
+  padding: clamp(22px, 2.5vw, 30px) !important;
+}
+.profile-watermark {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  display: block;
+  width: min(58%, 260px) !important;
+  margin: 0 auto 6px !important;
+  opacity: .14 !important;
+  filter: saturate(.85) drop-shadow(0 18px 45px rgba(0,0,0,.35));
+}
+.profile-statement {
+  margin-top: 0 !important;
+  padding: 18px 20px !important;
+}
+.profile-photo {
+  margin-top: 0 !important;
+  height: 330px !important;
+  object-fit: cover;
+  object-position: center 16%;
+}
+.profile-copy {
+  margin-top: 0 !important;
+}
+@media (max-width: 1280px) {
+  .contact-profile { max-width: 560px !important; }
+}
+@media (max-width: 760px) {
+  .profile-photo { height: auto !important; aspect-ratio: 4/5; }
+}
