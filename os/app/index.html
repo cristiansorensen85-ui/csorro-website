@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CSorro OS | Mission Control</title>
-  <link href="/os/app/app.css?v=010" rel="stylesheet"/>
+  <link href="/os/app/app.css?v=014" rel="stylesheet"/>
 </head>
 <body>
   <div class="app">
@@ -15,14 +15,14 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-item active" data-view="mission">Mission Control</button>
-        <button class="nav-item" onclick="location.href='/os/app/workspace/'">Workspaces</button>
-        <button class="nav-item" data-view="projects">Projects</button>
-        <button class="nav-item" data-view="people">People</button>
-        <button class="nav-item" data-view="assets">Assets</button>
-        <button class="nav-item" data-view="knowledge">Knowledge</button>
-        <button class="nav-item" data-view="calendar">Calendar</button>
-        <button class="nav-item" data-view="settings">Settings</button>
+        <button class="nav-item active" data-view="mission"><span class="nav-icon">⌂</span><span>Mission Control</span></button>
+        <button class="nav-item" onclick="location.href='/os/app/workspace/'"><span class="nav-icon">◇</span><span>Workspaces</span></button>
+        <button class="nav-item" onclick="location.href='/os/app/projects/'"><span class="nav-icon">▦</span><span>Projects</span></button>
+        <button class="nav-item" data-view="people"><span class="nav-icon">◉</span><span>People</span></button>
+        <button class="nav-item" data-view="assets"><span class="nav-icon">▧</span><span>Assets</span></button>
+        <button class="nav-item" data-view="knowledge"><span class="nav-icon">▤</span><span>Knowledge</span></button>
+        <button class="nav-item" data-view="calendar"><span class="nav-icon">◌</span><span>Calendar</span></button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
       </nav>
 
       <div class="core-mini" id="openCoreMini">
@@ -39,7 +39,7 @@
         <div class="search" id="openCoreSearch">
           <span>⌘</span>
           <input id="commandInput" placeholder="Ask CORE or search your entire OS..."/>
-          <kbd>Ctrl K</kbd>
+          <kbd>Ctrl / ⌘ K</kbd>
         </div>
         <button class="bell" id="openUpdates">🔔</button>
         <div class="profile">C</div>
@@ -135,6 +135,6 @@
     </aside>
   </div>
 
-  <script src="/os/app/app.js?v=010"></script>
+  <script src="/os/app/app.js?v=014"></script>
 </body>
 </html>
