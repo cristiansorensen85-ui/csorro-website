@@ -1,11 +1,16 @@
-# csorro.co.uk V3 — Working Static Build
+# CSorro V4.2 verified fix
 
-This is a dependency-free static version of V3, built to avoid Astro/package errors.
+This version fixes the V4.1 deployment issues:
 
-Cloudflare Pages settings:
+- Converts `rust-sunset.jpg` to a real JPEG so the World & Gameplay carousel loads reliably on Cloudflare.
+- Adds a CSS background fallback for the world carousel so it never appears as a black empty panel.
+- Reworks the social buttons into stacked icon/text cards so the labels cannot overlap.
+- Keeps the stronger world-building copy focused on lore, immersion, player behaviour, recording flow and evolving gameplay.
 
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: blank / repository root
+Upload the contents of this ZIP to the branch, not the folder itself.
 
-Upload the CONTENTS of this folder to the GitHub branch, not the folder itself.
+
+V4.3 fixes:
+- Removed rust-sunset fallback background so the carousel no longer jumps back to sunset between slides.
+- Adjusted carousel timing for a cleaner loop.
+- Filled contact profile dead space with a branded 12+ years statement and moved portrait into better balance.

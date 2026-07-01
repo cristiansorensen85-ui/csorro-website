@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.csorro.co.uk/sitemap-index.xml

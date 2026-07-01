@@ -1,6 +1,6 @@
 {
-  "name": "csorro-v3-working-static",
-  "version": "3.1.0",
+  "name": "csorro-v4-polish",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
     "build": "node build.js",
