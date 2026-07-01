@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSorro OS | Workspace Engine</title>
+  <link href="/os/app/workspace/workspace.css?v=009" rel="stylesheet"/>
+</head>
+<body>
+  <main class="engine">
+    <header class="engine-top">
+      <a class="back" href="/os/app/">← Back to Mission Control</a>
+      <div class="mini-status"><span></span> CORE Ready</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Workspace Engine</p>
+      <h1>Let’s build your workspace together.</h1>
+      <p>CORE will recommend the right structure based on what you’re trying to achieve. No confusing setup. No mental drain. You can change everything later.</p>
+    </section>
+
+    <section class="layout">
+      <section class="builder">
+        <div class="progress-line">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="steps">
+          <button class="step active" data-step="1"><b>1</b><span>Start</span></button>
+          <button class="step" data-step="2"><b>2</b><span>Goal</span></button>
+          <button class="step" data-step="3"><b>3</b><span>Name</span></button>
+          <button class="step" data-step="4"><b>4</b><span>Review</span></button>
+          <button class="step" data-step="5"><b>5</b><span>Ready</span></button>
+        </div>
+
+        <div class="screen active" id="screen-1">
+          <div class="welcome-card">
+            <div class="core-orb"></div>
+            <div>
+              <h2>Welcome to CSorro OS.</h2>
+              <p>You’re one minute away from having everything organised. I’ll do the difficult part — you just answer a few simple questions.</p>
+              <button class="primary" id="beginFlow">Let’s begin</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="screen" id="screen-2">
+          <h2>What best describes you today?</h2>
+          <p class="helper">Choose the closest option. If you’re unsure, pick “I’m just getting started”.</p>
+
+          <div class="goal-grid">
+            <button class="goal-card" data-type="Creator" data-preset="creator">
+              <strong>Creator</strong>
+              <span>Videos, podcasts, streaming, social media.</span>
+            </button>
+            <button class="goal-card" data-type="Business" data-preset="business">
+              <strong>Business</strong>
+              <span>Services, clients, operations, growth.</span>
+            </button>
+            <button class="goal-card" data-type="Agency" data-preset="agency">
+              <strong>Agency</strong>
+              <span>Multiple clients, campaigns and teams.</span>
+            </button>
+            <button class="goal-card" data-type="Project Manager" data-preset="project">
+              <strong>Project Manager</strong>
+              <span>Events, software, operations or delivery.</span>
+            </button>
+            <button class="goal-card recommended" data-type="Getting Started" data-preset="starter">
+              <strong>I’m just getting started</strong>
+              <span>I don’t know what I need yet. Recommend it for me.</span>
+            </button>
+            <button class="goal-card" data-type="Custom" data-preset="custom">
+              <strong>Something else</strong>
+              <span>Tell CORE what you’re trying to build.</span>
+            </button>
+          </div>
+
+          <div class="custom-box hidden" id="customBox">
+            <label>Tell CORE in one sentence</label>
+            <textarea id="customGoal" placeholder="Example: I’m starting a dog grooming business and need help with clients, bookings and marketing."></textarea>
+            <button class="primary" id="customContinue">Continue</button>
+          </div>
+        </div>
+
+        <div class="screen" id="screen-3">
+          <h2>What should this workspace be called?</h2>
+          <p class="helper">Use something simple and recognisable. CORE may suggest names later based on your brand, projects and connected accounts.</p>
+          <input id="workspaceName" placeholder="CSorro OS"/>
+          <div class="suggestion-block">
+            <p>Suggested names — optional</p>
+            <div class="examples">
+              <button data-name="CSorro">CSorro</button>
+              <button data-name="RyanNotBrian">RyanNotBrian</button>
+              <button data-name="Hull Podcast">Hull Podcast</button>
+              <button data-name="My Business">My Business</button>
+            </div>
+          </div>
+          <button class="primary" id="nameNext">Continue</button>
+        </div>
+
+        <div class="screen" id="screen-4">
+          <h2>CORE recommends this setup.</h2>
+          <p class="helper">These are based on your goal. You can switch anything off, but these are safe defaults.</p>
+          <div class="recommendations" id="recommendations"></div>
+          <button class="primary" id="buildWorkspace">Build my workspace</button>
+        </div>
+
+        <div class="screen" id="screen-5">
+          <div class="ready-state">
+            <div class="core-orb"></div>
+            <h2>Perfect. I’m preparing everything.</h2>
+            <div class="build-list">
+              <div><span></span> Creating workspace structure</div>
+              <div><span></span> Setting up your navigation</div>
+              <div><span></span> Preparing recommended sections</div>
+              <div><span></span> Connecting CORE briefing</div>
+              <div><span></span> Saving your workspace</div>
+            </div>
+            <a class="primary final" href="/os/app/">Open Mission Control</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="preview">
+        <p class="eyebrow">Live Workspace Preview</p>
+        <h2 id="previewName">New Workspace</h2>
+        <p id="previewType">CORE will shape this around your goal.</p>
+
+        <div class="core-note">
+          <b>CORE recommendation</b>
+          <p id="coreAdvice">Start by choosing what best describes you. I’ll recommend the setup from there.</p>
+        </div>
+
+        <div class="module-list" id="previewModules">
+          <span>Projects</span>
+          <span>People</span>
+          <span>Assets</span>
+          <span>Knowledge</span>
+          <span>CORE</span>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="/os/app/workspace/workspace.js?v=009"></script>
+</body>
+</html>
