@@ -559,3 +559,69 @@ footer img { width: 220px; }
   .profile-photo { height: auto; aspect-ratio: 4/5; margin-top: 54px; }
   .profile-watermark { width: 82%; top: 12px; }
 }
+
+/* V4.2 verified fixes: robust world carousel + social button layout */
+.world-carousel {
+  display: block;
+  min-height: 520px;
+  background: #080b14 url('/images/rust-sunset.jpg') center/cover no-repeat;
+}
+.world-slide {
+  display: block;
+  z-index: 1;
+}
+.world-slide.ws1 { opacity: 1; }
+.world-carousel::after { z-index: 2; }
+
+.social-buttons-v4 {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(118px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+.social-pill.platform {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  gap: 8px !important;
+  min-height: 96px;
+  padding: 14px 10px !important;
+  line-height: 1.05;
+}
+.social-pill.platform img,
+.social-pill.platform .icon-fallback {
+  width: 34px !important;
+  height: 34px !important;
+  margin: 0 auto;
+}
+.social-pill.platform span {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+  line-height: 1.05;
+}
+.social-pill.platform span small {
+  display: block;
+  font-size: 10px;
+  line-height: 1.1;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  opacity: .78;
+}
+@media (max-width: 1180px) {
+  .social-buttons-v4 { grid-template-columns: repeat(3, minmax(130px, 1fr)); }
+}
+@media (max-width: 680px) {
+  .world-carousel { min-height: 330px; }
+  .social-buttons-v4 { grid-template-columns: repeat(2, minmax(130px, 1fr)); }
+}
+@media (max-width: 420px) {
+  .social-buttons-v4 { grid-template-columns: 1fr; }
+}
