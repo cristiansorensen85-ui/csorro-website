@@ -1,22 +1,6 @@
-# Changelog
+# CSorro OS Build 019
 
-## v0.1.0 - Mission Control v1
-
-### Added
-- Live Mission Control app preview at `/os/app/`
-- Command bar
-- Dynamic greeting
-- Live date and time
-- Status strip
-- CORE briefing modal
-- Quick actions
-- Recent progress timeline
-- Updates panel
-
-
-## Build 018
-- Locked reference UI direction.
-- Added consistent outlined sidebar icons.
-- Improved logo/sidebar scale while preserving screen fit.
-- Rebuilt At a Glance into actionable priority cards.
-- Fixed bell icon and click cursors.
+- Upgraded Workspaces, Projects, People, Assets, Knowledge, Calendar and Settings to the locked Mission Control visual style.
+- Added full sidebar navigation links across OS pages.
+- Added the next-phase OS foundation: actionable project lanes, people pipeline, asset library, knowledge base, calendar, and CORE behaviour settings.
+- Preserved the workspace builder at `/os/app/workspace/new/`.
