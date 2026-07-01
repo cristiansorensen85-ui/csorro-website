@@ -1,23 +1,10 @@
-# csorro.co.uk V4 — Polish & Credibility
+# CSorro V4.2 verified fix
 
-Upload the **contents** of this folder to GitHub, not the folder itself.
+This version fixes the V4.1 deployment issues:
 
-Cloudflare Pages settings:
+- Converts `rust-sunset.jpg` to a real JPEG so the World & Gameplay carousel loads reliably on Cloudflare.
+- Adds a CSS background fallback for the world carousel so it never appears as a black empty panel.
+- Reworks the social buttons into stacked icon/text cards so the labels cannot overlap.
+- Keeps the stronger world-building copy focused on lore, immersion, player behaviour, recording flow and evolving gameplay.
 
-- Build command: `npm run build`
-- Build output directory: `/dist`
-- Root directory: `/`
-
-## V4 changes
-
-- Repositioned Cristian as a Technical Production & Operations Manager.
-- Upgraded the World Design section into World & Gameplay Design.
-- Added a world/gameplay image carousel using Minecraft and Rust-style screenshots.
-- Expanded the behind-the-scenes production explanation.
-- Added a "What people do not realise" credibility section.
-- Rebuilt the contact area with a stronger CTA and profile-card layout.
-- Added LinkedIn link: https://www.linkedin.com/in/cristian-sorensen-csorro/
-- Added branded social buttons for LinkedIn, Email, Discord, YouTube and Instagram.
-- Kept Discord, YouTube and Instagram as launching soon until live links are available.
-- Expanded Beyond the Projects with golf, Hull City, carp fishing, travel and food.
-
+Upload the contents of this ZIP to the branch, not the folder itself.
