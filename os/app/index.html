@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSorro OS | Mission Control</title>
+  <link href="/os/app/app.css?v=013" rel="stylesheet"/>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="/os/">
+        <img class="brand-logo" src="/os/assets/csorro-os-logo.png" alt="CSorro OS"/>
+        <span>CSorro <strong>OS</strong></span>
+      </a>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="mission"><span class="nav-icon">⌂</span><span>Mission Control</span></button>
+        <button class="nav-item" onclick="location.href='/os/app/workspace/'"><span class="nav-icon">◇</span><span>Workspaces</span></button>
+        <button class="nav-item" data-view="projects"><span class="nav-icon">▦</span><span>Projects</span></button>
+        <button class="nav-item" data-view="people"><span class="nav-icon">◉</span><span>People</span></button>
+        <button class="nav-item" data-view="assets"><span class="nav-icon">▧</span><span>Assets</span></button>
+        <button class="nav-item" data-view="knowledge"><span class="nav-icon">▤</span><span>Knowledge</span></button>
+        <button class="nav-item" data-view="calendar"><span class="nav-icon">◌</span><span>Calendar</span></button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+      </nav>
+
+      <div class="core-mini" id="openCoreMini">
+        <div class="core-dot"></div>
+        <div>
+          <b>CORE</b>
+          <p>Ask anything.<br/>I’ll check your OS first.</p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search" id="openCoreSearch">
+          <span>⌘</span>
+          <input id="commandInput" placeholder="Ask CORE or search your entire OS..."/>
+          <kbd>Ctrl / ⌘ K</kbd>
+        </div>
+        <button class="bell" id="openUpdates">🔔</button>
+        <div class="profile">C</div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">Mission Control</p>
+        <h1 id="greeting">Good Morning, Cristian.</h1>
+        <p>Everything is ready.</p>
+      </section>
+
+      <section class="core-hero">
+        <div class="core-dot large"></div>
+        <div class="core-copy">
+          <p class="eyebrow">CORE</p>
+          <h2 id="coreTitle">Morning Cristian. I’ve organised your day.</h2>
+          <ul id="coreList">
+            <li>Ryan recording starts in 2 hours.</li>
+            <li>Hull Podcast artwork is still waiting for approval.</li>
+            <li>One new creator application arrived overnight.</li>
+            <li>I’ve prepared your next recommended action.</li>
+          </ul>
+          <div class="core-actions">
+            <button id="openCorePanel">Open CORE</button>
+            <a href="/os/app/workspace/">Create workspace</a>
+          </div>
+        </div>
+        <div class="core-visual">
+          <div class="screen-card">
+            <div></div><div></div><div></div>
+            <div class="visual-tags">
+              <span>Projects</span><span>Assets</span><span>People</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="glance">
+        <div class="section-title">
+          <h2>At a Glance</h2>
+          <a href="/os/app/workspace/">Create workspace →</a>
+        </div>
+        <div class="stats">
+          <article><div class="icon purple">📋</div><strong id="tasksCount">4</strong><p>Actions today</p><a data-core-query="What should I do first?">Ask CORE →</a></article>
+          <article><div class="icon amber">📁</div><strong id="projectsCount">3</strong><p>Projects active</p><a data-core-query="Show my active projects">View projects →</a></article>
+          <article><div class="icon green">👥</div><strong>6</strong><p>People connected</p><a data-core-query="Who needs my attention?">View people →</a></article>
+          <article><div class="icon blue">🖼</div><strong>24</strong><p>Assets indexed</p><a data-core-query="Find latest thumbnail">Find assets →</a></article>
+          <article><div class="icon yellow">📖</div><strong>18</strong><p>Knowledge items</p><a data-core-query="Search knowledge">Open knowledge →</a></article>
+        </div>
+      </section>
+
+      <section class="workspaces">
+        <div class="section-title">
+          <h2>Recent Workspaces</h2>
+          <a href="/os/app/workspace/">New workspace →</a>
+        </div>
+        <div class="workspace-grid" id="workspaceGrid">
+          <article class="workspace-card" data-core-query="Open CSorro OS workspace"><span>Active</span><h3>CSorro OS</h3><p>Website, app preview and Discord platform.</p><div class="progress"><i style="width:72%"></i></div></article>
+          <article class="workspace-card" data-core-query="Show RyanNotBrian work"><span>Creator</span><h3>RyanNotBrian</h3><p>Recording, thumbnails, assets and approvals.</p><div class="progress"><i style="width:61%"></i></div></article>
+          <article class="workspace-card" data-core-query="Show Hull Podcast"><span>Podcast</span><h3>Hull Podcast</h3><p>Artwork approval and episode planning.</p><div class="progress"><i style="width:44%"></i></div></article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="core-panel hidden" id="corePanel">
+      <div class="core-panel-head">
+        <div>
+          <p class="eyebrow">CORE Command Centre</p>
+          <h2>How can I help?</h2>
+        </div>
+        <button id="closeCorePanel">×</button>
+      </div>
+
+      <div class="core-input">
+        <input id="coreQuestion" placeholder="Ask CORE anything..."/>
+        <button id="askCoreButton">Ask</button>
+      </div>
+
+      <div class="suggestions" id="suggestions">
+        <button data-query="What should I do first?">What should I do first?</button>
+        <button data-query="Find latest thumbnail">Find latest thumbnail</button>
+        <button data-query="Show RyanNotBrian assets">Show RyanNotBrian assets</button>
+        <button data-query="Who needs my attention?">Who needs my attention?</button>
+        <button data-query="Create a new project">Create a new project</button>
+      </div>
+
+      <div class="core-response" id="coreResponse">
+        <div class="message core-message">
+          <b>CORE</b>
+          <p>I’ll search CSorro OS first: workspaces, projects, people, assets, knowledge and connected tools. I’ll only suggest web search if the answer isn’t inside your OS.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/os/app/app.js?v=013"></script>
+</body>
+</html>
