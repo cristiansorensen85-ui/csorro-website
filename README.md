@@ -1,11 +1,23 @@
-# csorro.co.uk V3 — Working Static Build
+# csorro.co.uk V4 — Polish & Credibility
 
-This is a dependency-free static version of V3, built to avoid Astro/package errors.
+Upload the **contents** of this folder to GitHub, not the folder itself.
 
 Cloudflare Pages settings:
 
 - Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: blank / repository root
+- Build output directory: `/dist`
+- Root directory: `/`
 
-Upload the CONTENTS of this folder to the GitHub branch, not the folder itself.
+## V4 changes
+
+- Repositioned Cristian as a Technical Production & Operations Manager.
+- Upgraded the World Design section into World & Gameplay Design.
+- Added a world/gameplay image carousel using Minecraft and Rust-style screenshots.
+- Expanded the behind-the-scenes production explanation.
+- Added a "What people do not realise" credibility section.
+- Rebuilt the contact area with a stronger CTA and profile-card layout.
+- Added LinkedIn link: https://www.linkedin.com/in/cristian-sorensen-csorro/
+- Added branded social buttons for LinkedIn, Email, Discord, YouTube and Instagram.
+- Kept Discord, YouTube and Instagram as launching soon until live links are available.
+- Expanded Beyond the Projects with golf, Hull City, carp fishing, travel and food.
+
