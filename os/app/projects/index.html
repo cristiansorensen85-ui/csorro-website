@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CSorro OS | Projects</title>
-  <link href="/os/app/projects/projects.css?v=014" rel="stylesheet"/>
+  <link href="/os/app/projects/projects.css?v=016" rel="stylesheet"/>
 </head>
 <body>
   <div class="page">
@@ -82,6 +82,20 @@
     </main>
   </div>
 
-  <script src="/os/app/projects/projects.js?v=014"></script>
+  <div class="project-modal hidden" id="projectModal">
+    <div class="project-modal-card">
+      <button class="modal-close" id="closeProjectModal">×</button>
+      <p class="eyebrow">New Project</p>
+      <h2>Create a project</h2>
+      <p>Give it a simple name. You can add tasks, people and assets later.</p>
+      <input id="projectNameInput" placeholder="Example: Ryan Recording"/>
+      <div class="modal-actions">
+        <button id="createProjectConfirm">Create Project</button>
+        <button class="secondary" id="cancelProject">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/os/app/projects/projects.js?v=016"></script>
 </body>
 </html>
