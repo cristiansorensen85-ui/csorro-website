@@ -9,4 +9,5 @@ fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 fs.cpSync(pub, dist, { recursive: true });
 fs.copyFileSync(path.join(root, 'index.html'), path.join(dist, 'index.html'));
-console.log('Built static site to dist/');
+fs.cpSync(path.join(root, 'os'), path.join(dist, 'os'), { recursive: true });
+console.log('Built static site to dist/ including /os/');
