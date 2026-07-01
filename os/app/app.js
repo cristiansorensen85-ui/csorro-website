@@ -55,3 +55,39 @@ document.getElementById("commandInput").addEventListener("keydown", (event) => {
     openCore();
   }
 });
+
+
+function loadWorkspace() {
+  const saved = localStorage.getItem("csorroCurrentWorkspace");
+  if (!saved) return;
+
+  try {
+    const workspace = JSON.parse(saved);
+    const workspaceRows = document.querySelectorAll(".workspace-row");
+
+    if (workspaceRows.length > 0) {
+      const first = workspaceRows[0];
+      const title = first.querySelector("strong");
+      const subtitle = first.querySelector("span");
+      const progress = first.querySelector(".mini-progress i");
+
+      if (title) title.textContent = workspace.name;
+      if (subtitle) subtitle.textContent = `${workspace.type} workspace • ${workspace.priorities.slice(0, 3).join(", ")}`;
+      if (progress) progress.style.width = `${workspace.progress || 12}%`;
+    }
+
+    const coreList = document.querySelector(".core-panel ul");
+    if (coreList) {
+      const item = document.createElement("li");
+      item.textContent = `${workspace.name} workspace has been created and is ready to organise.`;
+      coreList.prepend(item);
+    }
+
+    const statusDue = document.querySelector(".status-strip div:nth-child(4) strong");
+    if (statusDue) statusDue.textContent = "Workspace ready";
+  } catch (error) {
+    console.warn("Could not load saved workspace", error);
+  }
+}
+
+loadWorkspace();
