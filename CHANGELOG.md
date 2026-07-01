@@ -13,3 +13,10 @@
 - Recent progress timeline
 - Updates panel
 
+
+## Build 018
+- Locked reference UI direction.
+- Added consistent outlined sidebar icons.
+- Improved logo/sidebar scale while preserving screen fit.
+- Rebuilt At a Glance into actionable priority cards.
+- Fixed bell icon and click cursors.
