@@ -1,57 +1,8 @@
-const greetingEl = document.getElementById("greeting");
-const timeEl = document.getElementById("liveTime");
-const dateEl = document.getElementById("todayDate");
-
-function updateClock() {
-  const now = new Date();
-  const hour = now.getHours();
-  let greeting = "Good Morning";
-  if (hour >= 12 && hour < 18) greeting = "Good Afternoon";
-  if (hour >= 18) greeting = "Good Evening";
-
-  greetingEl.textContent = `${greeting}, Cristian.`;
-  timeEl.textContent = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  dateEl.textContent = now.toLocaleDateString([], { weekday: "short", day: "numeric", month: "short" });
-}
-
-updateClock();
-setInterval(updateClock, 1000 * 15);
-
-document.querySelectorAll(".nav-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    document.querySelectorAll(".nav-item").forEach((nav) => nav.classList.remove("active"));
-    item.classList.add("active");
-  });
-});
-
-const modal = document.getElementById("coreModal");
-const openBriefing = document.getElementById("openBriefing");
-const askCoreTop = document.getElementById("askCoreTop");
-const closeModal = document.getElementById("closeModal");
-const closeModal2 = document.getElementById("closeModal2");
-
-function openCore() {
-  modal.classList.remove("hidden");
-}
-
-function closeCore() {
-  modal.classList.add("hidden");
-}
-
-openBriefing.addEventListener("click", openCore);
-askCoreTop.addEventListener("click", openCore);
-closeModal.addEventListener("click", closeCore);
-closeModal2.addEventListener("click", closeCore);
-modal.addEventListener("click", (event) => {
-  if (event.target === modal) closeCore();
-});
-
-document.getElementById("notificationButton").addEventListener("click", () => {
-  document.getElementById("notificationsPanel").scrollIntoView({ behavior: "smooth", block: "center" });
-});
-
-document.getElementById("commandInput").addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    openCore();
-  }
-});
+const greetingEl=document.getElementById("greeting");const coreTitle=document.getElementById("coreTitle");const corePanel=document.getElementById("corePanel");const coreResponse=document.getElementById("coreResponse");const coreQuestion=document.getElementById("coreQuestion");
+function updateGreeting(){const h=new Date().getHours();let g="Good Morning",s="Morning";if(h>=12&&h<18){g="Good Afternoon";s="Afternoon"}if(h>=18){g="Good Evening";s="Evening"}greetingEl.textContent=`${g}, Cristian.`;coreTitle.innerHTML=`${s} Cristian.<br/>I’ve organised your day.`}
+function openCore(q=""){corePanel.classList.remove("hidden");if(q){coreQuestion.value=q;answerCore(q)}else setTimeout(()=>coreQuestion.focus(),80)}
+function closeCore(){corePanel.classList.add("hidden")}
+function answerCore(raw){const q=(raw||coreQuestion.value||"").trim();if(!q)return;coreResponse.innerHTML=`<div class="message"><b>You</b><p>${q}</p></div><div class="message"><b>CORE</b><p class="thinking">Checking OS data first...</p></div>`;setTimeout(()=>{let r="I searched your OS first. Here are the most relevant results.";let groups=[["Projects",[["Ryan Recording","Starts in 2 hours"],["Hull Podcast Artwork","Awaiting approval"],["CSorro OS","Active build"]]],["Assets",[["Episode17_Thumbnail_Final.png","RyanNotBrian / Assets"],["HullPodcast_Artwork_v2.png","Hull Podcast / Artwork"]]],["People",[["Ryan","Creator"],["New Creator Applicant","Needs review"]]]];if(q.toLowerCase().includes("first")||q.toLowerCase().includes("briefing"))r="Start with Hull Podcast artwork because it is blocking the next step. Then prepare Ryan recording.";let html=`<div class="message"><b>CORE</b><p>${r}</p><div class="os-first">OS data first • Web later</div>`;groups.forEach(([name,rows])=>{html+=`<div class="result-group"><h4>${name}</h4>`;rows.forEach(([a,b])=>html+=`<div class="result"><strong>${a}</strong><span>${b}</span></div>`);html+=`</div>`});coreResponse.innerHTML=`<div class="message"><b>You</b><p>${q}</p></div>`+html+`</div>`},450)}
+function loadWorkspace(){const saved=localStorage.getItem("csorroCurrentWorkspace");if(!saved)return;try{const w=JSON.parse(saved);const grid=document.getElementById("workspaceGrid");const card=document.createElement("article");card.className="workspace-card";card.dataset.coreQuery=`Open ${w.name}`;card.innerHTML=`<small class="tag active">${w.type||"Workspace"}</small><h3>${w.name}</h3><p>${(w.priorities||[]).slice(0,3).join(", ")||"Ready to organise."}</p><div class="bar"><i style="width:${w.progress||18}%"></i><span>${w.progress||18}%</span></div>`;grid.prepend(card)}catch(e){}}
+updateGreeting();loadWorkspace();
+document.getElementById("openCorePanel").addEventListener("click",()=>openCore());document.getElementById("openCoreMini").addEventListener("click",()=>openCore());document.getElementById("openCoreSearch").addEventListener("click",()=>openCore());document.getElementById("openFullBriefing").addEventListener("click",()=>openCore("Give me my full briefing"));document.getElementById("closeCorePanel").addEventListener("click",closeCore);document.getElementById("askCoreButton").addEventListener("click",()=>answerCore());coreQuestion.addEventListener("keydown",e=>{if(e.key==="Enter")answerCore()});document.querySelectorAll("[data-core-query],[data-query]").forEach(el=>el.addEventListener("click",()=>openCore(el.dataset.coreQuery||el.dataset.query)));document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openCore()}if(e.key==="Escape")closeCore()});

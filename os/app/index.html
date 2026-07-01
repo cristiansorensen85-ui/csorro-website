@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CSorro OS | Mission Control</title>
-  <link href="/os/app/app.css?v=017" rel="stylesheet"/>
+  <link href="/os/app/app.css?v=019" rel="stylesheet"/>
 </head>
 <body>
   <div class="app">
@@ -15,14 +15,14 @@
       </a>
 
       <nav class="nav">
-        <a class="active" href="/os/app/"><i>⌂</i><span>Mission Control</span></a>
-        <a href="/os/app/workspace/"><i>▦</i><span>Workspaces</span></a>
-        <a href="/os/app/projects/"><i>▣</i><span>Projects</span></a>
-        <a href="#"><i>◉</i><span>People</span></a>
-        <a href="#"><i>▧</i><span>Assets</span></a>
-        <a href="#"><i>▤</i><span>Knowledge</span></a>
-        <a href="#"><i>◌</i><span>Calendar</span></a>
-        <a href="#"><i>⚙</i><span>Settings</span></a>
+        <a class="active" href="/os/app/"><i class="nav-icon" data-icon="home"></i><span>Mission Control</span></a>
+        <a href="/os/app/workspace/"><i class="nav-icon" data-icon="grid"></i><span>Workspaces</span></a>
+        <a href="/os/app/projects/"><i class="nav-icon" data-icon="folder"></i><span>Projects</span></a>
+        <a href="/os/app/people/"><i class="nav-icon" data-icon="users"></i><span>People</span></a>
+        <a href="/os/app/assets/"><i class="nav-icon" data-icon="image"></i><span>Assets</span></a>
+        <a href="/os/app/knowledge/"><i class="nav-icon" data-icon="book"></i><span>Knowledge</span></a>
+        <a href="/os/app/calendar/"><i class="nav-icon" data-icon="calendar"></i><span>Calendar</span></a>
+        <a href="/os/app/settings/"><i class="nav-icon" data-icon="settings"></i><span>Settings</span></a>
       </nav>
 
       <button class="core-mini" id="openCoreMini">
@@ -93,36 +93,41 @@
           <h2>At a Glance</h2>
         </div>
 
-        <div class="glance-grid">
-          <article class="glance-card purple" data-core-query="What should I do first?">
-            <i>▤</i>
-            <strong>4</strong>
-            <p>Actions today</p>
-            <a>Ask CORE →</a>
+        <div class="glance-grid action-grid">
+          <article class="glance-card priority" data-core-query="What should I do first?">
+            <i>!</i>
+            <small>Priority</small>
+            <strong>Podcast artwork</strong>
+            <p>Waiting for approval before the next episode can move.</p>
+            <a>Review now →</a>
           </article>
-          <article class="glance-card amber" data-core-query="Show my active projects">
-            <i>▣</i>
-            <strong>3</strong>
-            <p>Projects active</p>
-            <a>View projects →</a>
+          <article class="glance-card amber" data-core-query="Show my next event">
+            <i>▶</i>
+            <small>Next event</small>
+            <strong>Ryan Recording</strong>
+            <p>Starts today at 19:00. Prep notes are ready.</p>
+            <a>Open prep →</a>
           </article>
           <article class="glance-card green" data-core-query="Who needs my attention?">
-            <i>◉</i>
-            <strong>6</strong>
-            <p>People connected</p>
-            <a>View people →</a>
+            <i>?</i>
+            <small>Waiting on</small>
+            <strong>Ryan + artwork</strong>
+            <p>Two approvals need chasing or clearing.</p>
+            <a>View blockers →</a>
           </article>
-          <article class="glance-card blue" data-core-query="Find latest thumbnail">
-            <i>▧</i>
-            <strong>24</strong>
-            <p>Assets indexed</p>
-            <a>Find assets →</a>
+          <article class="glance-card blue" data-core-query="Show active projects">
+            <i>↗</i>
+            <small>Active work</small>
+            <strong>3 projects moving</strong>
+            <p>CSorro OS, RyanNotBrian and Hull Podcast are live.</p>
+            <a>View projects →</a>
           </article>
-          <article class="glance-card yellow" data-core-query="Search knowledge">
-            <i>▤</i>
-            <strong>18</strong>
-            <p>Knowledge items</p>
-            <a>Open knowledge →</a>
+          <article class="glance-card yellow" data-core-query="Give me your recommendation">
+            <i>✦</i>
+            <small>CORE recommends</small>
+            <strong>Clear the blocker</strong>
+            <p>Approve the podcast artwork, then return to recording prep.</p>
+            <a>Ask CORE →</a>
           </article>
         </div>
       </section>
@@ -158,7 +163,7 @@
       <section class="upcoming">
         <div class="section-head">
           <h2>Upcoming</h2>
-          <a href="#">View calendar →</a>
+          <a href="/os/app/calendar/">View calendar →</a>
         </div>
 
         <div class="event-list">
@@ -211,6 +216,6 @@
     </aside>
   </div>
 
-  <script src="/os/app/app.js?v=017"></script>
+  <script src="/os/app/app.js?v=019"></script>
 </body>
 </html>
