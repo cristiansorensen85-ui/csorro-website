@@ -963,3 +963,23 @@ footer img { width: 220px; }
   .os-preview-v31 { grid-template-columns: 1fr !important; }
   .benefit-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Build 034 - consistent slim header across product/founder pages */
+.site-header.product-header,
+.site-header.compact-header {
+  min-height: 96px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+.site-header.product-header .brand img,
+.site-header.compact-header .brand img {
+  width: clamp(150px, 11vw, 198px) !important;
+  max-height: 78px !important;
+}
+.site-header.product-header nav {
+  align-items: center !important;
+}
+@media (max-width: 900px) {
+  .site-header.product-header, .site-header.compact-header { min-height: 0 !important; }
+}

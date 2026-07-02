@@ -11,3 +11,57 @@
 
 /* Build 033 - people permissions, saved whiteboards and CORE dialog */
 .person-permission-row{display:grid;grid-template-columns:1fr auto;align-items:start}.person-permission-row .perm-mini-grid{grid-column:1/-1;margin-top:12px}.perm-mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.perm-mini-grid label{display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:12px;padding:9px 10px;color:#cbd3df;font-size:13px;font-weight:800}.role-perm{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);border-radius:16px;margin-top:10px;padding:10px}.role-perm summary{cursor:pointer;font-weight:1000;color:#fff}.whiteboard-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;align-items:start}.saved-boards{position:sticky;top:20px}.saved-board{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:16px;padding:12px;margin-top:10px}.saved-board b,.saved-board small{display:block}.saved-board small{color:#9da7b6;margin:4px 0 10px}.core-ai-shell{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:start}.core-dialog .messages{height:430px}.core-ai-shell .chip-btn{display:block;width:100%;text-align:left;margin:10px 0;padding:11px 12px}.permission-note{color:#9da7b6;font-size:13px}@media(max-width:1100px){.whiteboard-layout,.core-ai-shell{grid-template-columns:1fr}.saved-boards{position:relative;top:auto}}@media(max-width:720px){.perm-mini-grid{grid-template-columns:1fr}.person-permission-row{grid-template-columns:1fr}.person-actions{margin-top:10px}}
+
+/* Build 034 - Project Hub balance + tab alignment */
+.context-shell {
+  align-items: start !important;
+}
+.context-rail {
+  margin-top: 58px !important;
+}
+.project-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  margin: 0 0 18px !important;
+  align-items: stretch !important;
+}
+.project-tabs button {
+  min-width: 0 !important;
+  width: 100% !important;
+  height: 44px !important;
+  padding: 0 8px !important;
+  font-size: 13px !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+}
+.content-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+}
+.os-card.metric {
+  min-width: 0 !important;
+  min-height: 116px !important;
+  overflow: hidden !important;
+}
+.os-card.metric strong {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  font-size: clamp(28px, 2.8vw, 42px) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.06em !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+#nextMilestone {
+  font-size: clamp(26px, 2.2vw, 38px) !important;
+  white-space: normal !important;
+  text-align: right !important;
+}
+@media (max-width: 1320px) {
+  .project-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 900px) {
+  .context-rail { margin-top: 0 !important; }
+  .project-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
