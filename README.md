@@ -1,23 +1,31 @@
-# CSorro Website + OS
+# CSorro Website + OS Base
 
-Clean upload build.
+Clean base build for CSorro.
 
 ## What is included
 
-- `index.html` — product-first CSorro homepage.
-- `public/` — website images, CSS and CV PDF.
-- `os/` — CSorro OS app pages and assets.
-- `package.json` / `build.js` — optional static build script.
-- `docs/` — consolidated notes only, not needed for deployment.
+- `index.html` — public product-first homepage.
+- `public/` — source media, images, CSS and CV PDF.
+- `os/` — CSorro OS preview/app pages.
+- `dist/` — prebuilt static site output for hosts that deploy from `dist`.
+- `build.js` — static build script that rebuilds `dist` from `index.html`, `public/` and `os/`.
+- `docs/PROJECT_NOTES.md` — consolidated project notes.
 
-## Build
+## Deploying
+
+If your host deploys from the repository root, upload everything in this ZIP.
+
+If your host deploys from `dist`, upload or point the host to the `dist/` folder.
+
+## Rebuilding dist
 
 ```bash
+npm install
 npm run build
 ```
 
-This creates a fresh `dist/` folder locally.
+This will recreate `dist/` from the source files.
 
-## Deploy
+## Clean-up notes
 
-Upload this clean project to GitHub/Vercel/Netlify. Do not upload old scattered `BUILD_*.md` files or `UPLOAD_INSTRUCTIONS.txt`.
+Scattered `BUILD_*.md`, upload instruction files and old loose deployment notes have been removed. Important notes are consolidated in `docs/PROJECT_NOTES.md`.
