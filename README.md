@@ -1,16 +1,23 @@
-# CSorro V4.2 verified fix
+# CSorro Website + OS
 
-This version fixes the V4.1 deployment issues:
+Clean upload build.
 
-- Converts `rust-sunset.jpg` to a real JPEG so the World & Gameplay carousel loads reliably on Cloudflare.
-- Adds a CSS background fallback for the world carousel so it never appears as a black empty panel.
-- Reworks the social buttons into stacked icon/text cards so the labels cannot overlap.
-- Keeps the stronger world-building copy focused on lore, immersion, player behaviour, recording flow and evolving gameplay.
+## What is included
 
-Upload the contents of this ZIP to the branch, not the folder itself.
+- `index.html` — product-first CSorro homepage.
+- `public/` — website images, CSS and CV PDF.
+- `os/` — CSorro OS app pages and assets.
+- `package.json` / `build.js` — optional static build script.
+- `docs/` — consolidated notes only, not needed for deployment.
 
+## Build
 
-V4.3 fixes:
-- Removed rust-sunset fallback background so the carousel no longer jumps back to sunset between slides.
-- Adjusted carousel timing for a cleaner loop.
-- Filled contact profile dead space with a branded 12+ years statement and moved portrait into better balance.
+```bash
+npm run build
+```
+
+This creates a fresh `dist/` folder locally.
+
+## Deploy
+
+Upload this clean project to GitHub/Vercel/Netlify. Do not upload old scattered `BUILD_*.md` files or `UPLOAD_INSTRUCTIONS.txt`.
