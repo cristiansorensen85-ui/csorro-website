@@ -1,6 +1,13 @@
-# CSorro OS Build 019
+# CSorro OS Changelog
 
-- Upgraded Workspaces, Projects, People, Assets, Knowledge, Calendar and Settings to the locked Mission Control visual style.
-- Added full sidebar navigation links across OS pages.
-- Added the next-phase OS foundation: actionable project lanes, people pipeline, asset library, knowledge base, calendar, and CORE behaviour settings.
-- Preserved the workspace builder at `/os/app/workspace/new/`.
+## Build 020 - Project Collaboration Core
+- Added project hub page.
+- Added open and private project chat UI.
+- Added owner permission controls.
+- Added sticky notes board.
+- Added whiteboard/image markup tools.
+- Added editable project task lanes.
+- Added local storage persistence for project collaboration testing.
+
+## Build 019 - OS Pages Next Phase
+- Upgraded OS pages to match the locked visual direction.
