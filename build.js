@@ -9,5 +9,6 @@ fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 fs.cpSync(pub, dist, { recursive: true });
 fs.copyFileSync(path.join(root, 'index.html'), path.join(dist, 'index.html'));
+if (fs.existsSync(path.join(root, 'founder'))) fs.cpSync(path.join(root, 'founder'), path.join(dist, 'founder'), { recursive: true });
 fs.cpSync(path.join(root, 'os'), path.join(dist, 'os'), { recursive: true });
-console.log('Built static site to dist/ including /os/ and /os/app/');
+console.log('Built static site to dist/ including /founder/, /os/ and /os/app/');
