@@ -17,3 +17,13 @@
     render();
   }
 })();
+
+
+// Build 036 - simple workspace switcher fallback for non-project pages
+(function(){
+  const sw=document.getElementById('sidebarWorkspaceSwitcher');
+  if(!sw || sw.dataset.bound) return; sw.dataset.bound='1';
+  const key='csorroSidebarWorkspace';
+  const saved=localStorage.getItem(key); if(saved){[...sw.options].forEach((o,i)=>{ if(o.value===saved || o.textContent.startsWith(saved)) sw.selectedIndex=i; });}
+  sw.addEventListener('change',()=>{ localStorage.setItem(key, sw.options[sw.selectedIndex].textContent.split(' · ')[0]); });
+})();

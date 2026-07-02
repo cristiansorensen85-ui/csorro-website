@@ -1,19 +1,18 @@
 # CSorro Website + OS Base
 
-Clean base build for CSorro.
+## Latest: Build 046 Platform Foundation
 
-## Main entry points
-- `/index.html` — product-led CSorro homepage
-- `/os/app/index.html` — CSorro OS preview/app interface
+This base includes the frontend prototype plus a new Supabase backend architecture pack.
 
-## Deployment
-Upload the contents of this ZIP to your website repository root.
+New backend files:
+- `architecture/` — platform/database roadmap and system design
+- `database/migrations/001_core_platform_schema.sql` — first Supabase SQL migration
+- `.env.example` — environment variable template
 
-This build includes root `/styles` and `/images` folders so GitHub Pages/static hosting resolves assets correctly.
+Run the SQL only in the `csorro-os-dev` Supabase project first.
 
-## Build 033 - Permissions + CORE upgrade
-- Added role permission presets and per-person overrides in Project Hub → People.
-- Added saved Project Whiteboards list with open/delete.
-- Added CORE Project Assistant tab with simulated project-aware dialogue and task creation.
-- Clarified Assets privacy zones: My, Workspace, Project and Showcase assets.
+---
 
+# CSorro Build 045 – Clickable Intelligence
+
+Adds linked blocker / intelligence interactions. Current Blocker opens the related approval or priority task. CORE suggestions, overview priority cards and activity items jump to their source panel and highlight the target.
