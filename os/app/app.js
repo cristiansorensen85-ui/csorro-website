@@ -6,3 +6,37 @@ function answerCore(raw){const q=(raw||coreQuestion.value||"").trim();if(!q)retu
 function loadWorkspace(){const saved=localStorage.getItem("csorroCurrentWorkspace");if(!saved)return;try{const w=JSON.parse(saved);const grid=document.getElementById("workspaceGrid");const card=document.createElement("article");card.className="workspace-card";card.dataset.coreQuery=`Open ${w.name}`;card.innerHTML=`<small class="tag active">${w.type||"Workspace"}</small><h3>${w.name}</h3><p>${(w.priorities||[]).slice(0,3).join(", ")||"Ready to organise."}</p><div class="bar"><i style="width:${w.progress||18}%"></i><span>${w.progress||18}%</span></div>`;grid.prepend(card)}catch(e){}}
 updateGreeting();loadWorkspace();
 document.getElementById("openCorePanel").addEventListener("click",()=>openCore());document.getElementById("openCoreMini").addEventListener("click",()=>openCore());document.getElementById("openCoreSearch").addEventListener("click",()=>openCore());document.getElementById("openFullBriefing").addEventListener("click",()=>openCore("Give me my full briefing"));document.getElementById("closeCorePanel").addEventListener("click",closeCore);document.getElementById("askCoreButton").addEventListener("click",()=>answerCore());coreQuestion.addEventListener("keydown",e=>{if(e.key==="Enter")answerCore()});document.querySelectorAll("[data-core-query],[data-query]").forEach(el=>el.addEventListener("click",()=>openCore(el.dataset.coreQuery||el.dataset.query)));document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openCore()}if(e.key==="Escape")closeCore()});
+
+async function loadLiveWorkspaceData(){
+  if(!window.CSorroPlatform) return;
+  const switcher=document.getElementById('sidebarWorkspaceSwitcher');
+  const grid=document.getElementById('workspaceGrid');
+  const prof=await CSorroPlatform.profile().catch(()=>null);
+  if(prof && greetingEl){
+    const first=(prof.display_name||prof.full_name||'Cristian').split(' ')[0];
+    const h=new Date().getHours();
+    let g='Good Morning'; if(h>=12&&h<18) g='Good Afternoon'; if(h>=18) g='Good Evening';
+    greetingEl.textContent=`${g}, ${first}.`;
+  }
+  const list=await CSorroPlatform.workspaces().catch(()=>[]);
+  if(switcher && list.length){
+    switcher.innerHTML='';
+    list.forEach(w=>{
+      const opt=document.createElement('option');
+      opt.value=w.id; opt.textContent=`${w.name} · ${w.privacy||w.visibility||'Private'}`;
+      switcher.appendChild(opt);
+    });
+  }
+  if(grid && list.length){
+    grid.innerHTML='';
+    list.slice(0,6).forEach(w=>{
+      const card=document.createElement('article');
+      card.className='workspace-card';
+      card.innerHTML=`<small class="tag active">${w.privacy||'Private'}</small><h3>${w.name}</h3><p>Live workspace from Supabase. Open it to create projects, invite people and manage privacy.</p><div class="bar"><i style="width:24%"></i><span>Live</span></div>`;
+      card.addEventListener('click',()=>{ localStorage.setItem('csorroActiveWorkspaceId', w.id); location.href='/os/app/workspace/'; });
+      grid.appendChild(card);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded',()=>setTimeout(loadLiveWorkspaceData,100));

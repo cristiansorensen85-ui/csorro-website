@@ -175,7 +175,7 @@ document.getElementById("nameNext").addEventListener("click", () => {
   go(4);
 });
 
-document.getElementById("buildWorkspace").addEventListener("click", () => {
+document.getElementById("buildWorkspace").addEventListener("click", async () => {
   const selected = [...document.querySelectorAll("#recommendations input:checked")].map((input) => input.value);
   const workspace = {
     name: workspaceName || "CSorro OS",
@@ -186,6 +186,23 @@ document.getElementById("buildWorkspace").addEventListener("click", () => {
     createdAt: new Date().toISOString(),
     progress: 18
   };
-  localStorage.setItem("csorroCurrentWorkspace", JSON.stringify(workspace));
-  go(5);
+  const buildButton = document.getElementById("buildWorkspace");
+  const originalText = buildButton.textContent;
+  buildButton.disabled = true;
+  buildButton.textContent = "Building...";
+  try {
+    if (window.CSorroPlatform && CSorroPlatform.status.mode === 'live') {
+      const created = await CSorroPlatform.createWorkspace(workspace);
+      workspace.live = true;
+      workspace.id = created.workspace_id || created.id || workspace.id;
+      workspace.projectId = created.project_id || null;
+    }
+    localStorage.setItem("csorroCurrentWorkspace", JSON.stringify(workspace));
+    go(5);
+  } catch (err) {
+    alert(err.message || "Could not create workspace. Check Supabase settings and login status.");
+  } finally {
+    buildButton.disabled = false;
+    buildButton.textContent = originalText;
+  }
 });
