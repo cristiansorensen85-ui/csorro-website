@@ -122,3 +122,76 @@
 
 /* v045 clickable intelligence */
 .intelligence-link{cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}.intelligence-link:hover{border-color:rgba(255,176,0,.55)!important;box-shadow:0 0 0 1px rgba(255,176,0,.16),0 18px 50px rgba(255,176,0,.07);transform:translateY(-1px)}.open-source-hint{display:inline-block;margin-top:12px;color:#ffb000;font-size:12px;font-weight:1000;letter-spacing:.08em;text-transform:uppercase}.intel-row{width:100%;border:0;background:transparent;color:#fff;text-align:left;padding:8px 0;cursor:pointer}.intel-row:hover b{color:#ffb000}.csorro-target-flash{animation:csorroTargetFlash 2.2s ease;border-color:#ffb000!important;box-shadow:0 0 0 2px rgba(255,176,0,.35),0 0 42px rgba(255,176,0,.25)!important}@keyframes csorroTargetFlash{0%,100%{transform:translateY(0)}20%{transform:translateY(-3px)}40%{transform:translateY(0)}}
+
+
+/* Build 048 - Project Hub layout stabilisation and whiteboard revamp */
+.project-hub-v43,.project-hub-v35{min-width:0!important}
+.project-main-v43,.project-main-v35{max-width:1540px!important;width:100%!important;overflow-x:hidden!important}
+.project-hero-v35{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(300px,390px)!important;gap:22px!important;align-items:start!important;margin-bottom:18px!important}
+.project-title-block{min-width:0!important}.project-title-block h1{font-size:clamp(42px,4.4vw,64px)!important;line-height:.92!important;max-width:100%!important}.project-title-block p{max-width:840px!important}
+.blocker-card{min-width:0!important;max-width:100%!important}.blocker-card .open-source-hint{display:none!important}
+.project-tabs-v35,.project-tabs{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;gap:0!important;align-items:stretch!important;border-radius:16px 16px 0 0!important;scrollbar-width:thin!important;margin-bottom:18px!important}
+.project-tabs-v35 button,.project-tabs button{flex:0 0 auto!important;min-width:104px!important;height:52px!important;padding:0 16px!important;white-space:nowrap!important;text-align:center!important}
+.project-panel{min-width:0!important}.project-panel.active{display:block!important}.project-panel:not(.active){display:none!important}
+.overview-layout-v35{display:grid!important;grid-template-columns:300px minmax(0,1fr) 310px!important;gap:18px!important;align-items:start!important;position:relative!important;isolation:isolate!important}
+.overview-layout-v35>*{min-width:0!important;position:relative!important;z-index:auto!important;transform:none!important}
+.project-team-card,.overview-center-v35,.right-rail-v35{min-width:0!important;position:relative!important;top:auto!important;right:auto!important;left:auto!important;bottom:auto!important}
+.overview-center-v35{display:grid!important;gap:18px!important}
+.metric-row-v35{display:grid!important;grid-template-columns:repeat(5,minmax(128px,1fr))!important;gap:14px!important;align-items:stretch!important}
+.metric-v35{min-height:142px!important;padding:18px!important;display:block!important}.metric-v35 strong{font-size:clamp(30px,2.6vw,42px)!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;line-height:1.05!important}.metric-v35.phase strong{font-size:clamp(28px,2vw,34px)!important}.metric-v35 span,.metric-v35 p{line-height:1.35!important}
+.work-grid-v35{display:grid!important;grid-template-columns:minmax(280px,.9fr) minmax(0,1.1fr)!important;gap:18px!important}.today-card,.activity-card{min-height:300px!important}.activity-list-v35{max-height:285px!important;overflow:auto!important;padding-right:4px!important}.right-rail-v35{display:grid!important;gap:16px!important;align-content:start!important}.right-rail-v35 .os-card{min-height:0!important;height:auto!important}.upcoming-card p{grid-template-columns:24px minmax(0,1fr)!important}.quick-actions-v35{display:grid!important;grid-template-columns:auto repeat(5,minmax(120px,1fr))!important;gap:12px!important;align-items:center!important}.quick-actions-v35 button{white-space:normal!important;text-align:left!important;line-height:1.2!important;padding:8px!important;border-radius:12px!important}.intelligence-strip-v43{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:16px!important;margin-top:0!important}.intelligence-actions-v43{display:flex!important;flex-wrap:wrap!important;justify-content:flex-end!important}.core-suggest{max-height:420px!important}.core-suggest #coreSays{max-height:210px!important;overflow:auto!important;padding-right:4px!important}
+/* Whiteboard gets a proper page treatment instead of a cramped widget */
+#whiteboard .whiteboard-v44,.whiteboard-layout.whiteboard-v44{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important}.whiteboard-shell{min-width:0!important;padding:18px!important}.whiteboard-header-v44{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:18px!important}.whiteboard-status-v44{min-width:220px!important}.whiteboard-tools-v44{position:relative!important;top:auto!important;display:flex!important;flex-wrap:wrap!important;gap:9px!important;margin-bottom:14px!important}.whiteboard-tools-v44 .tool,.whiteboard-tools-v44 button,.whiteboard-tools-v44 label{height:40px!important;padding:0 12px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;white-space:nowrap!important}#board{width:100%!important;height:min(68vh,760px)!important;min-height:520px!important;display:block!important;border-radius:22px!important}.saved-boards-v44,.saved-boards{position:relative!important;top:auto!important}.saved-boards-v44 #savedBoardsList,.saved-boards #savedBoardsList{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}.saved-board-v44,.saved-board{margin-top:0!important;min-height:120px!important}
+.tasks-shell-v41,.files-layout-v40,.activity-layout-v40,.approvals-layout-v40,.chat-layout,.comm-shell-v38,.core-ai-shell,.mail-shell{min-width:0!important;align-items:start!important}.chat-card,.room-list,.mail-body,.whiteboard-shell{min-width:0!important}.messages{max-width:100%!important}.message{word-break:break-word!important}
+@media(max-width:1560px){.overview-layout-v35{grid-template-columns:285px minmax(0,1fr)!important}.right-rail-v35{grid-column:1/-1!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}.metric-row-v35{grid-template-columns:repeat(5,minmax(118px,1fr))!important}.work-grid-v35{grid-template-columns:1fr 1fr!important}}
+@media(max-width:1280px){.project-hero-v35,.overview-layout-v35{grid-template-columns:1fr!important}.right-rail-v35,.metric-row-v35{grid-template-columns:repeat(2,minmax(0,1fr))!important}.work-grid-v35,.quick-actions-v35,.intelligence-strip-v43{grid-template-columns:1fr!important}.intelligence-actions-v43{justify-content:flex-start!important}.saved-boards-v44 #savedBoardsList,.saved-boards #savedBoardsList{grid-template-columns:1fr 1fr!important}}
+@media(max-width:760px){.right-rail-v35,.metric-row-v35,.saved-boards-v44 #savedBoardsList,.saved-boards #savedBoardsList{grid-template-columns:1fr!important}.project-tabs-v35 button,.project-tabs button{min-width:92px!important;padding:0 12px!important;font-size:12px!important}.whiteboard-header-v44{display:grid!important}.whiteboard-status-v44{min-width:0!important}#board{min-height:420px!important;height:58vh!important}}
+
+/* Build 049 - calm usability pass: reduce mental load and prevent crowded dashboards */
+.project-main-v43,.project-main-v35{max-width:1500px!important;padding-top:24px!important}
+.project-hero-v35{margin-bottom:16px!important;grid-template-columns:minmax(0,1fr) minmax(280px,360px)!important}
+.project-title-block h1{font-size:clamp(42px,4vw,58px)!important;line-height:.96!important;letter-spacing:-.055em!important}
+.project-title-block #projectIntro{font-size:16px!important;line-height:1.45!important;color:#c7d1df!important;max-width:720px!important}
+.project-meta-line{display:flex!important;flex-wrap:wrap!important;gap:10px!important;margin-top:10px!important;color:#93a0b1!important;font-size:13px!important}
+.project-meta-line span{display:inline-flex!important;align-items:center!important;gap:7px!important;border:1px solid rgba(255,255,255,.08)!important;background:rgba(255,255,255,.035)!important;border-radius:999px!important;padding:6px 10px!important}
+.blocker-card{padding:20px!important;border-radius:22px!important;min-height:132px!important}
+.blocker-card b{font-size:22px!important;line-height:1.12!important;display:block!important;margin:12px 0 6px!important}
+.blocker-alert{width:46px!important;height:46px!important;right:18px!important;top:32px!important}
+.project-tabs-v35{position:relative!important;margin-bottom:18px!important;background:rgba(255,255,255,.025)!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:18px!important;padding:4px!important}
+.project-tabs-v35 button{height:44px!important;min-width:auto!important;padding:0 14px!important;border-radius:13px!important;border-bottom:0!important;background:transparent!important;color:#c4cedb!important}
+.project-tabs-v35 button.active{background:linear-gradient(135deg,#ffb000,#ff7b00)!important;color:#101114!important;box-shadow:0 12px 30px rgba(255,140,0,.18)!important}
+.overview-layout-v35{grid-template-columns:280px minmax(0,1fr) 300px!important;gap:16px!important}
+.project-team-card{align-self:start!important}
+.overview-center-v35{gap:16px!important}
+.metric-row-v35{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
+.metric-v35{min-height:124px!important;padding:16px!important;border-radius:18px!important}
+.metric-v35 span{font-size:13px!important;color:#b5c0cf!important}
+.metric-v35 strong{font-size:34px!important;margin-top:6px!important;display:block!important}
+.metric-v35 p{font-size:13px!important;margin-top:5px!important;color:#c2ccda!important}
+.metric-v35.phase{display:none!important}
+.work-grid-v35{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)!important;gap:16px!important}
+.today-card,.activity-card{min-height:280px!important;border-radius:20px!important}
+.today-card .card-head,.activity-card .card-head{min-height:34px!important}
+.activity-list-v35{max-height:255px!important}
+.right-rail-v35{gap:14px!important}
+.right-rail-v35 .os-card{border-radius:20px!important;padding:18px!important}
+.milestone-card{min-height:132px!important}
+.upcoming-card p{margin:12px 0!important}
+.core-suggest{max-height:320px!important}
+.core-suggest #coreSays{max-height:128px!important}
+.quick-actions-v35{margin-top:0!important;grid-template-columns:auto repeat(5,minmax(0,1fr))!important;border-radius:20px!important;padding:14px 16px!important;min-height:74px!important}
+.quick-actions-v35 b{font-size:12px!important;letter-spacing:.18em!important;color:#9dafc2!important;text-transform:uppercase!important}
+.quick-actions-v35 button{min-height:44px!important;border-radius:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+.intelligence-strip-v43{border-radius:20px!important;padding:20px!important;grid-template-columns:minmax(0,1fr) auto!important}
+.intelligence-strip-v43 h3{font-size:24px!important;line-height:1.1!important;margin:8px 0 6px!important}
+.intelligence-strip-v43 p{font-size:15px!important;color:#c7d1df!important}
+.intelligence-actions-v43 button{height:40px!important;border-radius:13px!important}
+/* Make every project sub-page feel calm rather than crammed */
+.project-panel{padding-bottom:24px!important}.project-panel h2{font-size:30px!important;line-height:1.05!important}.project-panel .muted{line-height:1.5!important}
+.tasks-shell-v41,.comm-shell-v38,.files-layout-v40,.activity-layout-v40,.approvals-layout-v40,.core-ai-shell,.team-grid{gap:18px!important;align-items:start!important}
+.tasks-board-v41{gap:14px!important}.task-card-v41,.room-card,.asset-card-v40,.approval-card-v40,.timeline-item-v40{border-radius:16px!important}
+/* Whiteboard should be a working surface, not a tiny widget */
+#whiteboard{padding-top:2px!important}#whiteboard .whiteboard-v44{gap:18px!important}.whiteboard-header-v44 h2{font-size:34px!important}.whiteboard-helper-v44{display:none!important}#board{min-height:620px!important;height:calc(100vh - 280px)!important;max-height:820px!important;background:#0d131a!important}.whiteboard-tools-v44{position:sticky!important;top:10px!important;z-index:4!important}.saved-boards-v44 #savedBoardsList,.saved-boards #savedBoardsList{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+@media(max-width:1480px){.overview-layout-v35{grid-template-columns:270px minmax(0,1fr)!important}.right-rail-v35{grid-column:1/-1!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}.work-grid-v35{grid-template-columns:1fr 1fr!important}.project-tabs-v35 button{padding:0 11px!important;font-size:13px!important}.quick-actions-v35{grid-template-columns:1fr 1fr 1fr!important}.quick-actions-v35 b{grid-column:1/-1}.metric-row-v35{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:1180px){.overview-layout-v35,.project-hero-v35,.work-grid-v35{grid-template-columns:1fr!important}.right-rail-v35,.metric-row-v35{grid-template-columns:repeat(2,minmax(0,1fr))!important}.intelligence-strip-v43{grid-template-columns:1fr!important}.project-tabs-v35{overflow-x:auto!important}.project-tabs-v35 button{flex:0 0 auto!important}.saved-boards-v44 #savedBoardsList,.saved-boards #savedBoardsList{grid-template-columns:1fr!important}#board{height:64vh!important;min-height:500px!important}}
+@media(max-width:760px){.right-rail-v35,.metric-row-v35,.quick-actions-v35{grid-template-columns:1fr!important}.project-title-block h1{font-size:38px!important}.blocker-card{min-height:120px!important}.project-tabs-v35 button{height:42px!important;padding:0 10px!important}.whiteboard-header-v44{display:block!important}#board{min-height:420px!important}}

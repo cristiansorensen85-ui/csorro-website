@@ -93,3 +93,33 @@ button,.actions a,.nav a,.workspace-card,.glance-card,.circle,.avatar{cursor:poi
 .global-msg-shell-v38 + .os-card{margin-top:18px}
 @media(max-width:1500px){.project-main-v35{padding-left:28px!important;padding-right:28px!important}.overview-layout-v35{grid-template-columns:280px minmax(0,1fr) 280px!important}.metric-row-v35{grid-template-columns:repeat(5,minmax(130px,1fr))!important}.metric-v35{padding:18px!important}.metric-v35 strong{font-size:34px}.metric-v35.phase strong{font-size:28px}.right-rail-v35{min-width:0}.project-tabs-v35 button{padding:13px 13px!important;font-size:13px}}
 @media(max-width:1250px){.overview-layout-v35{grid-template-columns:1fr!important}.right-rail-v35{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric-row-v35{grid-template-columns:repeat(3,1fr)!important}}
+
+
+/* Build 048 - global OS layout stabilisation */
+body{overflow-x:hidden!important}
+.app{grid-template-columns:270px minmax(0,1fr)!important;min-width:0!important}
+.main,.main.wide,.project-main-v35,.project-main-v43{width:100%!important;max-width:1540px!important;min-width:0!important;margin:0 auto!important;padding:28px clamp(22px,2.4vw,42px) 56px!important;overflow-x:hidden!important}
+.topbar{min-height:52px!important;margin-bottom:28px!important;align-items:center!important}
+.search{height:52px!important;min-width:0!important}
+.circle{font-size:0!important;position:relative!important;overflow:visible!important}
+.circle::before{content:"";width:20px;height:20px;background:#dbe4f0;display:block}
+.avatar{font-size:17px!important;display:grid!important;place-items:center!important}
+.sidebar.csorro-sidebar-v36 .brand{min-height:112px!important;margin-bottom:12px!important}
+.sidebar.csorro-sidebar-v36 .brand img{width:118px!important;height:74px!important;object-fit:contain!important;object-position:center!important;margin:0 auto 6px!important}
+.sidebar.csorro-sidebar-v36 .brand strong{font-size:27px!important}
+.sidebar.csorro-sidebar-v36 .nav a{white-space:nowrap!important}
+.os-card,.glance-card,.workspace-card,.upcoming,.list-item{min-width:0!important;overflow:hidden!important}
+.os-card h1,.os-card h2,.os-card h3,.os-card p,.os-card b,.os-card small,.list-item b,.list-item small{overflow-wrap:anywhere}
+.page-hero{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:22px!important;align-items:end!important;margin-bottom:24px!important}
+.page-hero h1{font-size:clamp(42px,4.4vw,68px)!important;line-height:.95!important;margin:0!important}
+.page-hero p{max-width:760px!important}
+.os-grid.two{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important;align-items:start!important}
+.os-grid.three{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;align-items:start!important}
+@media(max-width:1180px){.app{grid-template-columns:250px minmax(0,1fr)!important}.main,.main.wide,.project-main-v35,.project-main-v43{padding:24px 22px 48px!important}.os-grid.two,.os-grid.three,.page-hero{grid-template-columns:1fr!important}.page-actions{justify-content:flex-start!important}}
+@media(max-height:820px){.sidebar.csorro-sidebar-v36 .brand{min-height:92px!important}.sidebar.csorro-sidebar-v36 .brand img{width:96px!important;height:58px!important}.sidebar.csorro-sidebar-v36 .nav a{height:38px!important}.sidebar.csorro-sidebar-v36 .core-mini{min-height:82px!important}}
+
+/* Build 049 - global clean usability guardrails */
+.os-card,.glance-card,.workspace-card,.upcoming{box-shadow:none!important}
+.topbar{position:relative!important;z-index:10!important}.main{isolation:isolate!important}.sidebar{z-index:20!important}
+button,a,.chip-btn,.btn{cursor:pointer}.btn,.chip-btn{white-space:nowrap!important}
+@media(max-height:820px){.sidebar.csorro-sidebar-v36 .core-mini p{display:none!important}.sidebar.csorro-sidebar-v36 .core-mini{min-height:68px!important}}
