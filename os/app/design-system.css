@@ -1,0 +1,154 @@
+/* Build 051 - CSorro Design System Foundation
+   Purpose: reduce mental load by making layout, cards, buttons, forms and states consistent. */
+:root{
+  --cs-space-1:4px;
+  --cs-space-2:8px;
+  --cs-space-3:12px;
+  --cs-space-4:16px;
+  --cs-space-5:20px;
+  --cs-space-6:24px;
+  --cs-space-7:32px;
+  --cs-space-8:40px;
+  --cs-page-max:1440px;
+  --cs-header-h:62px;
+  --cs-control-h:44px;
+  --cs-card-pad:20px;
+}
+/* Page shell */
+.cs-page,
+.main.wide,
+.project-main-v35,
+.project-main-v43{
+  width:100%;
+  max-width:var(--cs-page-max)!important;
+  margin:0 auto!important;
+}
+.cs-page-section{margin-top:var(--cs-space-6)}
+.cs-page-grid{display:grid;gap:var(--cs-space-5);align-items:start;min-width:0}
+.cs-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cs-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cs-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cs-grid-main-rail{grid-template-columns:minmax(0,1fr) minmax(280px,360px)}
+/* Consistent card language */
+.cs-card,
+.os-card,
+.project-card,
+.workspace-card,
+.glance-card,
+.lane,
+.task-card,
+.task-card-v41,
+.activity-card,
+.mail-shell,
+.whiteboard-shell{
+  border-radius:var(--cs-radius)!important;
+  border:1px solid var(--cs-border)!important;
+  background:var(--cs-card)!important;
+  min-width:0!important;
+  overflow:hidden;
+}
+.cs-card{padding:var(--cs-card-pad)}
+.cs-card > :first-child{margin-top:0}
+.cs-card > :last-child{margin-bottom:0}
+.cs-card.compact{padding:var(--cs-space-4);border-radius:18px!important}
+.cs-card.hero{padding:var(--cs-space-7);border-radius:28px!important}
+/* Typography safety */
+.cs-title{font-size:clamp(30px,3vw,48px);letter-spacing:-.055em;line-height:.98;margin:0;color:var(--cs-text)}
+.cs-subtitle{max-width:760px;margin:10px 0 0;color:var(--cs-muted);font-size:16px;line-height:1.55}
+.cs-eyebrow{margin:0 0 8px;color:var(--cs-accent);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:1000}
+.cs-muted{color:var(--cs-muted)}
+.cs-truncate{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cs-wrap{overflow-wrap:anywhere}
+/* Buttons */
+.cs-btn,
+.btn,
+.btn-secondary,
+button.cs-btn,
+a.cs-btn{
+  min-height:var(--cs-control-h);
+  border-radius:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:0 16px;
+  font-weight:900;
+  text-decoration:none;
+  cursor:pointer;
+  border:1px solid var(--cs-border);
+  white-space:nowrap;
+}
+.cs-btn.primary{background:linear-gradient(135deg,var(--cs-accent),var(--cs-accent-2));color:#111;border-color:transparent}
+.cs-btn.secondary{background:var(--cs-surface-2);color:var(--cs-text)}
+.cs-btn.ghost{background:transparent;color:var(--cs-muted)}
+.cs-btn.danger{background:rgba(239,68,68,.12);color:#ff8b84;border-color:rgba(239,68,68,.28)}
+.cs-btn-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+/* Tabs: one row first, horizontal scroll if needed. */
+.cs-tabs,
+.project-tabs,
+.project-tabs-v35{
+  display:flex!important;
+  gap:8px!important;
+  flex-wrap:nowrap!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scrollbar-width:thin;
+  max-width:100%;
+  padding-bottom:2px;
+}
+.cs-tabs button,
+.project-tabs button,
+.project-tabs-v35 button{
+  flex:0 0 auto!important;
+  min-height:40px;
+  white-space:nowrap!important;
+}
+/* Forms */
+.cs-field{display:grid;gap:7px;margin-bottom:14px}
+.cs-field label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--cs-subtle);font-weight:1000}
+.cs-input,
+.cs-field input,
+.cs-field textarea,
+.cs-field select{
+  width:100%;
+  min-height:44px;
+  border-radius:14px;
+  border:1px solid var(--cs-border);
+  background:var(--cs-card-solid);
+  color:var(--cs-text);
+  padding:10px 12px;
+}
+.cs-field textarea{min-height:110px;resize:vertical}
+/* Empty/loading states */
+.cs-empty{border:1px dashed var(--cs-border);border-radius:var(--cs-radius);padding:28px;text-align:center;background:var(--cs-surface-2);color:var(--cs-muted)}
+.cs-empty b{display:block;color:var(--cs-text);font-size:18px;margin-bottom:6px}
+.cs-skeleton{position:relative;overflow:hidden;background:var(--cs-surface-2);border-radius:12px;min-height:18px}
+.cs-skeleton::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);animation:cs-shimmer 1.4s infinite}
+@keyframes cs-shimmer{100%{transform:translateX(100%)}}
+/* Mental-load guardrails */
+.cs-calm-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.cs-calm-list li{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:14px;background:var(--cs-surface-2);border:1px solid var(--cs-border-soft);min-width:0}
+.cs-kpi-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cs-kpi{padding:14px;border-radius:18px;border:1px solid var(--cs-border);background:var(--cs-surface-2);min-width:0}
+.cs-kpi small{display:block;color:var(--cs-subtle);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:11px}.cs-kpi b{display:block;font-size:22px;margin-top:5px;color:var(--cs-text)}
+/* Whiteboard work area should stay useful, not cramped. */
+.whiteboard-shell,
+.whiteboard-page,
+.board-stage{
+  min-height:clamp(560px,72vh,860px)!important;
+}
+#board,.whiteboard-canvas,canvas.whiteboard-canvas{min-height:520px!important}
+/* Header consistency */
+.topbar{min-height:var(--cs-header-h)!important;align-items:center!important}
+.topbar .circle,.topbar .avatar{flex:0 0 auto!important}
+/* Responsive */
+@media(max-width:1200px){
+  .cs-grid-4,.cs-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cs-grid-main-rail{grid-template-columns:1fr}
+  .cs-kpi-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .cs-grid-2,.cs-grid-3,.cs-grid-4{grid-template-columns:1fr}
+  .cs-kpi-row{grid-template-columns:1fr}
+  .cs-card.hero{padding:22px}
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>CSorro OS | Network</title><link href="/os/app/app.css?v=051" rel="stylesheet"/><link href="/os/app/os-page.css?v=051" rel="stylesheet"/><link href="/os/app/projects/project-hub.css?v=051" rel="stylesheet"/><link href="/os/app/v022.css?v=051" rel="stylesheet"/><link href="/os/app/v024.css?v=051" rel="stylesheet"/><link href="/os/app/theme-engine.css?v=051" rel="stylesheet"/><link href="/os/app/design-system.css?v=051" rel="stylesheet"/></head><body><div class="app"><aside class="sidebar csorro-sidebar-v36">
+  <a class="brand" href="/os/app/"><img src="/os/assets/csorro-os-logo.png" alt="CSorro OS"/><strong>CSorro <span>OS</span></strong></a>
+  <div class="workspace-mini-switcher"><label>Workspace</label><select id="sidebarWorkspaceSwitcher"><option>RyanNotBrian · Private</option><option>CSorro Ltd · Private</option><option>Hull Podcast · Private</option></select></div>
+  <nav class="nav"><a class="" href="/os/app/"><i class="nav-icon" data-icon="home"></i><span>Mission Control</span></a><a class="" href="/os/app/workspace/"><i class="nav-icon" data-icon="grid"></i><span>Workspaces</span></a><a class="" href="/os/app/projects/"><i class="nav-icon" data-icon="folder"></i><span>Projects</span></a><a class="" href="/os/app/people/"><i class="nav-icon" data-icon="users"></i><span>People</span></a><a class="" href="/os/app/messages/"><i class="nav-icon" data-icon="message"></i><span>Messages</span></a><a class="active" href="/os/app/network/"><i class="nav-icon" data-icon="globe"></i><span>Network</span></a><a class="" href="/os/app/studio/"><i class="nav-icon" data-icon="film"></i><span>Studio</span></a><a class="" href="/os/app/calendar/"><i class="nav-icon" data-icon="calendar"></i><span>Calendar</span></a><a class="" href="/os/app/storage/"><i class="nav-icon" data-icon="archive"></i><span>Storage</span></a><a class="" href="/os/app/knowledge/"><i class="nav-icon" data-icon="book"></i><span>Knowledge</span></a><a class="" href="/os/app/templates/"><i class="nav-icon" data-icon="folder"></i><span>Templates</span></a><a class="" href="/os/app/settings/"><i class="nav-icon" data-icon="settings"></i><span>Settings</span></a></nav>
+  <button class="core-mini"><span class="core-orb small"></span><div><b>CORE</b><p>Your AI assistant.<br/>Always here to help.</p><span class="core-cta">Open CORE →</span></div></button>
+</aside><main class="main wide"><header class="topbar"><button class="search"><span>Ask CORE or search your OS</span><kbd>Ctrl K</kbd></button><button class="circle" aria-label="Notifications">Notifications</button><a class="circle message-circle" aria-label="Messages" href="/os/app/messages/"></a><button class="avatar" data-user-initial>C</button></header>
+<section class="page-hero network-hero-v54"><div><p class="eyebrow">Network</p><h1>Professional Network</h1><p>Share updates, showcase work, hire talent and discover creators without exposing private workspace data.</p></div><div class="page-actions"><a class="btn" href="#networkComposer">Create post</a><a class="btn-secondary" href="/os/app/people/">People</a></div></section>
+<section class="network-layout-v54">
+  <aside class="network-side-v54 os-card">
+    <h3>Discover</h3>
+    <button class="active" data-network-filter="all">All posts</button>
+    <button data-network-filter="looking_for_work">Open for work</button>
+    <button data-network-filter="hiring">Hiring</button>
+    <button data-network-filter="showcase">Showcase</button>
+    <button data-network-filter="product_update">Updates</button>
+    <hr/>
+    <div class="network-tip"><b>Privacy first</b><p>Workspaces stay private. Only selected profiles, posts and showcases appear here.</p></div>
+  </aside>
+  <section class="network-center-v54">
+    <article class="os-card composer-card-v54">
+      <form id="networkComposer">
+        <div class="composer-row"><select id="postType"><option value="looking_for_work">Looking for Work</option><option value="hiring">Hiring</option><option value="showcase">Showcase</option><option value="product_update">Product Update</option><option value="tutorial">Tutorial</option><option value="community_question">Community Question</option></select><input id="postTitle" placeholder="Short title, e.g. Editor open for work"/></div>
+        <textarea id="postBody" placeholder="Write a clean professional post..."></textarea>
+        <div class="composer-row"><input id="postLink" placeholder="Portfolio or showcase link"/><input id="postImage" placeholder="Optional image URL"/></div>
+        <div class="composer-actions"><small id="networkStatus">Posts can link to portfolios, workspaces, projects or hiring pages.</small><button class="btn" type="submit">Post</button></div>
+      </form>
+    </article>
+    <div id="networkFeed" class="network-feed-v54"></div>
+  </section>
+  <aside class="network-right-v54 os-card">
+    <h3>Recommended</h3>
+    <div class="list">
+      <div class="list-item"><div><b>Thumbnail Artists</b><small>12 available this week</small></div><span class="mini-label amber">Creative</span></div>
+      <div class="list-item"><div><b>Editors</b><small>Gaming, podcast and social</small></div><span class="mini-label green">Open</span></div>
+      <div class="list-item"><div><b>Studios</b><small>Public showcases enabled</small></div><span class="mini-label blue">Showcase</span></div>
+    </div>
+  </aside>
+</section></main></div><script src="/os/app/platform-config.js?v=054"></script><script src="/os/app/platform-client.js?v=054"></script><script src="/os/app/v022.js?v=054"></script><script src="/os/app/network/network.js?v=054"></script><script src="/os/app/theme-engine.js?v=054"></script></body></html>
