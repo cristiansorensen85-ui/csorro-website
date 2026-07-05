@@ -1,3 +1,14 @@
+# CSorro Build 059 – SaaS CSS Hotfix
+
+This build fixes the broken homepage styling by inlining the landing CSS as a fallback and keeping both `/styles/global.css` and `styles/global.css` links.
+
+Test first:
+- `/`
+- `/os/app/`
+- `/os/app/storage/`
+
+Use this instead of Build 058.
+
 # CSorro OS Base
 
 ## Latest: Build 056 – Workspace Storage Architecture
