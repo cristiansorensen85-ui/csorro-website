@@ -1,150 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CSorro OS | Workspace Engine</title>
-  <link href="/os/app/workspace/new/workspace.css?v=052" rel="stylesheet"/>
-<link href="/os/app/theme-engine.css?v=051" rel="stylesheet"/><link href="/os/app/design-system.css?v=051" rel="stylesheet"/></head>
-<body>
-  <main class="engine">
-    <header class="engine-top">
-      <a class="back" href="/os/app/workspace/">← Back to Workspaces</a>
-      <div class="mini-status"><span></span> CORE Ready</div>
-    </header>
+let workspaceType = "";
+let workspaceName = "";
+let preset = "";
+let customGoal = "";
 
-    <section class="hero">
-      <p class="eyebrow">Workspace Engine</p>
-      <h1>Let’s build your workspace together.</h1>
-      <p>CORE will recommend the right structure based on what you’re trying to achieve. No confusing setup. No mental drain. You can change everything later.</p>
-    </section>
+const screens = [...document.querySelectorAll(".screen")];
+const steps = [...document.querySelectorAll(".step")];
+const progressFill = document.getElementById("progressFill");
 
-    <section class="layout">
-      <section class="builder">
-        <div class="progress-line">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
+const presets = {
+  creator: {
+    advice: "Creators usually need a clear content flow, a place for assets, and simple approvals. I’ll keep it focused.",
+    modules: [
+      ["Projects", "Plan videos, campaigns, series and deliverables."],
+      ["Content Calendar", "Know what is being created, reviewed and published."],
+      ["Asset Library", "Store thumbnails, videos, scripts, brand assets and files."],
+      ["Knowledge Base", "Keep ideas, scripts, notes and repeatable processes in one place."],
+      ["Client Portal", "Let clients or collaborators approve work without seeing everything."],
+      ["CORE Automation", "Summaries, reminders and suggested next steps."]
+    ]
+  },
+  business: {
+    advice: "Businesses need structure, visibility and a calm way to manage people, projects and clients.",
+    modules: [
+      ["Projects", "Track work, goals, deadlines and responsibilities."],
+      ["People", "Manage staff, freelancers, collaborators and permissions."],
+      ["Client Portal", "Give clients a clean place to review updates and approve work."],
+      ["Knowledge Base", "Store processes, documents, policies and decisions."],
+      ["Opportunities", "Track leads, partnerships and future work."],
+      ["CORE Automation", "Prepare briefings, organise information and reduce admin."]
+    ]
+  },
+  agency: {
+    advice: "Agencies need repeatable client workflows, clear approvals, and visibility across multiple projects.",
+    modules: [
+      ["Client Workspaces", "Separate each client safely with the right permissions."],
+      ["Projects", "Manage campaigns, deliverables and timelines."],
+      ["Team Collaboration", "Keep designers, editors, managers and clients aligned."],
+      ["Asset Library", "Store brand assets, approvals and files per client."],
+      ["Opportunities", "Manage leads, proposals and future work."],
+      ["CORE Automation", "Summaries, task suggestions and client updates."]
+    ]
+  },
+  project: {
+    advice: "Project managers need clarity, deadlines, ownership and fewer scattered conversations.",
+    modules: [
+      ["Projects", "Plan phases, deadlines, tasks and ownership."],
+      ["Tasks", "Track what needs doing, who owns it and what is blocked."],
+      ["Calendar", "Keep deadlines, meetings and milestones visible."],
+      ["Knowledge Base", "Store plans, decisions, notes and documentation."],
+      ["People", "Manage roles, responsibilities and access."],
+      ["CORE Automation", "Prepare daily priorities and highlight risks."]
+    ]
+  },
+  starter: {
+    advice: "No problem. I’ll set up a simple, safe workspace that works for most new ventures.",
+    modules: [
+      ["Projects", "A simple place to organise what you are building."],
+      ["Tasks", "Clear next steps so you always know what to do."],
+      ["Storage", "Company drive for files, reviews, media and documents."],
+      ["Knowledge", "A simple notebook for decisions, notes and how things work."],
+      ["People", "Add collaborators when you are ready."],
+      ["CORE Automation", "Guidance, summaries and reminders when you need them."]
+    ]
+  },
+  custom: {
+    advice: "I’ll recommend a flexible setup based on your description.",
+    modules: [
+      ["Projects", "Organise the work into clear areas."],
+      ["Tasks", "Break the work into manageable next steps."],
+      ["Storage", "Keep workspace files, media and reviews together."],
+      ["Knowledge", "Store decisions, notes and guidance."],
+      ["People", "Add the right people when needed."],
+      ["CORE Automation", "Help organise and guide the workspace."]
+    ]
+  }
+};
 
-        <div class="steps">
-          <button class="step active" data-step="1"><b>1</b><span>Start</span></button>
-          <button class="step" data-step="2"><b>2</b><span>Goal</span></button>
-          <button class="step" data-step="3"><b>3</b><span>Name</span></button>
-          <button class="step" data-step="4"><b>4</b><span>Review</span></button>
-          <button class="step" data-step="5"><b>5</b><span>Ready</span></button>
-        </div>
+function go(step) {
+  screens.forEach((screen) => screen.classList.remove("active"));
+  steps.forEach((s) => s.classList.remove("active"));
+  document.getElementById(`screen-${step}`).classList.add("active");
+  document.querySelector(`.step[data-step="${step}"]`).classList.add("active");
+  progressFill.style.width = `${step * 20}%`;
+}
 
-        <div class="screen active" id="screen-1">
-          <div class="welcome-card">
-            <div class="core-orb"></div>
-            <div>
-              <h2>Welcome to CSorro OS.</h2>
-              <p>You’re one minute away from having everything organised. I’ll do the difficult part — you just answer a few simple questions.</p>
-              <button class="primary" id="beginFlow">Let’s begin</button>
-            </div>
-          </div>
-        </div>
+function updatePreview() {
+  document.getElementById("previewName").textContent = workspaceName || "New Workspace";
+  document.getElementById("previewType").textContent = workspaceType ? `${workspaceType} workspace` : "CORE will shape this around your goal.";
+  const active = presets[preset] || presets.starter;
+  document.getElementById("coreAdvice").textContent = active.advice;
+}
 
-        <div class="screen" id="screen-2">
-          <h2>What best describes you today?</h2>
-          <p class="helper">Choose the closest option. If you’re unsure, pick “I’m just getting started”.</p>
+function renderRecommendations() {
+  const active = presets[preset] || presets.starter;
+  const wrap = document.getElementById("recommendations");
+  const preview = document.getElementById("previewModules");
+  wrap.innerHTML = "";
+  preview.innerHTML = "";
 
-          <div class="goal-grid">
-            <button class="goal-card" data-type="Creator" data-preset="creator">
-              <strong>Creator</strong>
-              <span>Videos, podcasts, streaming, social media.</span>
-            </button>
-            <button class="goal-card" data-type="Business" data-preset="business">
-              <strong>Business</strong>
-              <span>Services, clients, operations, growth.</span>
-            </button>
-            <button class="goal-card" data-type="Agency" data-preset="agency">
-              <strong>Agency</strong>
-              <span>Multiple clients, campaigns and teams.</span>
-            </button>
-            <button class="goal-card" data-type="Project Manager" data-preset="project">
-              <strong>Project Manager</strong>
-              <span>Events, software, operations or delivery.</span>
-            </button>
-            <button class="goal-card recommended" data-type="Getting Started" data-preset="starter">
-              <strong>I’m just getting started</strong>
-              <span>I don’t know what I need yet. Recommend it for me.</span>
-            </button>
-            <button class="goal-card" data-type="Custom" data-preset="custom">
-              <strong>Something else</strong>
-              <span>Tell CORE what you’re trying to build.</span>
-            </button>
-          </div>
+  active.modules.forEach(([name, desc], index) => {
+    const card = document.createElement("label");
+    card.className = "module-card";
+    card.innerHTML = `<input type="checkbox" value="${name}" ${index < 5 ? "checked" : ""}/><div><b>${name}</b><p>${desc}</p></div>`;
+    wrap.appendChild(card);
 
-          <div class="custom-box hidden" id="customBox">
-            <label>Tell CORE in one sentence</label>
-            <textarea id="customGoal" placeholder="Example: I’m starting a dog grooming business and need help with clients, bookings and marketing."></textarea>
-            <button class="primary" id="customContinue">Continue</button>
-          </div>
-        </div>
+    if (index < 5) {
+      const tag = document.createElement("span");
+      tag.textContent = name;
+      preview.appendChild(tag);
+    }
+  });
 
-        <div class="screen" id="screen-3">
-          <h2>What should this workspace be called?</h2>
-          <p class="helper">Use something simple and recognisable. CORE may suggest names later based on your brand, projects and connected accounts.</p>
-          <input id="workspaceName" placeholder="CSorro OS"/>
-          <div class="suggestion-block">
-            <p>Suggested names — optional</p>
-            <div class="examples">
-              <button data-name="CSorro">CSorro</button>
-              <button data-name="RyanNotBrian">RyanNotBrian</button>
-              <button data-name="Hull Podcast">Hull Podcast</button>
-              <button data-name="My Business">My Business</button>
-            </div>
-          </div>
-          <button class="primary" id="nameNext">Continue</button>
-        </div>
+  wrap.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("change", updatePreviewModules);
+  });
+}
 
-        <div class="screen" id="screen-4">
-          <h2>CORE recommends this setup.</h2>
-          <p class="helper">These are based on your goal. You can switch anything off, but these are safe defaults.</p>
-          <div class="recommendations" id="recommendations"></div>
-          <button class="primary" id="buildWorkspace">Build my workspace</button>
-        </div>
+function updatePreviewModules() {
+  const preview = document.getElementById("previewModules");
+  preview.innerHTML = "";
+  [...document.querySelectorAll("#recommendations input:checked")].forEach((input) => {
+    const tag = document.createElement("span");
+    tag.textContent = input.value;
+    preview.appendChild(tag);
+  });
+}
 
-        <div class="screen" id="screen-5">
-          <div class="ready-state">
-            <div class="core-orb"></div>
-            <h2>Perfect. I’m preparing everything.</h2>
-            <div class="build-list">
-              <div><span></span> Creating workspace structure</div>
-              <div><span></span> Setting up your navigation</div>
-              <div><span></span> Preparing recommended sections</div>
-              <div><span></span> Connecting CORE briefing</div>
-              <div><span></span> Saving your workspace</div>
-            </div>
-            <a class="primary final" href="/os/app/">Open Mission Control</a>
-          </div>
-        </div>
-      </section>
+document.getElementById("beginFlow").addEventListener("click", () => go(2));
 
-      <aside class="preview">
-        <p class="eyebrow">Live Workspace Preview</p>
-        <h2 id="previewName">New Workspace</h2>
-        <p id="previewType">CORE will shape this around your goal.</p>
+document.querySelectorAll(".goal-card").forEach((choice) => {
+  choice.addEventListener("click", () => {
+    document.querySelectorAll(".goal-card").forEach((c) => c.classList.remove("selected"));
+    choice.classList.add("selected");
+    workspaceType = choice.dataset.type;
+    preset = choice.dataset.preset;
+    updatePreview();
 
-        <div class="core-note">
-          <b>CORE recommendation</b>
-          <p id="coreAdvice">Start by choosing what best describes you. I’ll recommend the setup from there.</p>
-        </div>
+    if (preset === "custom") {
+      document.getElementById("customBox").classList.remove("hidden");
+      return;
+    }
 
-        <div class="module-list" id="previewModules">
-          <span>Projects</span>
-          <span>People</span>
-          <span>Storage</span>
-          <span>Knowledge</span>
-          <span>CORE</span>
-        </div>
-      </aside>
-    </section>
-  </main>
+    renderRecommendations();
+    setTimeout(() => go(3), 250);
+  });
+});
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="/os/app/platform-config.js?v=052"></script>
-<script src="/os/app/platform-client.js?v=052"></script>
-<script src="/os/app/workspace/new/workspace.js?v=052"></script>
-<script src="/os/app/theme-engine.js?v=051"></script></body>
-</html>
+document.getElementById("customContinue").addEventListener("click", () => {
+  customGoal = document.getElementById("customGoal").value.trim();
+  if (customGoal) {
+    document.getElementById("coreAdvice").textContent = `Based on “${customGoal}”, I’ll create a flexible workspace you can adjust later.`;
+  }
+  renderRecommendations();
+  go(3);
+});
+
+document.getElementById("workspaceName").addEventListener("input", (event) => {
+  workspaceName = event.target.value;
+  updatePreview();
+});
+
+document.querySelectorAll(".examples button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    workspaceName = btn.dataset.name;
+    document.getElementById("workspaceName").value = workspaceName;
+    updatePreview();
+  });
+});
+
+document.getElementById("nameNext").addEventListener("click", () => {
+  workspaceName = document.getElementById("workspaceName").value || "CSorro OS";
+  updatePreview();
+  renderRecommendations();
+  go(4);
+});
+
+document.getElementById("buildWorkspace").addEventListener("click", () => {
+  const selected = [...document.querySelectorAll("#recommendations input:checked")].map((input) => input.value);
+  const workspace = {
+    name: workspaceName || "CSorro OS",
+    type: workspaceType || "Workspace",
+    preset: preset || "starter",
+    customGoal,
+    priorities: selected,
+    createdAt: new Date().toISOString(),
+    progress: 18
+  };
+  localStorage.setItem("csorroCurrentWorkspace", JSON.stringify(workspace));
+  go(5);
+});

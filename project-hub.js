@@ -1,6 +1,208 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>CSorro OS | Workspaces</title><link href="/os/app/app.css?v=051" rel="stylesheet"/><link href="/os/app/os-page.css?v=051" rel="stylesheet"/><link href="/os/app/projects/project-hub.css?v=051" rel="stylesheet"/><link href="/os/app/v022.css?v=051" rel="stylesheet"/><link href="/os/app/v024.css?v=051" rel="stylesheet"/><link href="/os/app/theme-engine.css?v=051" rel="stylesheet"/><link href="/os/app/design-system.css?v=051" rel="stylesheet"/></head><body><div class="app"><aside class="sidebar csorro-sidebar-v36">
-  <a class="brand" href="/os/app/"><img src="/os/assets/csorro-os-logo.png" alt="CSorro OS"/><strong>CSorro <span>OS</span></strong></a>
-  <div class="workspace-mini-switcher"><label>Workspace</label><select id="sidebarWorkspaceSwitcher"><option>RyanNotBrian · Private</option><option>CSorro Ltd · Private</option><option>Hull Podcast · Private</option></select></div>
-  <nav class="nav"><a class="" href="/os/app/"><i class="nav-icon" data-icon="home"></i><span>Mission Control</span></a><a class="active" href="/os/app/workspace/"><i class="nav-icon" data-icon="grid"></i><span>Workspaces</span></a><a class="" href="/os/app/projects/"><i class="nav-icon" data-icon="folder"></i><span>Projects</span></a><a class="" href="/os/app/people/"><i class="nav-icon" data-icon="users"></i><span>People</span></a><a class="" href="/os/app/messages/"><i class="nav-icon" data-icon="message"></i><span>Messages</span></a><a class="" href="/os/app/network/"><i class="nav-icon" data-icon="globe"></i><span>Network</span></a><a class="" href="/os/app/studio/"><i class="nav-icon" data-icon="film"></i><span>Studio</span></a><a class="" href="/os/app/calendar/"><i class="nav-icon" data-icon="calendar"></i><span>Calendar</span></a><a class="" href="/os/app/storage/"><i class="nav-icon" data-icon="archive"></i><span>Storage</span></a><a class="" href="/os/app/knowledge/"><i class="nav-icon" data-icon="book"></i><span>Knowledge</span></a><a class="" href="/os/app/templates/"><i class="nav-icon" data-icon="folder"></i><span>Templates</span></a><a class="" href="/os/app/settings/"><i class="nav-icon" data-icon="settings"></i><span>Settings</span></a></nav>
-  <button class="core-mini"><span class="core-orb small"></span><div><b>CORE</b><p>Your AI assistant.<br/>Always here to help.</p><span class="core-cta">Open CORE →</span></div></button>
-</aside><main class="main wide"><header class="topbar"><button class="search"><span>Ask CORE or search your OS</span><kbd>Ctrl K</kbd></button><button class="circle" aria-label="Notifications">Notifications</button><button class="avatar">C</button></header><section class="page-hero"><div><p class="eyebrow">Workspaces</p><h1>Company hubs</h1><p>Run each company, client or team in its own private space.</p></div><div class="page-actions"><a class="btn" href="/os/app/workspace/new/">Create workspace</a><a class="btn-secondary" href="/os/app/projects/production-hub/">Open project hub</a></div></section><section class="stat-row"><div class="stat"><b>3</b><span>Workspaces</span></div><div class="stat"><b>10</b><span>Projects</span></div><div class="stat"><b>15</b><span>People</span></div><div class="stat"><b>Private</b><span>Default visibility</span></div></section><section class="os-grid three"><a class="os-card" href="/os/app/workspace/csorro/"><span class="mini-label amber">Private</span><h2>CSorro Ltd</h2><p>Website, OS development, network and launch planning.</p><br/><small class="muted">3 projects · 4 people</small></a><a class="os-card" href="/os/app/projects/production-hub/"><span class="mini-label amber">Private</span><h2>RyanNotBrian</h2><p>Recordings, series planning, server prep, assets and approvals.</p><br/><small class="muted">5 projects · 8 people</small></a><a class="os-card" href="/os/app/projects/production-hub/"><span class="mini-label amber">Private</span><h2>Hull Podcast</h2><p>Episode planning, artwork, guests, clips and socials.</p><br/><small class="muted">2 projects · 3 people</small></a></section><section class="block os-grid two"><article class="os-card"><h2>How it works</h2><div class="list"><div class="list-item"><div><b>Workspace</b><small>Company, client or team hub.</small></div></div><div class="list-item"><div><b>Project</b><small>The actual piece of work inside that hub.</small></div></div><div class="list-item"><div><b>People</b><small>Invite to the workspace or only to selected projects.</small></div></div></div></article><article class="os-card"><h2>Showcase controls</h2><p>All workspaces stay hidden until the owner chooses what to publish.</p><br/><div class="showcase-options"><label><input type="checkbox" checked/> Logo</label><label><input type="checkbox"/> Team</label><label><input type="checkbox" checked/> Portfolio</label><label><input type="checkbox" checked/> Careers</label><label><input type="checkbox"/> Projects</label><label><input type="checkbox"/> Clients</label></div></article></section></main></div><script src="/os/app/v022.js?v=051"></script><script src="/os/app/theme-engine.js?v=051"></script></body></html>
+let workspaceType = "";
+let workspaceName = "";
+let preset = "";
+let customGoal = "";
+
+const screens = [...document.querySelectorAll(".screen")];
+const steps = [...document.querySelectorAll(".step")];
+const progressFill = document.getElementById("progressFill");
+
+const presets = {
+  creator: {
+    advice: "Creators usually need a clear content flow, a place for assets, and simple approvals. I’ll keep it focused.",
+    modules: [
+      ["Projects", "Plan videos, campaigns, series and deliverables."],
+      ["Content Calendar", "Know what is being created, reviewed and published."],
+      ["Asset Library", "Store thumbnails, videos, scripts, brand assets and files."],
+      ["Knowledge Base", "Keep ideas, scripts, notes and repeatable processes in one place."],
+      ["Client Portal", "Let clients or collaborators approve work without seeing everything."],
+      ["CORE Automation", "Summaries, reminders and suggested next steps."]
+    ]
+  },
+  business: {
+    advice: "Businesses need structure, visibility and a calm way to manage people, projects and clients.",
+    modules: [
+      ["Projects", "Track work, goals, deadlines and responsibilities."],
+      ["People", "Manage staff, freelancers, collaborators and permissions."],
+      ["Client Portal", "Give clients a clean place to review updates and approve work."],
+      ["Knowledge Base", "Store processes, documents, policies and decisions."],
+      ["Opportunities", "Track leads, partnerships and future work."],
+      ["CORE Automation", "Prepare briefings, organise information and reduce admin."]
+    ]
+  },
+  agency: {
+    advice: "Agencies need repeatable client workflows, clear approvals, and visibility across multiple projects.",
+    modules: [
+      ["Client Workspaces", "Separate each client safely with the right permissions."],
+      ["Projects", "Manage campaigns, deliverables and timelines."],
+      ["Team Collaboration", "Keep designers, editors, managers and clients aligned."],
+      ["Asset Library", "Store brand assets, approvals and files per client."],
+      ["Opportunities", "Manage leads, proposals and future work."],
+      ["CORE Automation", "Summaries, task suggestions and client updates."]
+    ]
+  },
+  project: {
+    advice: "Project managers need clarity, deadlines, ownership and fewer scattered conversations.",
+    modules: [
+      ["Projects", "Plan phases, deadlines, tasks and ownership."],
+      ["Tasks", "Track what needs doing, who owns it and what is blocked."],
+      ["Calendar", "Keep deadlines, meetings and milestones visible."],
+      ["Knowledge Base", "Store plans, decisions, notes and documentation."],
+      ["People", "Manage roles, responsibilities and access."],
+      ["CORE Automation", "Prepare daily priorities and highlight risks."]
+    ]
+  },
+  starter: {
+    advice: "No problem. I’ll set up a simple, safe workspace that works for most new ventures.",
+    modules: [
+      ["Projects", "A simple place to organise what you are building."],
+      ["Tasks", "Clear next steps so you always know what to do."],
+      ["Assets", "A home for files, images, documents and ideas."],
+      ["Knowledge", "A simple notebook for decisions, notes and how things work."],
+      ["People", "Add collaborators when you are ready."],
+      ["CORE Automation", "Guidance, summaries and reminders when you need them."]
+    ]
+  },
+  custom: {
+    advice: "I’ll recommend a flexible setup based on your description.",
+    modules: [
+      ["Projects", "Organise the work into clear areas."],
+      ["Tasks", "Break the work into manageable next steps."],
+      ["Assets", "Keep important files and resources together."],
+      ["Knowledge", "Store decisions, notes and guidance."],
+      ["People", "Add the right people when needed."],
+      ["CORE Automation", "Help organise and guide the workspace."]
+    ]
+  }
+};
+
+function go(step) {
+  screens.forEach((screen) => screen.classList.remove("active"));
+  steps.forEach((s) => s.classList.remove("active"));
+  document.getElementById(`screen-${step}`).classList.add("active");
+  document.querySelector(`.step[data-step="${step}"]`).classList.add("active");
+  progressFill.style.width = `${step * 20}%`;
+}
+
+function updatePreview() {
+  document.getElementById("previewName").textContent = workspaceName || "New Workspace";
+  document.getElementById("previewType").textContent = workspaceType ? `${workspaceType} workspace` : "CORE will shape this around your goal.";
+  const active = presets[preset] || presets.starter;
+  document.getElementById("coreAdvice").textContent = active.advice;
+}
+
+function renderRecommendations() {
+  const active = presets[preset] || presets.starter;
+  const wrap = document.getElementById("recommendations");
+  const preview = document.getElementById("previewModules");
+  wrap.innerHTML = "";
+  preview.innerHTML = "";
+
+  active.modules.forEach(([name, desc], index) => {
+    const card = document.createElement("label");
+    card.className = "module-card";
+    card.innerHTML = `<input type="checkbox" value="${name}" ${index < 5 ? "checked" : ""}/><div><b>${name}</b><p>${desc}</p></div>`;
+    wrap.appendChild(card);
+
+    if (index < 5) {
+      const tag = document.createElement("span");
+      tag.textContent = name;
+      preview.appendChild(tag);
+    }
+  });
+
+  wrap.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("change", updatePreviewModules);
+  });
+}
+
+function updatePreviewModules() {
+  const preview = document.getElementById("previewModules");
+  preview.innerHTML = "";
+  [...document.querySelectorAll("#recommendations input:checked")].forEach((input) => {
+    const tag = document.createElement("span");
+    tag.textContent = input.value;
+    preview.appendChild(tag);
+  });
+}
+
+document.getElementById("beginFlow").addEventListener("click", () => go(2));
+
+document.querySelectorAll(".goal-card").forEach((choice) => {
+  choice.addEventListener("click", () => {
+    document.querySelectorAll(".goal-card").forEach((c) => c.classList.remove("selected"));
+    choice.classList.add("selected");
+    workspaceType = choice.dataset.type;
+    preset = choice.dataset.preset;
+    updatePreview();
+
+    if (preset === "custom") {
+      document.getElementById("customBox").classList.remove("hidden");
+      return;
+    }
+
+    renderRecommendations();
+    setTimeout(() => go(3), 250);
+  });
+});
+
+document.getElementById("customContinue").addEventListener("click", () => {
+  customGoal = document.getElementById("customGoal").value.trim();
+  if (customGoal) {
+    document.getElementById("coreAdvice").textContent = `Based on “${customGoal}”, I’ll create a flexible workspace you can adjust later.`;
+  }
+  renderRecommendations();
+  go(3);
+});
+
+document.getElementById("workspaceName").addEventListener("input", (event) => {
+  workspaceName = event.target.value;
+  updatePreview();
+});
+
+document.querySelectorAll(".examples button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    workspaceName = btn.dataset.name;
+    document.getElementById("workspaceName").value = workspaceName;
+    updatePreview();
+  });
+});
+
+document.getElementById("nameNext").addEventListener("click", () => {
+  workspaceName = document.getElementById("workspaceName").value || "CSorro OS";
+  updatePreview();
+  renderRecommendations();
+  go(4);
+});
+
+document.getElementById("buildWorkspace").addEventListener("click", async () => {
+  const selected = [...document.querySelectorAll("#recommendations input:checked")].map((input) => input.value);
+  const workspace = {
+    name: workspaceName || "CSorro OS",
+    type: workspaceType || "Workspace",
+    preset: preset || "starter",
+    customGoal,
+    priorities: selected,
+    createdAt: new Date().toISOString(),
+    progress: 18
+  };
+  const buildButton = document.getElementById("buildWorkspace");
+  const originalText = buildButton.textContent;
+  buildButton.disabled = true;
+  buildButton.textContent = "Building...";
+  try {
+    if (window.CSorroPlatform && CSorroPlatform.status.mode === 'live') {
+      const created = await CSorroPlatform.createWorkspace(workspace);
+      workspace.live = true;
+      workspace.id = created.workspace_id || created.id || workspace.id;
+      workspace.projectId = created.project_id || null;
+    }
+    localStorage.setItem("csorroCurrentWorkspace", JSON.stringify(workspace));
+    go(5);
+  } catch (err) {
+    alert(err.message || "Could not create workspace. Check Supabase settings and login status.");
+  } finally {
+    buildButton.disabled = false;
+    buildButton.textContent = originalText;
+  }
+});

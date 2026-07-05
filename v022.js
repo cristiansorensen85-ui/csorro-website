@@ -1,3 +1,144 @@
-/* Build 019 - shared OS page polish */
-body{overflow-x:hidden}.main.wide{max-width:1180px}.page-title{margin:0 0 28px}.page-title h1{font-size:clamp(54px,6vw,92px);line-height:.88;letter-spacing:-.07em;margin:0}.page-title p{font-size:20px;color:#cbd3df;max-width:790px}.top-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.btn,.btn-secondary{min-height:46px;border-radius:15px;padding:0 18px;border:0;font-weight:1000;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}.btn{background:linear-gradient(135deg,#ffb000,#ff6b00);color:#111}.btn-secondary{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);color:#fff}.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.content-grid.two{grid-template-columns:1.25fr .75fr}.content-grid.four{grid-template-columns:repeat(4,1fr)}.os-card{border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.026));border-radius:26px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.18)}.os-card:hover{border-color:rgba(255,176,0,.32);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}.os-card h2,.os-card h3{letter-spacing:-.045em;margin:0 0 8px}.os-card h2{font-size:32px}.os-card h3{font-size:24px}.os-card p{color:#c4ccd8;line-height:1.45}.mini-label{display:inline-flex;border-radius:999px;padding:7px 9px;margin-bottom:14px;background:rgba(255,176,0,.12);color:#ffb000;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:1000}.mini-label.green{background:rgba(53,199,89,.14);color:#35c759}.mini-label.purple{background:rgba(128,90,213,.2);color:#b794f4}.mini-label.red{background:rgba(255,69,58,.16);color:#ff6b61}.mini-label.blue{background:rgba(64,156,255,.16);color:#66b6ff}.metric{display:flex;align-items:end;justify-content:space-between;gap:16px}.metric strong{font-size:42px;letter-spacing:-.06em}.bar{height:9px;background:#2b313d;border-radius:999px;overflow:hidden;margin-top:16px}.bar i{display:block;height:100%;background:linear-gradient(90deg,#ffb000,#ff6b00);border-radius:999px}.list{display:grid;gap:10px}.list-row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:18px;padding:14px}.list-row b{display:block}.list-row span,.list-row p{color:#9da7b6;margin:3px 0 0}.icon-chip{width:42px;height:42px;border-radius:15px;background:rgba(255,176,0,.13);color:#ffb000;display:grid;place-items:center;font-weight:1000}.kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.lane{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);border-radius:24px;padding:16px}.lane h3{font-size:15px;text-transform:uppercase;letter-spacing:.14em;color:#ffb000;margin:0 0 14px}.task{border:1px solid rgba(255,255,255,.09);background:#111821;border-radius:18px;padding:14px;margin-bottom:10px}.task b{display:block;margin-bottom:6px}.task p{font-size:14px;color:#aeb8c7;margin:0}.core-strip{margin:24px 0;border:1px solid rgba(255,176,0,.22);background:linear-gradient(90deg,rgba(255,176,0,.10),rgba(255,255,255,.035));border-radius:24px;padding:18px 20px;display:flex;justify-content:space-between;gap:18px;align-items:center}.core-strip b{color:#ffb000;letter-spacing:.16em;text-transform:uppercase;font-size:12px}.core-strip p{margin:5px 0 0;color:#d7dee9}.table-card{overflow:hidden}.table-row{display:grid;grid-template-columns:1fr 150px 120px;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.08)}.table-row:first-child{border-top:0}.asset-thumb{height:138px;border-radius:20px;background:radial-gradient(circle at 35% 28%,rgba(255,176,0,.45),transparent 30%),linear-gradient(135deg,#151d27,#080c11);border:1px solid rgba(255,255,255,.08);margin-bottom:14px}.settings-row{display:flex;justify-content:space-between;gap:18px;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding:18px 0}.settings-row:first-child{border-top:0}.toggle{width:52px;height:30px;border-radius:999px;background:#ffb000;position:relative}.toggle:before{content:"";position:absolute;right:4px;top:4px;width:22px;height:22px;border-radius:50%;background:#111}.empty-note{border:1px dashed rgba(255,176,0,.3);background:rgba(255,176,0,.055);border-radius:24px;padding:22px;color:#d7dee9}@media(max-width:1280px){.content-grid,.content-grid.four,.kanban{grid-template-columns:1fr 1fr}.content-grid.two{grid-template-columns:1fr}}@media(max-width:960px){.content-grid,.content-grid.four,.kanban{grid-template-columns:1fr}.page-title h1{font-size:48px}.core-strip{display:block}.table-row{grid-template-columns:1fr}}
-.task-link{display:block;color:inherit;text-decoration:none}.task-link:hover{border-color:rgba(255,176,0,.38)}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="CSorro OS — The operating system for creative work. Reduce mental load, organise projects, and bring people, teams and production together."/>
+  <title>CSorro OS | The Operating System for Creative Work</title>
+  <link href="/os/styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <header class="os-header">
+    <a class="brand" href="/">
+      <img src="/images/csorro-logo.png" alt="CSorro logo"/>
+    </a>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#features">Features</a>
+      <a href="#core">CORE</a>
+      <a href="#access">Request Access</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Introducing CSorro OS</p>
+        <h1>The operating system for creative work.</h1>
+        <p class="lead">CSorro OS brings people, projects, assets, knowledge and intelligent workflows together so creators, teams and businesses can move from idea to delivery with clarity and confidence.</p>
+        <div class="actions">
+          <a class="btn primary" href="/os/app/">Launch app preview</a>
+          <a class="btn" href="#mission">Explore the vision</a>
+        </div>
+        <div class="principles">
+          <span>Reduce mental load</span>
+          <span>People create. AI works.</span>
+          <span>Everything has a home</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="app-shell">
+          <aside>
+            <div class="mini-logo">CSorro <strong>OS</strong></div>
+            <a class="active">Mission Control</a>
+            <a>Workspaces</a>
+            <a>Projects</a>
+            <a>People</a>
+            <a>Assets</a>
+            <a>Knowledge</a>
+            <a>CORE</a>
+          </aside>
+          <section class="mission">
+            <div class="topline">
+              <span>Mission Control</span>
+              <button>Ask CORE</button>
+            </div>
+            <h2>Good Morning, Cristian.</h2>
+            <p>Everything is ready.</p>
+            <div class="grid">
+              <article>
+                <small>Today's Focus</small>
+                <b>3 priorities</b>
+                <p>Website review, creator application, Discord setup.</p>
+              </article>
+              <article>
+                <small>Continue Working</small>
+                <b>CSorro OS</b>
+                <div class="progress"><i></i></div>
+                <p>72% ready</p>
+              </article>
+              <article class="wide">
+                <small>CORE Briefing</small>
+                <b>I've prepared today's priorities.</b>
+                <p>Two creators need approval. One client is waiting for feedback. Everything else is on schedule.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mission">
+      <p class="eyebrow">The promise</p>
+      <h2>Less chaos. More clarity.</h2>
+      <p>CSorro OS exists to reduce the mental load of creative work. It is designed to make users feel calm, organised, confident and in control from the moment they open it.</p>
+    </section>
+
+    <section class="feature-grid" id="features">
+      <article>
+        <h3>Mission Control</h3>
+        <p>One calm home screen showing what matters today, what changed, and what needs attention.</p>
+      </article>
+      <article>
+        <h3>Workspace Engine</h3>
+        <p>Create a workspace by answering a few simple questions. CSorro OS builds the structure for you.</p>
+      </article>
+      <article>
+        <h3>Projects & Tasks</h3>
+        <p>Simple, focused project management built around momentum, clarity and delivery.</p>
+      </article>
+      <article>
+        <h3>People & Teams</h3>
+        <p>Manage creators, freelancers, clients, staff and collaborators with clean roles and access.</p>
+      </article>
+      <article>
+        <h3>Assets & Knowledge</h3>
+        <p>Files, notes, guides, briefs, decisions and brand assets live where they belong.</p>
+      </article>
+      <article>
+        <h3>Discord Integration</h3>
+        <p>Private creator hubs, tickets, roles and workspaces can be created automatically.</p>
+      </article>
+    </section>
+
+    <section class="core" id="core">
+      <div>
+        <p class="eyebrow">Powered by CORE</p>
+        <h2>AI should never create work. It should work.</h2>
+        <p>CORE quietly organises, summarises, prepares and connects the work around your work. It helps clients, creators and teams move from A to B faster, cleaner and with more confidence.</p>
+      </div>
+      <div class="core-panel">
+        <p>CORE Briefing</p>
+        <ul>
+          <li>Meeting notes prepared</li>
+          <li>Assets organised</li>
+          <li>Tasks suggested</li>
+          <li>Team updates ready</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="access" id="access">
+      <p class="eyebrow">Early access</p>
+      <h2>CSorro OS is now in active development.</h2>
+      <p>Join the early access list, discuss a creator workspace, or follow the build.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:contact@csorro.co.uk?subject=CSorro%20OS%20Early%20Access">Request early access</a>
+        <a class="btn" href="/os/app/">Open app preview</a>
+        <a class="btn" href="https://discord.gg/P9U6ZsZYpC">Join Discord</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
