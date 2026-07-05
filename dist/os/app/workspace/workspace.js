@@ -57,7 +57,7 @@ const presets = {
     modules: [
       ["Projects", "A simple place to organise what you are building."],
       ["Tasks", "Clear next steps so you always know what to do."],
-      ["Storage", "Company drive for files, reviews, media and documents."],
+      ["Assets", "A home for files, images, documents and ideas."],
       ["Knowledge", "A simple notebook for decisions, notes and how things work."],
       ["People", "Add collaborators when you are ready."],
       ["CORE Automation", "Guidance, summaries and reminders when you need them."]
@@ -68,7 +68,7 @@ const presets = {
     modules: [
       ["Projects", "Organise the work into clear areas."],
       ["Tasks", "Break the work into manageable next steps."],
-      ["Storage", "Keep workspace files, media and reviews together."],
+      ["Assets", "Keep important files and resources together."],
       ["Knowledge", "Store decisions, notes and guidance."],
       ["People", "Add the right people when needed."],
       ["CORE Automation", "Help organise and guide the workspace."]

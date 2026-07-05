@@ -1,15 +1,20 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cristian Sorensen | Founder of CSorro</title><meta name="description" content="Cristian Sorensen — production manager, creator operations specialist and founder of CSorro OS."><link rel="stylesheet" href="/styles/global.css?v=064"><link rel="stylesheet" href="../styles/global.css?v=064"></head><body><div class="site-shell"><header class="site-header">
-  <a class="brand-word" href="/"><span class="logo-text">CSORRO <em>OS</em></span><span class="logo-sub">Business Operating System</span></a>
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="nav-item"><a class="nav-link" href="/product/">Product⌄</a><div class="mega"><a href="/product/#dashboard"><strong>Dashboard</strong><span>One daily view for the whole business.</span></a><a href="/product/#studio"><strong>Studio Review</strong><span>Upload, comment, approve and version creative work.</span></a><a href="/product/#storage"><strong>Workspace Storage</strong><span>Libraries, permissions, versions and linked files.</span></a><a href="/product/#finance"><strong>CRM, Reports & Finance</strong><span>Clients, reports, invoices and business admin.</span></a></div></div>
-    <div class="nav-item"><a class="nav-link" href="/solutions/">Solutions⌄</a><div class="mega"><a href="/solutions/#business"><strong>Business teams</strong><span>Run operations, clients, people and projects.</span></a><a href="/solutions/#agency"><strong>Agencies</strong><span>Manage clients, assets, reviews and approvals.</span></a><a href="/solutions/#creative"><strong>Creative teams</strong><span>Production, storage, feedback and delivery.</span></a><a href="/solutions/#custom"><strong>Custom workspaces</strong><span>Enable only the modules your team needs.</span></a></div></div>
-    <div class="nav-item"><a class="nav-link" href="/resources/">Resources⌄</a><div class="mega"><a href="/resources/#guides"><strong>Guides</strong><span>Set up workspaces, storage and permissions.</span></a><a href="/resources/#templates"><strong>Templates</strong><span>Starter layouts for different types of teams.</span></a><a href="/resources/#roadmap"><strong>Roadmap</strong><span>What is live, next and planned.</span></a><a href="/resources/#updates"><strong>Updates</strong><span>Release notes as CSorro grows.</span></a></div></div>
-    <a class="nav-link" href="/pricing/">Pricing</a>
-    <a class="nav-link" href="/about/">About</a>
-  </nav>
-  <div class="site-actions"><a class="btn ghost" href="/os/app/login/">Sign in</a><a class="btn primary" href="/os/app/login/">Get started free</a></div>
-  <a class="btn mobile-menu" href="/os/app/login/">Start</a>
-</header><main id="top" class="founder-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Cristian Sorensen — founder of CSorro, production manager and creative operations specialist." name="description"/>
+<title>Founder | Cristian Sorensen | CSorro</title>
+<link href="/styles/global.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header product-header">
+<a aria-label="CSorro home" class="brand" href="/">
+<img alt="C Sorro logo" src="/images/csorro-logo.png"/>
+</a>
+<nav><a href="/#product">Product</a><a href="/#features">Features</a><a href="/#showcase">Showcase</a><a href="/founder/">Founder</a><a href="/founder/#work">Work</a><a href="/founder/#contact">Contact</a><a class="nav-cta" href="/os/app/">Launch OS</a></nav>
+</header>
+<main id="top" class="founder-page">
 <section class="founder-intro section-pad grid-two" id="founder">
 <div class="reveal">
 <p class="eyebrow">Meet the founder</p>
@@ -243,9 +248,27 @@
 </aside>
 </div>
 </section>
-</main><footer class="footer"><div><strong>CSorro OS</strong><br>Built in Hull, United Kingdom. The business operating system for modern teams.</div><div><a href="/product/">Product</a> · <a href="/solutions/">Solutions</a> · <a href="/pricing/">Pricing</a> · <a href="/about/">About</a></div></footer></div><script>
-const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting)entry.target.classList.add('is-visible');});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach((el)=>observer.observe(el));
-const contactForm=document.getElementById('contactForm');
-if(contactForm){contactForm.addEventListener('submit',(event)=>{event.preventDefault();const subject=document.getElementById('contactSubject').value.trim()||'Project enquiry from csorro.co.uk';const message=document.getElementById('contactMessage').value.trim();const body=message||'Hi Cristian, I would like to talk about a project or opportunity.';window.location.href=`mailto:cristian.sorensen85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;});}
-</script></body></html>
+</main>
+</main>
+<footer><img alt="C Sorro logo" src="/images/csorro-logo.png"/><span>© 2026 CSorro. Built by Cristian Sorensen.</span></footer>
+<script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const subject = document.getElementById('contactSubject').value.trim() || 'Project enquiry from csorro.co.uk';
+          const message = document.getElementById('contactMessage').value.trim();
+          const body = message || 'Hi Cristian, I would like to talk about a project or opportunity.';
+          window.location.href = `mailto:cristian.sorensen85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+      }
+    </script>
+</body>
+</html>
