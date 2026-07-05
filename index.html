@@ -1,99 +1,60 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CSorro OS | Business Operating System</title><meta name="description" content="CSorro OS is the business operating system for modern teams — projects, people, storage, clients, communication, reports and AI in one place."><link rel="stylesheet" href="/styles/global.css?v=066"><link rel="stylesheet" href="styles/global.css?v=066"><style>
-/* Emergency Build 066 homepage fix: force a clean, stable hero preview */
-.home-hero-v65{grid-template-columns:minmax(420px,.9fr) minmax(560px,1.1fr)!important;align-items:center!important;gap:clamp(42px,6vw,96px)!important;padding-top:clamp(70px,8vw,120px)!important;padding-bottom:clamp(70px,8vw,120px)!important;min-height:calc(100vh - 74px)!important;}
-.hero-product-card{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;}
-.preview-shell{width:min(760px,100%);border:1px solid rgba(255,255,255,.14);border-radius:30px;background:radial-gradient(circle at 35% 0,rgba(0,224,194,.20),transparent 28rem),linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.026));box-shadow:0 30px 90px rgba(0,0,0,.42),0 0 85px rgba(0,224,194,.13);padding:18px;transform:perspective(1200px) rotateY(-5deg) rotateX(1.5deg);overflow:hidden;}
-.preview-shell *{box-sizing:border-box;}
-.preview-topbar{height:44px;border-bottom:1px solid rgba(255,255,255,.10);display:flex;align-items:center;justify-content:space-between;color:#eaf6ff;font-weight:950;letter-spacing:.04em;}
-.preview-topbar i{width:220px;height:28px;border-radius:10px;background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.10);}
-.preview-body{display:grid!important;grid-template-columns:150px minmax(0,1fr) 220px!important;gap:14px!important;padding-top:14px!important;}
-.preview-sidebar,.preview-main,.preview-panel{border:1px solid rgba(255,255,255,.10);background:rgba(4,12,18,.48);border-radius:20px;padding:16px;min-width:0;}
-.preview-sidebar{display:flex;flex-direction:column;gap:8px;}
-.preview-sidebar b{margin-bottom:8px;color:#fff;}
-.preview-sidebar span{display:block;padding:8px 10px;border-radius:10px;color:#9fb1bf;font-size:13px;font-weight:800;}
-.preview-sidebar .active{background:rgba(0,224,194,.13);color:#00e0c2;}
-.preview-greeting{font-size:22px;font-weight:950;margin:0 0 14px!important;color:#fff;}
-.preview-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px;}
-.preview-stats div{border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(255,255,255,.05);padding:13px;}
-.preview-stats strong{display:block;font-size:26px;color:#fff;line-height:1;}
-.preview-stats small{display:block;color:#9fb1bf;font-size:11px;margin-top:5px;}
-.preview-projects{display:grid;gap:10px;}
-.preview-project{display:grid!important;grid-template-columns:44px minmax(0,1fr) 110px 42px!important;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(255,255,255,.045);padding:10px;}
-.preview-project img{width:44px;height:44px;border-radius:12px;object-fit:cover;}
-.preview-project b{display:block;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.preview-project small{display:block;color:#9fb1bf;}
-.preview-project em{height:8px;border-radius:999px;background:#14232d;overflow:hidden;display:block;}
-.preview-project em i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#00e0c2,#b7ff67);}
-.preview-project strong{font-size:13px;color:#dff7ef;}
-.preview-panel h3{margin:18px 0 10px;font-size:18px;}
-.preview-panel p{margin:0;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#c8d5df;font-weight:750;}
-.preview-panel small{color:#9fb1bf;margin-left:4px;}
-.storage-ring{width:132px;height:132px;border-radius:50%;margin:4px auto 12px;background:conic-gradient(#00e0c2 0 68%,#b7ff67 68% 78%,#20313b 78%);display:grid;place-items:center;}
-.storage-ring span{width:88px;height:88px;border-radius:50%;background:#08131b;display:grid;place-items:center;text-align:center;color:#00e0c2;font-size:27px;font-weight:1000;line-height:1;}
-.storage-ring small{display:block;color:#fff;font-size:11px;margin-top:4px;}
-@media(max-width:1280px){.home-hero-v65{grid-template-columns:1fr!important;}.preview-shell{transform:none;}.hero-product-card{min-height:auto;}}
-@media(max-width:760px){.preview-body{grid-template-columns:1fr!important;}.preview-sidebar{display:none;}.preview-panel{display:none;}.preview-stats{grid-template-columns:repeat(2,1fr);}.preview-project{grid-template-columns:44px 1fr!important;}.preview-project em,.preview-project strong{display:none;}.preview-topbar i{display:none;}}
-</style></head><body><div class="site-shell"><header class="site-header">
-  <a class="brand-word" href="/"><span class="logo-text">CSORRO <em>OS</em></span><span class="logo-sub">Business Operating System</span></a>
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="nav-item"><a class="nav-link" href="/product/">Product⌄</a><div class="mega"><a href="/product/#dashboard"><strong>Dashboard</strong><span>One daily view for the whole business.</span></a><a href="/product/#studio"><strong>Studio Review</strong><span>Upload, comment, approve and version creative work.</span></a><a href="/product/#storage"><strong>Workspace Storage</strong><span>Libraries, permissions, versions and linked files.</span></a><a href="/product/#finance"><strong>CRM, Reports & Finance</strong><span>Clients, reports, invoices and business admin.</span></a></div></div>
-    <div class="nav-item"><a class="nav-link" href="/solutions/">Solutions⌄</a><div class="mega"><a href="/solutions/#business"><strong>Business teams</strong><span>Run operations, clients, people and projects.</span></a><a href="/solutions/#agency"><strong>Agencies</strong><span>Manage clients, assets, reviews and approvals.</span></a><a href="/solutions/#creative"><strong>Creative teams</strong><span>Production, storage, feedback and delivery.</span></a><a href="/solutions/#custom"><strong>Custom workspaces</strong><span>Enable only the modules your team needs.</span></a></div></div>
-    <div class="nav-item"><a class="nav-link" href="/resources/">Resources⌄</a><div class="mega"><a href="/resources/#guides"><strong>Guides</strong><span>Set up workspaces, storage and permissions.</span></a><a href="/resources/#templates"><strong>Templates</strong><span>Starter layouts for different types of teams.</span></a><a href="/resources/#roadmap"><strong>Roadmap</strong><span>What is live, next and planned.</span></a><a href="/resources/#updates"><strong>Updates</strong><span>Release notes as CSorro grows.</span></a></div></div>
-    <a class="nav-link" href="/pricing/">Pricing</a>
-    <a class="nav-link" href="/founder/">Founder</a>
-    <a class="nav-link" href="/about/">About</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSorro OS | Business Operating System</title>
+  <meta name="description" content="CSorro OS is the business operating system for modern teams." />
+  <style>
+    :root{--bg:#061017;--bg2:#081720;--card:rgba(255,255,255,.055);--line:rgba(255,255,255,.12);--text:#f2f7fb;--muted:#9fb2bf;--cyan:#00e0c2;--lime:#b7ff67;--shadow:0 28px 90px rgba(0,0,0,.45)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 70% 8%,rgba(0,224,194,.10),transparent 34rem),linear-gradient(180deg,#03090e 0%,var(--bg) 55%,#03090e 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(1440px,calc(100% - 56px));margin:0 auto}.site-header{position:sticky;top:0;z-index:20;height:76px;background:rgba(3,9,14,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{display:flex;flex-direction:column;line-height:1}.brand strong{font-size:27px;font-weight:1000;letter-spacing:.045em}.brand em{font-style:normal;color:var(--cyan)}.brand span{margin-top:8px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.24em;text-transform:uppercase}.links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:950;text-transform:uppercase;letter-spacing:.035em}.nav-item{position:relative;padding:28px 0}.nav-link{opacity:.92}.nav-link:hover{color:var(--cyan)}.drop{display:none;position:absolute;top:68px;left:50%;transform:translateX(-50%);width:310px;padding:10px;border:1px solid var(--line);border-radius:18px;background:#08131b;box-shadow:var(--shadow)}.nav-item:hover .drop{display:grid;gap:6px}.drop a{display:block;padding:12px;border-radius:13px}.drop a:hover{background:rgba(0,224,194,.08)}.drop strong{display:block;font-size:13px;text-transform:none}.drop span{display:block;margin-top:3px;color:var(--muted);font-size:12px;font-weight:650;text-transform:none;letter-spacing:0}.actions{display:flex;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 22px;border-radius:14px;border:1px solid var(--line);font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.04em}.btn.primary{border:0;background:linear-gradient(135deg,#25f0c6,var(--lime));color:#03100d}.btn.ghost{background:rgba(255,255,255,.035)}.btn:hover{transform:translateY(-1px)}
+    .hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:minmax(420px,.9fr) minmax(560px,1.1fr);gap:clamp(42px,6vw,100px);align-items:center;padding:90px 0}.eyebrow{margin:0 0 20px;color:var(--cyan);font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.22em}.hero h1{margin:0;font-size:clamp(58px,7vw,118px);line-height:.93;letter-spacing:-.075em;font-weight:1000}.hero h1 span{display:block;background:linear-gradient(100deg,#25f0c6,var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:680px;margin:26px 0 0;color:#d7e6ee;font-size:clamp(18px,1.35vw,23px)}.hero-ctas{display:flex;align-items:center;gap:18px;margin-top:34px}.play{width:54px;height:54px;border-radius:50%;border:2px solid var(--cyan);display:grid;place-items:center;color:var(--cyan);font-size:17px}.ticks{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px;color:#cfe1ea;font-size:13px}.ticks span:before{content:'✓';color:var(--cyan);margin-right:9px}.preview{position:relative}.preview:before{content:'';position:absolute;inset:8% -4%;background:radial-gradient(circle,rgba(0,224,194,.18),transparent 60%);filter:blur(14px);z-index:-1}.os-card{border:1px solid var(--line);border-radius:32px;background:radial-gradient(circle at 25% 0,rgba(0,224,194,.20),transparent 26rem),linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.026));box-shadow:var(--shadow);padding:18px;transform:perspective(1200px) rotateY(-4deg);overflow:hidden}.os-top{height:46px;border-bottom:1px solid rgba(255,255,255,.10);display:flex;align-items:center;justify-content:space-between}.os-top b{font-size:15px;letter-spacing:.04em}.search{width:230px;height:28px;border-radius:10px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.10)}.os-body{display:grid;grid-template-columns:150px minmax(0,1fr) 220px;gap:14px;padding-top:14px}.panel,.side,.main{border:1px solid rgba(255,255,255,.10);background:rgba(4,12,18,.52);border-radius:21px;padding:16px;min-width:0}.side{display:flex;flex-direction:column;gap:8px}.side b{margin-bottom:8px}.side span{padding:8px 10px;border-radius:10px;color:var(--muted);font-size:13px;font-weight:800}.side .active{background:rgba(0,224,194,.13);color:var(--cyan)}.greeting{margin:0 0 14px;font-size:22px;font-weight:1000}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.stat{border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(255,255,255,.05);padding:13px}.stat strong{display:block;font-size:26px;line-height:1}.stat small{color:var(--muted);font-size:11px}.projects{display:grid;gap:10px}.project{display:grid;grid-template-columns:44px minmax(0,1fr) 105px 38px;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(255,255,255,.045);padding:10px}.project img{width:44px;height:44px;object-fit:cover;border-radius:12px}.project b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.project small{color:var(--muted)}.bar{height:8px;border-radius:99px;background:#14232d;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--lime));border-radius:99px}.ring{width:132px;height:132px;border-radius:50%;margin:6px auto 12px;background:conic-gradient(var(--cyan) 0 68%,var(--lime) 68% 78%,#20313b 78%);display:grid;place-items:center}.ring span{width:88px;height:88px;border-radius:50%;background:#08131b;display:grid;place-items:center;text-align:center;color:var(--cyan);font-size:27px;font-weight:1000;line-height:1}.ring small{display:block;color:#fff;font-size:11px}.panel h3{margin:18px 0 8px}.panel p{margin:0;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#c8d5df;font-weight:750}.panel small{color:var(--muted);margin-left:4px}
+    .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}.strip-inner{display:flex;align-items:center;gap:34px;padding:26px 0}.strip-title{width:210px;color:var(--muted);font-size:12px;font-weight:1000;text-transform:uppercase;letter-spacing:.18em}.strip-title strong{display:block;margin-top:4px;color:var(--cyan);font-size:18px;letter-spacing:.08em}.creator-list{display:flex;align-items:center;gap:28px;overflow:auto;padding-bottom:2px}.creator{display:flex;align-items:center;gap:12px;min-width:max-content}.creator img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}.creator b{display:block;font-size:14px}.creator small{color:var(--muted)}section{padding:92px 0}.center{text-align:center;max-width:850px;margin:0 auto 36px}.center h2,.founder h2,.cta h2{margin:0;font-size:clamp(42px,4.5vw,70px);line-height:1;letter-spacing:-.055em}.center p,.founder p,.cta p{color:#c7d7e0;font-size:18px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature{border:1px solid var(--line);border-radius:24px;background:var(--card);padding:24px;min-height:150px}.feature b{display:block;font-size:20px}.feature span{display:block;margin-top:10px;color:var(--muted)}.founder{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(0,224,194,.05),transparent)}.founder-inner{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}.footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer strong{color:#fff}.footer a{color:#e9f3f9}
+    @media(max-width:1180px){.links{display:none}.hero{grid-template-columns:1fr}.os-card{transform:none}.preview{max-width:920px}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.wrap{width:min(100% - 28px,1440px)}.actions .ghost{display:none}.hero{padding:58px 0}.hero h1{font-size:58px}.os-body{grid-template-columns:1fr}.side,.panel{display:none}.stats{grid-template-columns:repeat(2,1fr)}.project{grid-template-columns:44px 1fr}.bar,.project strong{display:none}.strip-inner,.founder-inner,.footer-inner{display:block}.strip-title{width:auto;margin-bottom:18px}.grid{grid-template-columns:1fr}.search{display:none}}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="/"><strong>CSORRO <em>OS</em></strong><span>Business Operating System</span></a>
+  <nav class="links" aria-label="Main navigation">
+    <div class="nav-item"><a class="nav-link" href="/product/">Product⌄</a><div class="drop"><a href="/product/#dashboard"><strong>Dashboard</strong><span>One daily view for the whole business.</span></a><a href="/product/#studio"><strong>Studio Review</strong><span>Creative review, comments and approval.</span></a><a href="/product/#storage"><strong>Storage</strong><span>Libraries, files, versions and permissions.</span></a><a href="/product/#finance"><strong>CRM & Finance</strong><span>Clients, invoices, reports and admin.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/solutions/">Solutions⌄</a><div class="drop"><a href="/solutions/#creator"><strong>Creators</strong><span>Run content, assets and production.</span></a><a href="/solutions/#agency"><strong>Agencies</strong><span>Manage client work and approvals.</span></a><a href="/solutions/#business"><strong>Businesses</strong><span>Connect people, projects and finance.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/resources/">Resources⌄</a><div class="drop"><a href="/resources/#guides"><strong>Guides</strong><span>Set up and run CSorro OS.</span></a><a href="/resources/#templates"><strong>Templates</strong><span>Starter workflows for teams.</span></a><a href="/resources/#roadmap"><strong>Roadmap</strong><span>What is live, next and planned.</span></a></div></div>
+    <a class="nav-link" href="/pricing/">Pricing</a><a class="nav-link" href="/founder/">Founder</a><a class="nav-link" href="/about/">About</a>
   </nav>
-  <div class="site-actions"><a class="btn ghost" href="/os/app/login/">Sign in</a><a class="btn primary" href="/os/app/login/">Get started free</a></div>
-  <a class="btn mobile-menu" href="/os/app/login/">Start</a>
-</header><main>
-<section class="hero home-hero-v65">
-  <div class="hero-copy-v65"><p class="eyebrow">One operating system for modern teams</p><h1>Run your business. <span>All in one place.</span></h1><p class="lead">Projects, people, storage, clients, communication, studio review, reports, invoices and AI — CSorro brings the tools a business needs into one clean operating system.</p><div class="hero-ctas"><a class="btn primary" href="/os/app/login/">Get started free →</a><a class="play" href="/product/">▶</a><a href="/product/">See how it works</a></div><div class="ticks"><span>No credit card</span><span>Private by default</span><span>Built for teams of any type</span></div></div>
-  <div class="hero-product-card" aria-label="CSorro OS preview">
-    <div class="preview-shell">
-      <div class="preview-topbar"><span>CSorro OS</span><i></i></div>
-      <div class="preview-body">
-        <aside class="preview-sidebar">
-          <b>Workspace</b>
-          <span class="active">Dashboard</span>
-          <span>Projects</span>
-          <span>Studio Review</span>
-          <span>Storage</span>
-          <span>CRM</span>
-          <span>Reports</span>
-        </aside>
-        <main class="preview-main">
-          <p class="preview-greeting">Good morning, Cristian 👋</p>
-          <div class="preview-stats">
-            <div><strong>12</strong><small>Projects</small></div>
-            <div><strong>48</strong><small>Tasks</small></div>
-            <div><strong>3</strong><small>Reviews</small></div>
-            <div><strong>23</strong><small>People</small></div>
-          </div>
-          <div class="preview-projects">
-            <div class="preview-project"><img src="images/ryan_logo.jpg" alt="RyanNotBrian"><section><b>MODDED WAR</b><small>Production</small></section><em><i style="width:73%"></i></em><strong>73%</strong></div>
-            <div class="preview-project"><img src="images/ryan2_logo.jpg" alt="RyanNotBrian2"><section><b>Hide or Hunt</b><small>Recording</small></section><em><i style="width:58%"></i></em><strong>58%</strong></div>
-          </div>
-        </main>
-        <section class="preview-panel">
-          <div class="storage-ring"><span>68%<small>Used</small></span></div>
-          <h3>Activity</h3>
-          <p>Review approved <small>2m</small></p>
-          <p>Invoice sent <small>1h</small></p>
-          <p>File uploaded <small>2h</small></p>
-        </section>
+  <div class="actions"><a class="btn ghost" href="/os/app/login/">Sign in</a><a class="btn primary" href="/os/app/login/">Get started free</a></div>
+</div></header>
+
+<main>
+  <section class="hero wrap">
+    <div>
+      <p class="eyebrow">One operating system for modern teams</p>
+      <h1>Run your business. <span>All in one place.</span></h1>
+      <p class="lead">Projects, people, storage, clients, communication, studio review, reports, invoices and AI — CSorro brings the tools a business needs into one clean operating system.</p>
+      <div class="hero-ctas"><a class="btn primary" href="/os/app/login/">Get started free →</a><a class="play" href="/product/">▶</a><a href="/product/">See how it works</a></div>
+      <div class="ticks"><span>No credit card</span><span>Private by default</span><span>Built for teams of any type</span></div>
+    </div>
+    <div class="preview">
+      <div class="os-card">
+        <div class="os-top"><b>CSorro OS</b><div class="search"></div></div>
+        <div class="os-body">
+          <aside class="side"><b>Workspace</b><span class="active">Dashboard</span><span>Projects</span><span>Studio Review</span><span>Storage</span><span>CRM</span><span>Reports</span></aside>
+          <div class="main"><p class="greeting">Good morning, Cristian 👋</p><div class="stats"><div class="stat"><strong>12</strong><small>Projects</small></div><div class="stat"><strong>48</strong><small>Tasks</small></div><div class="stat"><strong>3</strong><small>Reviews</small></div><div class="stat"><strong>23</strong><small>People</small></div></div><div class="projects"><div class="project"><img src="images/ryan_logo.jpg" alt="RyanNotBrian"><div><b>MODDED WAR</b><small>Production</small></div><div class="bar"><i style="width:73%"></i></div><strong>73%</strong></div><div class="project"><img src="images/ryan2_logo.jpg" alt="RyanNotBrian2"><div><b>Hide or Hunt</b><small>Recording</small></div><div class="bar"><i style="width:58%"></i></div><strong>58%</strong></div></div></div>
+          <section class="panel"><div class="ring"><span>68%<small>Used</small></span></div><h3>Activity</h3><p>Review approved <small>2m</small></p><p>Invoice sent <small>1h</small></p><p>File uploaded <small>2h</small></p></section>
+        </div>
       </div>
     </div>
-  </div>
-</section></div></article>
-      <article class="preview-slide"><div class="screen-title">Projects</div><div class="screen-layout projects-screen"><aside><b>Workspace</b><span class="active">Production</span><span>Client Work</span><span>Internal</span></aside><main><p>Active project pipeline</p><div class="kanban"><div><b>Brief</b><span>New creator campaign</span><span>Server setup</span></div><div><b>In progress</b><span>Episode edit</span><span>Build review</span></div><div><b>Approval</b><span>Final thumbnail</span><span>Client notes</span></div></div></main></div></article>
-      <article class="preview-slide"><div class="screen-title">Studio Review</div><div class="screen-layout review-screen"><main><div class="video-card"><span>Episode 42 Cut 2</span><strong>03:12</strong></div></main><section><h3>Comments</h3><p><b>00:42</b> Shorten intro section.</p><p><b>03:12</b> Music change here.</p><p><b>07:30</b> Approved final beat.</p></section></div></article>
-      <article class="preview-slide"><div class="screen-title">Storage</div><div class="screen-layout storage-screen"><main><p>Workspace Storage</p><div class="storage-tiles"><div><b>Brand Kit</b><small>12 files</small></div><div><b>Projects</b><small>42 folders</small></div><div><b>Clients</b><small>18 records</small></div><div><b>Reviews</b><small>9 active</small></div><div><b>Reports</b><small>24 docs</small></div><div><b>Invoices</b><small>£2.4K draft</small></div></div></main></div></article>
-    </div>
-  </div>
-</section>
-<section class="creator-strip creator-strip-v65"><div class="creator-inner"><div class="strip-title">Selected work with <strong>real creators & teams</strong></div><div class="creator-list"><div class="creator"><img src="/images/ryan_logo.jpg"><div><b>RyanNotBrian</b><small>2.35M subscribers</small></div></div><div class="creator"><img src="/images/ryan2_logo.jpg"><div><b>RyanNotBrian2</b><small>Second channel</small></div></div><div class="creator"><img src="/images/survivingryan_logo.png"><div><b>Surviving Ryan</b><small>Production work</small></div></div><div class="creator"><img src="/images/elitecreatures_logo.jpg"><div><b>Elite Creatures</b><small>Creator project</small></div></div><div class="creator"><img src="/images/elitegames_logo.jpg"><div><b>EliteGames</b><small>Creator project</small></div></div><div class="creator"><img src="/images/emilroos_logo.png"><div><b>Emil Roos</b><small>3.26K subscribers</small></div></div><div class="creator"><img src="/images/ventoxmc_logo.png"><div><b>VentoxMC</b><small>Community</small></div></div></div></div></section>
-<section class="home-benefits-v65"><div class="section-head"><p class="eyebrow">Why CSorro OS</p><h2>One place for the work that normally gets scattered.</h2><p>The homepage stays simple. The deeper product detail now lives on the Product page.</p></div><div class="benefit-grid"><a href="/product/#dashboard"><b>Projects</b><span>Plan, assign and track work.</span></a><a href="/product/#studio"><b>Studio Review</b><span>Review creative work with comments and approvals.</span></a><a href="/product/#storage"><b>Storage</b><span>Files, folders, versions and permissions.</span></a><a href="/product/#finance"><b>Clients & Finance</b><span>CRM, invoices, reports and business admin.</span></a></div></section>
-<section class="founder-mini founder-mini-v65"><div><p class="eyebrow">Founder proof</p><h2>Built from real production management experience.</h2><p>CSorro OS is being built by Cristian Sorensen after years managing creator productions, communities, server systems, reviews, planning and delivery.</p></div><div class="founder-mini-actions"><a class="btn primary" href="/founder/">Meet Cristian</a><a class="btn ghost" href="/product/">Explore product</a></div></section>
-</main><footer class="footer"><div><strong>CSorro OS</strong><br>Built in Hull, United Kingdom. The business operating system for modern teams.</div><div><a href="/product/">Product</a> · <a href="/solutions/">Solutions</a> · <a href="/pricing/">Pricing</a> · <a href="/founder/">Founder</a></div></footer></div><script>
-(function(){const root=document.querySelector('[data-preview-carousel]');if(!root)return;const slides=[...root.querySelectorAll('.preview-slide')];const dots=[...root.querySelectorAll('[data-preview-dot]')];let active=0;function show(i){active=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('is-active',n===active));dots.forEach((d,n)=>d.classList.toggle('is-active',n===active));}dots.forEach((d,i)=>d.addEventListener('click',()=>show(i)));setInterval(()=>show(active+1),5200);})();
-</script></body></html>
+  </section>
+
+  <div class="strip"><div class="wrap strip-inner"><div class="strip-title">Selected work with <strong>real creators & teams</strong></div><div class="creator-list"><div class="creator"><img src="images/ryan_logo.jpg" alt=""><div><b>RyanNotBrian</b><small>2.35M subscribers</small></div></div><div class="creator"><img src="images/ryan2_logo.jpg" alt=""><div><b>RyanNotBrian2</b><small>Second channel</small></div></div><div class="creator"><img src="images/survivingryan_logo.png" alt=""><div><b>Surviving Ryan</b><small>Production work</small></div></div><div class="creator"><img src="images/elitecreatures_logo.jpg" alt=""><div><b>Elite Creatures</b><small>Creator project</small></div></div><div class="creator"><img src="images/elitegames_logo.jpg" alt=""><div><b>EliteGames</b><small>Creator project</small></div></div><div class="creator"><img src="images/emilroos_logo.png" alt=""><div><b>Emil Roos</b><small>3.26K subscribers</small></div></div><div class="creator"><img src="images/ventoxmc_logo.png" alt=""><div><b>VentoxMC</b><small>Community</small></div></div></div></div></div>
+
+  <section class="wrap"><div class="center"><p class="eyebrow">Why CSorro OS</p><h2>One place for the work that normally gets scattered.</h2><p>The homepage stays simple. The deeper product detail lives on the Product page.</p></div><div class="grid"><a class="feature" href="/product/#projects"><b>Projects</b><span>Plan, assign and track work without losing the bigger picture.</span></a><a class="feature" href="/product/#studio"><b>Studio Review</b><span>Review creative work with comments, approvals and versions.</span></a><a class="feature" href="/product/#storage"><b>Storage</b><span>Files, folders, libraries, versions and permissions.</span></a><a class="feature" href="/product/#finance"><b>Clients & Finance</b><span>CRM, invoices, reports and business admin in the same workspace.</span></a></div></section>
+
+  <section class="founder"><div class="wrap founder-inner"><div><p class="eyebrow">Founder proof</p><h2>Built from real production management experience.</h2><p>CSorro OS is being built by Cristian Sorensen after years managing creator productions, communities, server systems, reviews, planning and delivery.</p></div><div class="hero-ctas"><a class="btn primary" href="/founder/">Meet Cristian</a><a class="btn ghost" href="/product/">Explore product</a></div></div></section>
+
+  <section class="wrap cta"><div class="center"><p class="eyebrow">CSorro OS</p><h2>Run the work from one place.</h2><p>Start with a clean workspace today, then grow into projects, storage, review, CRM, reports and AI.</p><a class="btn primary" href="/os/app/login/">Get started free →</a></div></section>
+</main>
+
+<footer class="footer"><div class="wrap footer-inner"><div><strong>CSorro OS</strong><br>Built in Hull, United Kingdom. The business operating system for modern teams.</div><div><a href="/product/">Product</a> · <a href="/solutions/">Solutions</a> · <a href="/pricing/">Pricing</a> · <a href="/founder/">Founder</a></div></div></footer>
+</body>
+</html>
