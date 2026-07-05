@@ -1,6 +1,14 @@
-# CSorro OS v0.6.1 — Website Experience Polish
+# CSorro OS Build 062 — Premium Foundation Rebuild
 
-This release tightens the public website and restores the founder/work-with-me positioning while keeping CSorro OS as the main product.
+Gold master: Build 060 direction. Build 062 refines it rather than replacing it.
+
+## Updated
+- Website homepage tightened and made more visual.
+- Product, Solutions, Resources, Pricing and About rebuilt using one design system.
+- Founder presence restored on About without taking over the homepage.
+- Pricing updated: Studio £14.99, Business £49.99.
+- Creator strip uses real creator/team logos.
+- OS dashboard from Build 060 preserved as the application foundation.
 
 ## Test paths
 - `/`
@@ -9,16 +17,4 @@ This release tightens the public website and restores the founder/work-with-me p
 - `/resources/`
 - `/pricing/`
 - `/about/`
-- `/founder/`
 - `/os/app/`
-
-## Highlights
-- Reduced empty vertical space across marketing pages.
-- Added more visual OS preview sections instead of text-heavy pages.
-- Restored founder/personal work positioning.
-- Updated pricing: Studio £14.99 and Business £49.99.
-- Added consistent dropdown/mega-menu navigation across public pages.
-- Added stronger SaaS-style homepage sections with dashboard, studio review, storage, CRM, reports and CORE previews.
-
-## Backend
-No new migration in this release. This is a website/design-system polish release built on the existing v0.6 backend foundation.
