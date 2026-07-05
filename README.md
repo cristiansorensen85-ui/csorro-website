@@ -1,6 +1,6 @@
-# CSorro OS Build 062 — Premium Foundation Rebuild
+# CSorro OS Build 063 — Premium Foundation Rebuild
 
-Gold master: Build 060 direction. Build 062 refines it rather than replacing it.
+Gold master: Build 060 direction. Build 063 refines it rather than replacing it.
 
 ## Updated
 - Website homepage tightened and made more visual.
@@ -18,3 +18,9 @@ Gold master: Build 060 direction. Build 062 refines it rather than replacing it.
 - `/pricing/`
 - `/about/`
 - `/os/app/`
+
+
+## Build 063
+- Rebuilt `/founder/` as a proper standalone Cristian Sorensen founder/work page.
+- Keeps the premium CSorro theme while restoring personal experience, work history, selected creator work, interests and contact links.
+- Fixed the previous Founder button feeling like it led to the same About page.
