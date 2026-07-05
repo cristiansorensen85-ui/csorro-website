@@ -1,113 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="CSorro OS — the operating system for creative businesses. Run workspaces, projects, tasks, people, assets, chat, whiteboards and showcases in one private-by-default platform." name="description"/>
-<title>CSorro OS | Creative Business Operating System</title>
-<link href="/styles/global.css" rel="stylesheet"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="CSorro OS is the business operating system for modern teams — projects, people, storage, clients, communication, reports and AI in one place." />
+<title>CSorro OS | Creative Operating System</title>
+<link rel="stylesheet" href="/styles/global.css?v=060" />
+<link rel="stylesheet" href="styles/global.css?v=060" />
 </head>
 <body>
-<header class="site-header product-header compact-header">
-<a aria-label="CSorro home" class="brand" href="#top">
-<img alt="C Sorro logo" src="/images/csorro-logo.png"/>
-</a>
-<nav><a href="#product">Product</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#showcase">Showcase</a><a href="/founder/">Founder</a><a href="/founder/#work">Work</a><a href="/founder/#contact">Contact</a><a class="nav-cta" href="/os/app/">Launch OS</a></nav>
+<div class="site-shell">
+<header class="site-header">
+  <a class="brand-word" href="/"><span class="logo-text">CSORRO <em>OS</em></span><span class="logo-sub">Creative Operating System</span></a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-item"><a class="nav-link" href="/product/">Product⌄</a><div class="mega"><a href="/product/#dashboard"><strong>Dashboard</strong><span>Your business at a glance.</span></a><a href="/product/#modules"><strong>Modules</strong><span>Projects, CRM, storage, reports and more.</span></a><a href="/product/#core"><strong>CORE AI</strong><span>Context-aware assistance across the OS.</span></a><a href="/product/#security"><strong>Private by default</strong><span>Roles, permissions and workspace control.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/solutions/">Solutions⌄</a><div class="mega"><a href="/solutions/#business"><strong>Business teams</strong><span>Replace scattered tools with one operating system.</span></a><a href="/solutions/#creative"><strong>Creative teams</strong><span>Review, approve and deliver work faster.</span></a><a href="/solutions/#crm"><strong>CRM + clients</strong><span>Manage contacts, files, invoices and communication.</span></a><a href="/solutions/#custom"><strong>Custom workspaces</strong><span>Enable only the modules your team needs.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/resources/">Resources⌄</a><div class="mega"><a href="/resources/#guides"><strong>Guides</strong><span>Learn how to set up workspaces.</span></a><a href="/resources/#templates"><strong>Templates</strong><span>Start from business, agency or creator workflows.</span></a><a href="/resources/#updates"><strong>Updates</strong><span>Product roadmap and changelog.</span></a><a href="/resources/#support"><strong>Support</strong><span>Help, docs and community.</span></a></div></div>
+    <a class="nav-link" href="/pricing/">Pricing</a>
+    <a class="nav-link" href="/founder/">Founder</a>
+    <a class="nav-link" href="/about/">About</a>
+  </nav>
+  <div class="site-actions"><a class="btn ghost" href="/os/app/login/">Sign in</a><a class="btn primary" href="/os/app/login/">Get started free</a></div>
+  <a class="btn mobile-menu" href="/os/app/login/">Start</a>
 </header>
-<main id="top">
-<section class="product-hero product-hero-v31 section-pad" id="product">
-  <div class="product-hero-copy reveal">
-    <p class="eyebrow">CSorro OS</p>
-    <h1>The operating system for creative businesses.</h1>
-    <p class="lead">One private-by-default home for projects, people, tasks, assets, chat, whiteboards and production decisions.</p>
-    <div class="button-row">
-      <a class="btn primary" href="/os/app/">Launch OS Preview</a>
-      <a class="btn" href="#features">Explore features</a>
-      <a class="btn" href="/founder/">Meet the founder</a>
-    </div>
-    <div aria-label="CSorro OS pillars" class="tag-row"><span>Mission Control</span><span>Workspaces</span><span>Project Hubs</span><span>Tasks</span><span>Chat</span><span>Whiteboard</span><span>Creator Network</span></div>
+<main class="page">
+<section class="hero">
+  <div>
+    <p class="eyebrow">The operating system for modern teams</p>
+    <h1>Run your creative business. <span>All in one place.</span></h1>
+    <p class="lead">Projects, people, assets, clients, communication, reports and invoices — CSorro OS brings your business together so you can focus on creating, selling and delivering.</p>
+    <div class="hero-ctas"><a class="btn primary" href="/os/app/login/">Start your free trial →</a><a class="play" href="/product/">▶</a><a href="/product/">Watch overview</a></div>
+    <div class="ticks"><span>No credit card</span><span>Setup in minutes</span><span>Cancel anytime</span></div>
   </div>
-  <div class="os-preview os-preview-v31 reveal delay-1" aria-label="CSorro OS product preview">
-    <div class="preview-sidebar">
-      <div class="preview-logo"><img src="/images/csorro-logo.png" alt=""/><strong>OS</strong></div>
-      <span class="active">Mission Control</span><span>Workspaces</span><span>Projects</span><span>People</span><span>Messages</span><span>Network</span><span>Assets</span><span>Knowledge</span>
-      <div class="preview-core"><b>CORE Briefing</b><small>5 priorities ready</small></div>
-    </div>
-    <div class="preview-main">
-      <div class="preview-top"><span>Good morning, Cristian</span><button type="button">Ask CORE</button></div>
-      <div class="preview-grid">
-        <article class="priority-card wide"><small>Today’s Priority</small><b>Finish the product homepage</b><p>CSorro OS shows what matters, what is waiting and what to do next.</p></article>
-        <article><small>Workspaces</small><b>4 hubs</b><p>Separate companies, teams or clients.</p></article>
-        <article><small>Waiting</small><b>3 approvals</b><p>Artwork, app review and project brief.</p></article>
-        <article class="wide core-brief"><small>CORE Recommendation</small><b>Keep internal work private. Publish only what you choose.</b></article>
+  <div class="os-preview" aria-label="CSorro OS dashboard preview">
+    <div class="float-icon f1">▣</div><div class="float-icon f2">☑</div><div class="float-icon f3">▤</div>
+    <div class="mock-frame">
+      <div class="mock-top"><div class="mock-brand">CSORRO <em>OS</em></div><div class="mock-search"></div></div>
+      <div class="mock-body">
+        <aside class="mock-side"><span class="active">Dashboard</span><span>Projects</span><span>Tasks</span><span>Calendar</span><span>People</span><span>Studio Review</span><span>Storage</span><span>Clients</span><span>Reports</span><span>Settings</span></aside>
+        <section class="mock-main">
+          <div class="welcome">Welcome back, Cristian 👋</div>
+          <div class="mock-stats"><div class="mock-card"><strong>12</strong><br><small>Active Projects</small></div><div class="mock-card"><strong style="color:var(--orange)">48</strong><br><small>Tasks Due</small></div><div class="mock-card"><strong style="color:var(--teal)">3</strong><br><small>Reviews</small></div><div class="mock-card"><strong>23</strong><br><small>Team</small></div></div>
+          <div class="mock-card"><b>Recent Projects</b>
+            <div class="project-row"><img src="/images/ryan_logo.jpg"><div><b>MODDED WAR</b><br><small>YouTube Series</small></div><div class="bar"><i style="width:73%"></i></div><small>73%</small></div>
+            <div class="project-row"><img src="/images/ryan2_logo.jpg"><div><b>Hide or Hunt S5</b><br><small>YouTube Series</small></div><div class="bar"><i style="width:58%"></i></div><small>58%</small></div>
+            <div class="project-row"><img src="/images/survivingryan_logo.png"><div><b>Podcast Episode 42</b><br><small>Recording</small></div><div class="bar"><i style="width:40%"></i></div><small>40%</small></div>
+            <div class="project-row"><img src="/images/emilroos_logo.png"><div><b>Brand Campaign</b><br><small>Marketing</small></div><div class="bar"><i style="width:90%"></i></div><small>90%</small></div>
+          </div>
+          <div class="mock-card"><b>Studio Review</b><div class="review-row"><img src="/images/ryan2_logo.jpg"><span>Episode 42 Cut 1</span><small class="status-wait">Waiting for review</small></div><div class="review-row"><img src="/images/elitegames_logo.jpg"><span>Thumbnail Concepts</span><small class="status-change">Changes requested</small></div><div class="review-row"><img src="/images/ventoxmc_logo.png"><span>Intro Animation</span><small class="status-ok">Approved</small></div></div>
+        </section>
+        <aside class="mock-right"><div class="mock-card"><b>Storage</b><div class="ring"><div><strong>68%</strong><small>Used</small></div></div><p>341 GB / 500 GB<br><a style="color:var(--teal)" href="/product/#storage">Manage Storage</a></p></div><div class="mock-card"><b>Activity</b><p>RyanNotBrian2 uploaded a file <small>2m ago</small></p><p>Emil Roos approved a review <small>1h ago</small></p><p>EliteGames updated a project <small>2h ago</small></p><p>VentoxMC commented <small>3h ago</small></p></div></aside>
       </div>
     </div>
   </div>
 </section>
-
-<section class="product-strip section-pad compact v31-strip">
-  <article class="metric reveal"><strong>1</strong><span>Mission Control across every company and project</span></article>
-  <article class="metric reveal"><strong>Private</strong><span>Workspaces stay hidden unless you publish a showcase</span></article>
-  <article class="metric reveal"><strong>All-in-one</strong><span>Tasks, chat, assets, notes and whiteboards in each project</span></article>
-  <article class="metric reveal"><strong>Network</strong><span>Optional creator profiles, posts, portfolios and hiring</span></article>
+<section class="creator-strip">
+  <div class="creator-inner"><div class="strip-title">Selected work with <strong>creators & teams</strong></div><div class="creator-list">
+    <div class="creator"><img src="/images/ryan_logo.jpg"><div><b>RyanNotBrian</b><small>2.35M subscribers</small></div></div>
+    <div class="creator"><img src="/images/ryan2_logo.jpg"><div><b>RyanNotBrian2</b><small>49.7K subscribers</small></div></div>
+    <div class="creator"><img src="/images/survivingryan_logo.png"><div><b>Surviving Ryan</b><small>Production work</small></div></div>
+    <div class="creator"><img src="/images/elitecreatures_logo.jpg"><div><b>Elite Creatures</b><small>Creator project</small></div></div>
+    <div class="creator"><img src="/images/elitegames_logo.jpg"><div><b>EliteGames</b><small>Creator project</small></div></div>
+    <div class="creator"><img src="/images/emilroos_logo.png"><div><b>Emil Roos</b><small>3.26K subscribers</small></div></div>
+    <div class="creator"><img src="/images/ventoxmc_logo.png"><div><b>VentoxMC</b><small>Community</small></div></div>
+  </div></div>
 </section>
-
-<section class="section-pad product-story grid-two v31-section" id="features">
-  <div class="reveal">
-    <p class="eyebrow">Why it exists</p>
-    <h2>Creative work should not live across six disconnected tools.</h2>
-    <p>Discord for chat. Trello for tasks. Miro for whiteboards. Google Drive for files. Notion for notes. Calendar for deadlines. CSorro OS brings those moving parts into one calm operating system.</p>
-  </div>
-  <div class="feature-stack reveal delay-1">
-    <article><strong>Workspaces</strong><span>One private hub per company, client or organisation.</span></article>
-    <article><strong>Projects</strong><span>Tasks, chat, whiteboard, assets, knowledge, calendar and activity in one place.</span></article>
-    <article><strong>People</strong><span>Invite team members, freelancers, editors, artists, developers and guests with clear access.</span></article>
-    <article><strong>Showcase</strong><span>Publish only what you choose: portfolio, careers, selected projects or public profile.</span></article>
-  </div>
+<section class="feature-cards">
+  <article class="feature-card"><i>▣</i><div><h3>Projects & Tasks</h3><p>Plan, manage and deliver work on time.</p></div><a href="/product/#projects">Learn more →</a></article>
+  <article class="feature-card"><i>☷</i><div><h3>People & Teams</h3><p>Invite your team and set permissions with ease.</p></div><a href="/product/#people">Learn more →</a></article>
+  <article class="feature-card"><i>▤</i><div><h3>Storage & Assets</h3><p>Organise, store and share all your business files.</p></div><a href="/product/#storage">Learn more →</a></article>
+  <article class="feature-card"><i>▢</i><div><h3>Studio Review</h3><p>Review content, leave feedback and get approved.</p></div><a href="/product/#studio">Learn more →</a></article>
+  <article class="feature-card"><i>◈</i><div><h3>CRM & Clients</h3><p>Manage relationships, updates and client files.</p></div><a href="/solutions/#crm">Learn more →</a></article>
+  <article class="feature-card"><i>▥</i><div><h3>Reports & Invoices</h3><p>Track work, produce reports and prepare billing.</p></div><a href="/product/#reports">Learn more →</a></article>
 </section>
-
-<section class="section-pad v31-benefits" id="how">
-  <div class="section-head reveal">
-    <p class="eyebrow">How it helps</p>
-    <h2>From idea to delivery, every project has a home.</h2>
-  </div>
-  <div class="benefit-grid">
-    <article class="benefit-card reveal"><span>01</span><h3>Create a Workspace</h3><p>Separate each company, creator, client or team so the right people only see the right work.</p></article>
-    <article class="benefit-card reveal"><span>02</span><h3>Build Projects</h3><p>Give every production its own tasks, chat, files, notes, calendar, approvals and whiteboard.</p></article>
-    <article class="benefit-card reveal"><span>03</span><h3>Assign People</h3><p>Add editors, artists, developers, builders or guests to the exact workspace or project they need.</p></article>
-    <article class="benefit-card reveal"><span>04</span><h3>Let CORE Prioritise</h3><p>See what is due, what is blocked, who is waiting and what needs attention next.</p></article>
-  </div>
-</section>
-
-<section class="section-pad showcase-section v31-section" id="showcase">
-  <div class="section-head reveal">
-    <p class="eyebrow">Privacy by default. Visibility by choice.</p>
-    <h2>Your internal work stays private. Your public showcase is controlled.</h2>
-    <p>A company can run everything internally without being listed anywhere. A creator can turn on public profile mode, post availability, showcase work and receive project invites.</p>
-  </div>
-  <div class="showcase-grid">
-    <article class="showcase-card reveal"><h3>Workspace Showcase</h3><p>Choose whether to show logo, description, portfolio, careers, contact form, selected projects or team members.</p></article>
-    <article class="showcase-card reveal"><h3>Creator Profiles</h3><p>Editors, artists, developers and builders can publish portfolios, skills, availability and verified project credits.</p></article>
-    <article class="showcase-card reveal"><h3>Network Posts</h3><p>Post updates, open-for-work notices, hiring posts, product updates and showcase images that link back to profiles or workspaces.</p></article>
-  </div>
-</section>
-
-<section class="section-pad product-story grid-two v31-section" id="product-preview">
-  <div class="screen-frame reveal"><img alt="CSorro OS workspace preview" src="/images/workstation.jpg"/></div>
-  <div class="reveal delay-1">
-    <p class="eyebrow">Built for real production</p>
-    <h2>Less switching. More moving forward.</h2>
-    <p>CSorro OS is for teams who are tired of chasing updates through chats, docs, folders, boards and calendars. The aim is simple: open one system and know exactly what matters.</p>
-    <div class="button-row"><a class="btn primary" href="/os/app/">Open OS Preview</a><a class="btn" href="/founder/">Why Cristian built it</a></div>
-  </div>
-</section>
-</main>
-<footer><img alt="C Sorro logo" src="/images/csorro-logo.png"/><span>© 2026 CSorro. CSorro OS — the operating system for creative businesses.</span></footer>
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-</script>
-</body>
-</html>
+</main><footer class="footer"><span>© CSorro OS</span><span>Projects • People • Storage • CRM • Reports • AI</span></footer>
+</div>
+</body></html>

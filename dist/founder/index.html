@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Cristian Sorensen — founder of CSorro, production manager and creative operations specialist." name="description"/>
-<title>Founder | Cristian Sorensen | CSorro</title>
-<link href="/styles/global.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Cristian Sorensen — founder of CSorro, production manager and creative operations specialist."/>
+<title>Founder | Cristian Sorensen | CSorro OS</title>
+<link rel="stylesheet" href="/styles/global.css?v=072"/>
+<link rel="stylesheet" href="../styles/global.css?v=072"/>
+<link rel="stylesheet" href="/styles/founder.css?v=072"/>
+<link rel="stylesheet" href="../styles/founder.css?v=072"/>
 </head>
 <body>
-<header class="site-header product-header">
-<a aria-label="CSorro home" class="brand" href="/">
-<img alt="C Sorro logo" src="/images/csorro-logo.png"/>
-</a>
-<nav><a href="/#product">Product</a><a href="/#features">Features</a><a href="/#showcase">Showcase</a><a href="/founder/">Founder</a><a href="/founder/#work">Work</a><a href="/founder/#contact">Contact</a><a class="nav-cta" href="/os/app/">Launch OS</a></nav>
+<div class="site-shell founder-shell">
+<header class="site-header">
+  <a class="brand-word" href="/"><span class="logo-text">CSORRO <em>OS</em></span><span class="logo-sub">Creative Operating System</span></a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-item"><a class="nav-link" href="/product/">Product⌄</a><div class="mega"><a href="/product/#dashboard"><strong>Dashboard</strong><span>Your business at a glance.</span></a><a href="/product/#modules"><strong>Modules</strong><span>Projects, CRM, storage, reports and more.</span></a><a href="/product/#core"><strong>CORE AI</strong><span>Context-aware assistance across the OS.</span></a><a href="/product/#security"><strong>Private by default</strong><span>Roles, permissions and workspace control.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/solutions/">Solutions⌄</a><div class="mega"><a href="/solutions/#business"><strong>Business teams</strong><span>Replace scattered tools with one operating system.</span></a><a href="/solutions/#creative"><strong>Creative teams</strong><span>Review, approve and deliver work faster.</span></a><a href="/solutions/#crm"><strong>CRM + clients</strong><span>Manage contacts, files, invoices and communication.</span></a><a href="/solutions/#custom"><strong>Custom workspaces</strong><span>Enable only the modules your team needs.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/resources/">Resources⌄</a><div class="mega"><a href="/resources/#guides"><strong>Guides</strong><span>Learn how to set up workspaces.</span></a><a href="/resources/#templates"><strong>Templates</strong><span>Start from business, agency or creator workflows.</span></a><a href="/resources/#updates"><strong>Updates</strong><span>Product roadmap and changelog.</span></a><a href="/resources/#support"><strong>Support</strong><span>Help, docs and community.</span></a></div></div>
+    <a class="nav-link" href="/pricing/">Pricing</a>
+    <a class="nav-link" href="/founder/">Founder</a>
+    <a class="nav-link" href="/about/">About</a>
+  </nav>
+  <div class="site-actions"><a class="btn ghost" href="/os/app/login/">Sign in</a><a class="btn primary" href="/os/app/login/">Get started free</a></div>
+  <a class="btn mobile-menu" href="/os/app/login/">Start</a>
 </header>
 <main id="top" class="founder-page">
 <section class="founder-intro section-pad grid-two" id="founder">
@@ -249,8 +260,8 @@
 </div>
 </section>
 </main>
-</main>
-<footer><img alt="C Sorro logo" src="/images/csorro-logo.png"/><span>© 2026 CSorro. Built by Cristian Sorensen.</span></footer>
+<footer class="footer"><span>© CSorro OS</span><span>Built in Hull, United Kingdom — by Cristian Sorensen.</span><span><a href="/product/">Product</a> · <a href="/pricing/">Pricing</a> · <a href="/about/">About</a></span></footer>
+</div>
 <script>
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

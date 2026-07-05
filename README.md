@@ -1,38 +1,71 @@
-# CSorro Website + OS Base
+# CSorro Build 059 – SaaS CSS Hotfix
 
-## Latest: Build 046 Platform Foundation
+This build fixes the broken homepage styling by inlining the landing CSS as a fallback and keeping both `/styles/global.css` and `styles/global.css` links.
 
-This base includes the frontend prototype plus a new Supabase backend architecture pack.
+Test first:
+- `/`
+- `/os/app/`
+- `/os/app/storage/`
 
-New backend files:
-- `architecture/` — platform/database roadmap and system design
-- `database/migrations/001_core_platform_schema.sql` — first Supabase SQL migration
-- `.env.example` — environment variable template
+Use this instead of Build 058.
 
-Run the SQL only in the `csorro-os-dev` Supabase project first.
+# CSorro OS Base
 
----
+## Latest: Build 056 – Workspace Storage Architecture
 
-# CSorro Build 045 – Clickable Intelligence
+This is the current base ZIP for CSorro OS.
 
-Adds linked blocker / intelligence interactions. Current Blocker opens the related approval or priority task. CORE suggestions, overview priority cards and activity items jump to their source panel and highlight the target.
+Includes:
+- Product-led homepage and founder page
+- OS shell and Mission Control
+- Project Hub, tasks, chat, approvals, whiteboard and activity UI
+- Login/signup foundation
+- Supabase connection layer with demo-mode fallback
+- Workspace Modules settings
+- Professional Network feed foundation
+- Studio Review mini-test
+- Workspace Storage architecture
+- Theme/focus mode and design-system guardrails
+
+## New in Build 056
+- Assets has moved conceptually to **Workspace Storage**.
+- `/os/app/storage/` is the new storage control page.
+- `/os/app/assets/` redirects to Storage for compatibility.
+- Sidebar now uses Storage instead of Assets.
+- Studio uploads now point toward workspace-owned storage linked to projects.
+- Project Hub file wording now explains linked storage, not duplicated project files.
+- Migration 006 adds storage libraries, file versions, storage permissions and workspace usage tracking.
+
+## Supabase migration order
+Run these in Supabase SQL Editor, in order:
+
+1. `database/migrations/001_core_platform_schema.sql`
+2. `database/migrations/002_workspace_engine_rpc.sql`
+3. `database/migrations/003_auth_profile_foundation.sql`
+4. `database/migrations/004_modules_network_foundation.sql`
+5. `database/migrations/005_studio_review_foundation.sql`
+6. `database/migrations/006_workspace_storage_architecture.sql`
+
+## Backend config
+Add your Supabase URL and anon key in:
+
+`os/app/platform-config.js`
+
+The app will continue working in demo mode if these are blank.
+
+## Build
+
+```bash
+npm run build
+```
+
+Output goes to `/dist` for Cloudflare Pages.
+
+Build 057 hotfix:
+- Fixes migration 006 storage_permissions.role_id foreign key to reference public.workspace_roles(id), not public.roles(id).
+- Safe to re-run 006 after the failed attempt; objects use IF NOT EXISTS / idempotent patterns.
 
 
-## Build 050
+## Build 072 recovery
 
-Theme Engine and Focus Mode added. Test Settings > Appearance and Ctrl + Shift + F inside the OS.
-
-
-## Build 051 - Design System Foundation
-
-Added the first reusable CSorro OS design system layer:
-
-- `/os/app/design-system.css` for layout/card/button/form/empty-state guardrails.
-- `/os/app/design-system/` preview page for component reference.
-- `/docs/Product_Principles.md` and `/docs/Design_System.md`.
-
-Purpose: keep future pages cleaner, calmer and more consistent before continuing deeper backend integration.
-
-
-## Build 052 – Live Workspace Engine
-Run `database/migrations/002_workspace_engine_rpc.sql` in Supabase, configure `/os/app/platform-config.js`, then test `/os/app/login/` and `/os/app/workspace/new/`.
+Base restored from Build 060 homepage direction, with Founder page restored from Build 052 layout/content and reskinned using the CSorro OS dark theme. Shared nav/dropdowns are applied across marketing pages.
