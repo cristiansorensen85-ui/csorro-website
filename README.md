@@ -49,3 +49,7 @@ npm run build
 ```
 
 Output goes to `/dist` for Cloudflare Pages.
+
+Build 057 hotfix:
+- Fixes migration 006 storage_permissions.role_id foreign key to reference public.workspace_roles(id), not public.roles(id).
+- Safe to re-run 006 after the failed attempt; objects use IF NOT EXISTS / idempotent patterns.

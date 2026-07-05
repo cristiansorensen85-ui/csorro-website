@@ -89,7 +89,7 @@ create table if not exists public.storage_permissions (
   workspace_id uuid not null references public.workspaces(id) on delete cascade,
   library_id uuid references public.storage_libraries(id) on delete cascade,
   asset_id uuid references public.assets(id) on delete cascade,
-  role_id uuid references public.roles(id) on delete cascade,
+  role_id uuid references public.workspace_roles(id) on delete cascade,
   user_id uuid references public.profiles(id) on delete cascade,
   can_view boolean not null default true,
   can_comment boolean not null default false,
