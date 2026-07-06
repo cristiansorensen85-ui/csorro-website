@@ -13,3 +13,97 @@
 .profile-copy span{color:#8ffff0!important}
 .profile-copy li:before{color:var(--teal)!important}
 @media(max-width:1280px){.profile-photo{height:360px!important}.profile-watermark{width:min(270px,72%)!important}}
+
+/* Build 081: founder contact balance fix — remove stretched/wasted right column space */
+.contact-card.v4-contact{
+  align-items:start!important;
+  grid-template-columns:minmax(0,1.35fr) minmax(360px,440px)!important;
+  gap:34px!important;
+}
+.contact-card.v4-contact .contact-profile{
+  align-self:start!important;
+  height:auto!important;
+  min-height:0!important;
+  padding:28px!important;
+}
+.contact-card.v4-contact .profile-watermark{
+  width:min(260px,70%)!important;
+  margin:0 auto 22px!important;
+  opacity:.52!important;
+}
+.contact-card.v4-contact .profile-statement{
+  margin-bottom:18px!important;
+  padding:22px 24px!important;
+}
+.contact-card.v4-contact .profile-statement strong{
+  font-size:clamp(42px,3.3vw,58px)!important;
+}
+.contact-card.v4-contact .profile-photo{
+  height:300px!important;
+  object-position:center 20%!important;
+  margin-bottom:18px!important;
+}
+.contact-card.v4-contact .profile-copy{
+  padding:22px 24px!important;
+}
+.contact-card.v4-contact .profile-copy ul{
+  margin-top:16px!important;
+}
+.contact-card.v4-contact .profile-copy li{
+  margin:10px 0!important;
+}
+.connect-panel{
+  padding:24px!important;
+  margin-top:18px!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.018))!important;
+}
+.connect-title{
+  margin:0 0 14px!important;
+  font-size:20px!important;
+  font-weight:850!important;
+  color:#f4fbff!important;
+}
+.social-buttons.social-buttons-v4{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:12px!important;
+}
+.social-buttons.social-buttons-v4 .social-pill{
+  min-height:66px!important;
+  border-radius:16px!important;
+  padding:14px 16px!important;
+  background:rgba(255,255,255,.045)!important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important;
+}
+.social-buttons.social-buttons-v4 a.social-pill:hover{
+  transform:translateY(-2px)!important;
+  border-color:rgba(0,224,194,.35)!important;
+  box-shadow:0 14px 34px rgba(0,224,194,.08)!important;
+}
+.social-buttons.social-buttons-v4 .social-pill:first-child,
+.social-buttons.social-buttons-v4 .social-pill:nth-child(2){
+  border-color:rgba(0,224,194,.18)!important;
+}
+.cv-note{
+  margin:18px 0 0!important;
+  font-size:16px!important;
+  color:#c8d5df!important;
+}
+.contact-form .btn.primary{
+  background:linear-gradient(90deg,var(--teal),#6ffff0)!important;
+  color:#03100f!important;
+  box-shadow:0 18px 38px rgba(0,224,194,.18)!important;
+}
+.contact-form input,.contact-form textarea{
+  border-color:rgba(255,255,255,.13)!important;
+}
+.contact-form textarea{min-height:170px!important;}
+@media(max-width:1280px){
+  .contact-card.v4-contact{grid-template-columns:1fr!important;}
+  .contact-card.v4-contact .contact-profile{max-width:520px!important;margin:0 auto!important;}
+}
+@media(max-width:720px){
+  .social-buttons.social-buttons-v4{grid-template-columns:1fr!important;}
+  .contact-card.v4-contact{padding:24px!important;}
+  .contact-card.v4-contact .profile-photo{height:280px!important;}
+}
