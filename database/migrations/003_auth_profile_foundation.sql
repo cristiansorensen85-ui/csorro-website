@@ -1,4 +1,4 @@
--- CSorro OS Auth + Profile Foundation v1
+-- Sorro Auth + Profile Foundation v1
 -- Run after 001_core_platform_schema.sql and 002_workspace_engine_rpc.sql.
 -- This improves account creation, profile loading and subscription visibility for real login/signup testing.
 

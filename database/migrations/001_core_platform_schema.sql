@@ -1,4 +1,4 @@
--- CSorro OS Core Platform Schema v1
+-- Sorro Core Platform Schema v1
 -- Run inside Supabase SQL Editor on the csorro-os-dev project.
 -- This creates the first backend foundation for accounts, workspaces, projects,
 -- permissions, tasks, chat, assets, whiteboards, activity and notifications.

@@ -1,5 +1,5 @@
 (function(){
-  const cfg = window.CSORRO_SUPABASE || {};
+  const cfg = window.SORRO_SUPABASE || {};
   const ready = !!(cfg.url && cfg.anonKey && window.supabase);
   const status = {
     mode: ready ? 'live' : 'demo',
@@ -16,7 +16,7 @@
     ],
     projects: [
       { id: 'demo-recording', workspace_id: 'demo-ryan', name: 'Ryan Recording Prep', status: 'review', phase:'Review', progress:72, description: 'Recording prep, assets, thumbnail approval and team updates.' },
-      { id: 'demo-os', workspace_id: 'demo-csorro', name: 'CSorro OS Build', status: 'active', phase:'Foundation', progress:51, description: 'Build the operating system foundation.' }
+      { id: 'demo-os', workspace_id: 'demo-csorro', name: 'Sorro Build', status: 'active', phase:'Foundation', progress:51, description: 'Build the operating system foundation.' }
     ]
   };
 
@@ -144,7 +144,7 @@
       return [
         { id:'demo-1', post_type:'looking_for_work', title:'Editor open for work', body:'Available for gaming edits and creator projects this month. Portfolio ready.', author_name:'Creative Editor', like_count:24, comment_count:6, created_at:new Date().toISOString() },
         { id:'demo-2', post_type:'hiring', title:'Looking for thumbnail artist', body:'RyanNotBrian-style gaming thumbnail artist needed for a short project.', author_name:'Studio Manager', like_count:41, comment_count:12, created_at:new Date().toISOString() },
-        { id:'demo-3', post_type:'product_update', title:'CSorro OS platform update', body:'Modules, Network, Production Review and auth foundation are moving into the same engine.', author_name:'CSorro OS', like_count:88, comment_count:18, created_at:new Date().toISOString() }
+        { id:'demo-3', post_type:'product_update', title:'Sorro platform update', body:'Modules, Network, Production Review and auth foundation are moving into the same engine.', author_name:'Sorro', like_count:88, comment_count:18, created_at:new Date().toISOString() }
       ];
     }
     const { data, error } = await client.from('network_posts').select('*').order('created_at', { ascending:false }).limit(30);

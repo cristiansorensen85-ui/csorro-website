@@ -1,6 +1,6 @@
 # Build 055 — Studio Review Mini Test
 
-Adds the first visible Studio review module for CSorro OS.
+Adds the first visible Studio review module for Sorro.
 
 ## Frontend
 - New `/os/app/studio/` page.

@@ -4,7 +4,7 @@
 - Rebuild the public website around the clean premium SaaS style.
 - Add real navigation pages: Product, Solutions, Resources, Pricing, About.
 - Clean creator strip with correct creator/work logos.
-- Reposition CSorro OS as a business operating system, not only a creator tool.
+- Reposition Sorro as a business operating system, not only a creator tool.
 - Begin OS dashboard simplification: Dashboard-first, cleaner modules, no Mission Control wording.
 - Add first workspace setup modal to guide new customers through module selection.
 

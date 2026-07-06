@@ -1,4 +1,4 @@
-# CSorro OS Database Schema v1
+# Sorro Database Schema v1
 
 This database mirrors the OS navigation.
 

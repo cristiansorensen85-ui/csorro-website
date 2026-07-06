@@ -12,5 +12,5 @@ Add Supabase Storage buckets for assets, whiteboard exports and public showcase 
 ## Stage 4 — Billing
 Add Stripe products, plan limits, coupons, referral codes and annual discounts.
 
-## Stage 5 — CORE AI
-Connect CORE to live project data so it can summarise, create tasks, find blockers and recommend next actions.
+## Stage 5 — Sorro AI
+Connect Sorro AI to live project data so it can summarise, create tasks, find blockers and recommend next actions.

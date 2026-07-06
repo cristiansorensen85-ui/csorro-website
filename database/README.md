@@ -1,4 +1,4 @@
-# CSorro OS Database
+# Sorro Database
 
 ## Stage 1
 Run this first inside Supabase SQL Editor:

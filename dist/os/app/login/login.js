@@ -26,7 +26,7 @@
 
     const title={signin:'Sign in',signup:'Create account',recover:'Recover password',reset:'Set new password'}[mode];
     const intro={
-      signin:'Use your CSorro account to access your workspaces.',
+      signin:'Use your Sorro account to access your workspaces.',
       signup:'Create your CSorro account and start with a private workspace.',
       recover:'Enter your email and CSorro will send a secure reset link.',
       reset:'Choose a new password for your CSorro account.'
@@ -46,10 +46,10 @@
     return false;
   }
 
-  $('#signInTab').onclick=()=>{setMode('signin'); setMessage('Use your CSorro account to access your workspaces.');};
+  $('#signInTab').onclick=()=>{setMode('signin'); setMessage('Use your Sorro account to access your workspaces.');};
   $('#signUpTab').onclick=()=>{setMode('signup'); setMessage('Create your account. If email confirmation is enabled, check your inbox after submitting.');};
   $('#forgotPassword').onclick=()=>{setMode('recover'); setMessage('Enter your account email and we will send a recovery link.');};
-  $('#backToSignIn').onclick=()=>{setMode('signin'); setMessage('Use your CSorro account to access your workspaces.');};
+  $('#backToSignIn').onclick=()=>{setMode('signin'); setMessage('Use your Sorro account to access your workspaces.');};
 
   $('#authForm').onsubmit=async e=>{
     e.preventDefault();

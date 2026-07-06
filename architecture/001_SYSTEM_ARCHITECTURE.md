@@ -1,6 +1,6 @@
-# CSorro OS Platform Architecture
+# Sorro Platform Architecture
 
-CSorro OS is split into three parts:
+Sorro is split into three parts:
 
 1. **Frontend** — the website and OS interface hosted on Cloudflare Pages.
 2. **Supabase Backend** — authentication, database, storage, realtime and permissions.

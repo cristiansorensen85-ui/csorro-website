@@ -1,7 +1,7 @@
 # Build 053 — Authentication Foundation
 
 ## Test goal
-A real user should be able to start using CSorro OS authentication through Supabase.
+A real user should be able to start using Sorro authentication through Supabase.
 
 ## Supabase step
 Run this new migration in a **new SQL query**:

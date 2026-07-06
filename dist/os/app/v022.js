@@ -6,7 +6,7 @@
   if(feed){
     const key='csorroNetwork022';
     const seed=[
-      {type:'Product Update',name:'CSorro OS',text:'v0.1 foundation is being built: private workspaces, project hubs, people permissions, network feed and public showcase controls.',img:''},
+      {type:'Product Update',name:'Sorro',text:'v0.1 foundation is being built: private workspaces, project hubs, people permissions, network feed and public showcase controls.',img:''},
       {type:'Looking for Work',name:'Thumbnail Artist',text:'Open for Minecraft and podcast artwork this month. View my portfolio and invite me to a project.',img:''},
       {type:'Hiring',name:'RyanNotBrian Workspace',text:'Looking for a Minecraft builder for a short production. Apply through CSorro and attach portfolio examples.',img:''}
     ];

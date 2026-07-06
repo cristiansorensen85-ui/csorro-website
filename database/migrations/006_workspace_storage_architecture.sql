@@ -1,4 +1,4 @@
--- CSorro OS Workspace Storage Architecture v1
+-- Sorro Workspace Storage Architecture v1
 -- Run after 001-005. This shifts the product from isolated Assets to workspace-owned Storage.
 
 create extension if not exists "pgcrypto";

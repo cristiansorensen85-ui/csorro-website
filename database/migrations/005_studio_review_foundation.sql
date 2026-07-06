@@ -1,4 +1,4 @@
--- CSorro OS Studio Review Foundation v1
+-- Sorro Studio Review Foundation v1
 -- Run after 001-004. Extends production reviews for the Studio module.
 
 create extension if not exists "pgcrypto";

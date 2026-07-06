@@ -1,4 +1,4 @@
--- CSorro OS Modules + Network Foundation v1
+-- Sorro Modules + Network Foundation v1
 -- Run after 001, 002 and 003.
 -- Adds the first backend tables for modular workspaces and LinkedIn-style professional network posts.
 

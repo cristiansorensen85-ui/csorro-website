@@ -16,7 +16,7 @@ const presets = {
       ["Asset Library", "Store thumbnails, videos, scripts, brand assets and files."],
       ["Knowledge Base", "Keep ideas, scripts, notes and repeatable processes in one place."],
       ["Client Portal", "Let clients or collaborators approve work without seeing everything."],
-      ["CORE Automation", "Summaries, reminders and suggested next steps."]
+      ["Sorro AI Automation", "Summaries, reminders and suggested next steps."]
     ]
   },
   business: {
@@ -27,7 +27,7 @@ const presets = {
       ["Client Portal", "Give clients a clean place to review updates and approve work."],
       ["Knowledge Base", "Store processes, documents, policies and decisions."],
       ["Opportunities", "Track leads, partnerships and future work."],
-      ["CORE Automation", "Prepare briefings, organise information and reduce admin."]
+      ["Sorro AI Automation", "Prepare briefings, organise information and reduce admin."]
     ]
   },
   agency: {
@@ -38,7 +38,7 @@ const presets = {
       ["Team Collaboration", "Keep designers, editors, managers and clients aligned."],
       ["Asset Library", "Store brand assets, approvals and files per client."],
       ["Opportunities", "Manage leads, proposals and future work."],
-      ["CORE Automation", "Summaries, task suggestions and client updates."]
+      ["Sorro AI Automation", "Summaries, task suggestions and client updates."]
     ]
   },
   project: {
@@ -49,7 +49,7 @@ const presets = {
       ["Calendar", "Keep deadlines, meetings and milestones visible."],
       ["Knowledge Base", "Store plans, decisions, notes and documentation."],
       ["People", "Manage roles, responsibilities and access."],
-      ["CORE Automation", "Prepare daily priorities and highlight risks."]
+      ["Sorro AI Automation", "Prepare daily priorities and highlight risks."]
     ]
   },
   starter: {
@@ -60,7 +60,7 @@ const presets = {
       ["Storage", "Company drive for files, reviews, media and documents."],
       ["Knowledge", "A simple notebook for decisions, notes and how things work."],
       ["People", "Add collaborators when you are ready."],
-      ["CORE Automation", "Guidance, summaries and reminders when you need them."]
+      ["Sorro AI Automation", "Guidance, summaries and reminders when you need them."]
     ]
   },
   custom: {
@@ -71,7 +71,7 @@ const presets = {
       ["Storage", "Keep workspace files, media and reviews together."],
       ["Knowledge", "Store decisions, notes and guidance."],
       ["People", "Add the right people when needed."],
-      ["CORE Automation", "Help organise and guide the workspace."]
+      ["Sorro AI Automation", "Help organise and guide the workspace."]
     ]
   }
 };
@@ -86,7 +86,7 @@ function go(step) {
 
 function updatePreview() {
   document.getElementById("previewName").textContent = workspaceName || "New Workspace";
-  document.getElementById("previewType").textContent = workspaceType ? `${workspaceType} workspace` : "CORE will shape this around your goal.";
+  document.getElementById("previewType").textContent = workspaceType ? `${workspaceType} workspace` : "Sorro AI will shape this around your goal.";
   const active = presets[preset] || presets.starter;
   document.getElementById("coreAdvice").textContent = active.advice;
 }
@@ -169,7 +169,7 @@ document.querySelectorAll(".examples button").forEach((btn) => {
 });
 
 document.getElementById("nameNext").addEventListener("click", () => {
-  workspaceName = document.getElementById("workspaceName").value || "CSorro OS";
+  workspaceName = document.getElementById("workspaceName").value || "Sorro";
   updatePreview();
   renderRecommendations();
   go(4);
@@ -178,7 +178,7 @@ document.getElementById("nameNext").addEventListener("click", () => {
 document.getElementById("buildWorkspace").addEventListener("click", () => {
   const selected = [...document.querySelectorAll("#recommendations input:checked")].map((input) => input.value);
   const workspace = {
-    name: workspaceName || "CSorro OS",
+    name: workspaceName || "Sorro",
     type: workspaceType || "Workspace",
     preset: preset || "starter",
     customGoal,
