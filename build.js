@@ -12,6 +12,14 @@ const copyDir = (name) => {
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 if (fs.existsSync(pub)) fs.cpSync(pub, dist, { recursive: true });
+copyDir('styles');
 fs.copyFileSync(path.join(root, 'index.html'), path.join(dist, 'index.html'));
 ['product','solutions','resources','pricing','about','founder','os'].forEach(copyDir);
-console.log('Built CSorro OS static site to dist/ with marketing pages and OS app.');
+// Also mirror standalone CSS files into public/styles for Pages/static deployments that serve root files.
+const rootStyles = path.join(root, 'styles');
+const publicStyles = path.join(root, 'public', 'styles');
+if (fs.existsSync(rootStyles)) {
+  fs.mkdirSync(publicStyles, { recursive: true });
+  fs.cpSync(rootStyles, publicStyles, { recursive: true });
+}
+console.log('Built CSorro OS static site to dist/ with marketing pages, founder styles, about repair and OS app.');
