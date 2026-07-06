@@ -1,6 +1,6 @@
 # Build 050 - Theme Engine and Focus Mode
 
-Adds a controlled appearance system for CSorro OS:
+Adds a controlled appearance system for Sorro:
 
 - Midnight theme (default)
 - Daylight theme

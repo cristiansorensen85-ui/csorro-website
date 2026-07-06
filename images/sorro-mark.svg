@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sorro OS mark">
+  <defs>
+    <linearGradient id="outer" x1="100" y1="70" x2="414" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5DEBFF"/>
+      <stop offset="0.42" stop-color="#178BFF"/>
+      <stop offset="1" stop-color="#334BFF"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="155" y1="110" x2="365" y2="406" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102B4A"/>
+      <stop offset="1" stop-color="#050B16"/>
+    </linearGradient>
+    <linearGradient id="sGrad" x1="145" y1="118" x2="370" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FDFF"/>
+      <stop offset="0.28" stop-color="#A7F4FF"/>
+      <stop offset="0.55" stop-color="#248FFF"/>
+      <stop offset="1" stop-color="#093C99"/>
+    </linearGradient>
+    <linearGradient id="sShadow" x1="159" y1="208" x2="360" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35DFFF"/>
+      <stop offset="1" stop-color="#0A46D8"/>
+    </linearGradient>
+    <filter id="glow" x="-70" y="-70" width="652" height="652" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#168BFF" flood-opacity="0.72"/>
+      <feDropShadow dx="0" dy="28" stdDeviation="26" flood-color="#00142F" flood-opacity="0.88"/>
+    </filter>
+  </defs>
+
+  <path d="M256 40L424 137V331L256 428L88 331V137L256 40Z" fill="#07111d" stroke="url(#outer)" stroke-width="22" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="M256 88L382 161V307L256 380L130 307V161L256 88Z" fill="url(#inner)" stroke="rgba(125,230,255,.28)" stroke-width="8"/>
+
+  <!-- angular Sorro S mark -->
+  <path d="M344 124H218C180 124 151 147 151 181C151 211 171 230 209 239L298 260C313 264 322 271 322 281C322 294 309 302 289 302H155V250H286L195 228C136 214 106 182 106 137C106 83 151 50 219 50H344V124Z" fill="url(#sGrad)" transform="translate(20 48)"/>
+  <path d="M166 388H292C330 388 361 365 361 331C361 301 340 282 302 273L213 252C198 248 189 241 189 231C189 218 202 210 222 210H356V262H225L316 284C375 298 405 330 405 375C405 429 360 462 292 462H166V388Z" fill="url(#sShadow)" transform="translate(-10 -46)"/>
+  <path d="M365 172H238C209 172 191 184 191 202C191 215 201 224 224 229L309 250" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity=".22"/>
+  <path d="M147 340H280C309 340 328 328 328 310C328 297 317 288 294 283L209 262" stroke="#4CEBFF" stroke-width="10" stroke-linecap="round" opacity=".18"/>
+</svg>

@@ -1,4 +1,4 @@
-# CSorro OS Design System 1.0
+# Sorro Design System 1.0
 
 ## Theme tokens
 Colours are driven by `theme-engine.css` and component guardrails are in `design-system.css`.

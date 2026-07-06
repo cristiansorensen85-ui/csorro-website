@@ -1,4 +1,4 @@
--- CSorro OS Workspace Engine RPC v1
+-- Sorro Workspace Engine RPC v1
 -- Run after 001_core_platform_schema.sql.
 -- This lets the frontend create a workspace with safe defaults in one call.
 

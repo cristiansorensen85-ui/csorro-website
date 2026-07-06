@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="380" height="92" viewBox="0 0 380 92" fill="none"><rect x="2" y="2" width="88" height="88" rx="24" fill="url(#g)" stroke="rgba(255,255,255,.18)" stroke-width="4"/><path d="M58 25c-4-5-10-8-17-8-15 0-25 11-25 28s10 29 25 29c8 0 15-4 20-10l-10-11c-3 4-6 6-10 6-7 0-12-5-12-14s5-14 12-14c4 0 8 2 10 5l7-11Z" fill="white"/><path d="M64 58c7 0 11-3 11-8 0-5-3-7-10-9-5-1-7-2-7-4s2-4 6-4c4 0 8 1 12 4l5-10c-5-4-10-6-17-6-12 0-20 7-20 17 0 8 5 13 17 16 5 1 7 2 7 4 0 3-2 4-6 4-5 0-10-2-15-6l-6 10c6 5 14 8 23 8Z" fill="#ffb13b"/><text x="112" y="39" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="30" fill="white">C Sorro</text><text x="112" y="64" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#ffb13b">PRODUCTION SYSTEMS</text><defs><linearGradient id="g" x1="0" y1="0" x2="92" y2="92"><stop stop-color="#ff8a1f"/><stop offset=".5" stop-color="#141827"/><stop offset="1" stop-color="#7ee7ff"/></linearGradient></defs></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="92" viewBox="0 0 380 92" fill="none" role="img" aria-label="Sorro OS by CSorro">
+  <defs>
+    <linearGradient id="g" x1="16" y1="10" x2="90" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5DEBFF"/><stop offset="0.45" stop-color="#178BFF"/><stop offset="1" stop-color="#334BFF"/>
+    </linearGradient>
+    <linearGradient id="s" x1="20" y1="18" x2="78" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FDFF"/><stop offset="0.45" stop-color="#38DFFF"/><stop offset="1" stop-color="#0B4EEA"/>
+    </linearGradient>
+    <filter id="glow" x="-20" y="-20" width="130" height="130"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#178BFF" flood-opacity=".65"/></filter>
+  </defs>
+  <path d="M46 8 84 30v44L46 96 8 74V30L46 8Z" transform="translate(0 -6)" fill="#06111f" stroke="url(#g)" stroke-width="6" filter="url(#glow)"/>
+  <path d="M63 25H37c-12 0-20 7-20 17 0 9 6 15 18 18l20 5c5 1 8 3 8 6 0 4-4 6-10 6H22V62h31L34 57c-18-4-28-14-28-29C6 11 20 1 39 1h25v24Z" transform="translate(12 9)" fill="url(#s)"/>
+  <text x="112" y="39" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="34" fill="#F7FBFF" letter-spacing="-.04em">Sorro</text>
+  <text x="114" y="64" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="13" letter-spacing=".7" fill="#9EC6DD">Operating System by CSorro</text>
+</svg>

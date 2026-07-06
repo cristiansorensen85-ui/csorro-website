@@ -1,6 +1,6 @@
 {
-  "name": "csorro-v4-polish",
-  "version": "4.0.0",
+  "name": "sorro-v2-5-production-readiness",
+  "version": "2.5.0",
   "private": true,
   "scripts": {
     "build": "node build.js",

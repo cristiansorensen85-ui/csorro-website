@@ -1,6 +1,6 @@
-# CSorro OS Product Principles
+# Sorro Product Principles
 
-CSorro OS exists to reduce the mental load of running creative work.
+Sorro exists to reduce the mental load of running creative work.
 
 ## 1. Reduce mental load
 Every screen should answer: what matters, what is blocked, and what should I do next?

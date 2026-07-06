@@ -1,10 +1,210 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>CSorro OS | Mission Control</title><link href="/os/app/app.css?v=051" rel="stylesheet"/><link href="/os/app/os-page.css?v=051" rel="stylesheet"/><link href="/os/app/projects/project-hub.css?v=051" rel="stylesheet"/><link href="/os/app/v022.css?v=051" rel="stylesheet"/><link href="/os/app/v024.css?v=051" rel="stylesheet"/><link href="/os/app/theme-engine.css?v=051" rel="stylesheet"/><link href="/os/app/design-system.css?v=051" rel="stylesheet"/></head><body><div class="app"><aside class="sidebar csorro-sidebar-v36">
-  <a class="brand" href="/os/app/"><img src="/os/assets/csorro-os-logo.png" alt="CSorro OS"/><strong>CSorro <span>OS</span></strong></a>
-  <div class="workspace-mini-switcher"><label>Workspace</label><select id="sidebarWorkspaceSwitcher"><option>RyanNotBrian · Private</option><option>CSorro Ltd · Private</option><option>Hull Podcast · Private</option></select></div>
-  <nav class="nav"><a class="active" href="/os/app/"><i class="nav-icon" data-icon="home"></i><span>Mission Control</span></a><a class="" href="/os/app/workspace/"><i class="nav-icon" data-icon="grid"></i><span>Workspaces</span></a><a class="" href="/os/app/projects/"><i class="nav-icon" data-icon="folder"></i><span>Projects</span></a><a class="" href="/os/app/people/"><i class="nav-icon" data-icon="users"></i><span>People</span></a><a class="" href="/os/app/messages/"><i class="nav-icon" data-icon="message"></i><span>Messages</span></a><a class="" href="/os/app/network/"><i class="nav-icon" data-icon="globe"></i><span>Network</span></a><a class="" href="/os/app/calendar/"><i class="nav-icon" data-icon="calendar"></i><span>Calendar</span></a><a class="" href="/os/app/assets/"><i class="nav-icon" data-icon="image"></i><span>Assets</span></a><a class="" href="/os/app/knowledge/"><i class="nav-icon" data-icon="book"></i><span>Knowledge</span></a><a class="" href="/os/app/templates/"><i class="nav-icon" data-icon="folder"></i><span>Templates</span></a><a class="" href="/os/app/settings/"><i class="nav-icon" data-icon="settings"></i><span>Settings</span></a></nav>
-  <button class="core-mini"><span class="core-orb small"></span><div><b>CORE</b><p>Your AI assistant.<br/>Always here to help.</p><span class="core-cta">Open CORE →</span></div></button>
-</aside><main class="main wide"><header class="topbar"><button class="search"><span>Ask CORE or search your OS</span><kbd>Ctrl K</kbd></button><button class="circle" aria-label="Notifications">🔔</button><button class="avatar" data-user-initial>C</button></header>
-<section class="hero v22-hero"><p class="eyebrow">Mission Control</p><h1>Your command centre across every company.</h1><p>Workspaces are private company hubs. Projects are the work inside them. CORE brings the urgent actions into one operating view.</p></section>
-<section class="core-card v22-core"><span class="core-orb"></span><div class="core-copy"><h2>Morning Cristian. Here is what matters.</h2><ul><li><b>CSorro Ltd</b> — OS v0.1 foundation is ready to test across workspaces and projects.</li><li><b>RyanNotBrian</b> — artwork approval is the current project blocker.</li><li><b>Hull Podcast</b> — next episode prep needs assets and guest notes.</li></ul><div class="actions"><a href="/os/app/projects/production-hub/">Open Project Hub</a><a href="/os/app/workspace/">Switch Workspace</a><a href="/os/app/network/">Open Network</a></div></div><div class="v22-stack"><b>Locked hierarchy</b><span>Workspace = company/client/team<br/>Project = the work<br/>Tasks = how it gets finished</span></div></section>
-<section class="block"><div class="section-head"><h2>Operating structure</h2><a href="/os/app/projects/production-hub/">Test project switching</a></div><div class="blueprint-grid"><article><b>🏢 Workspaces</b><p>Private-by-default hubs for each company, client or team.</p></article><article><b>📂 Projects</b><p>Everything needed for one piece of work: tasks, team, chat, whiteboard, assets and activity.</p></article><article><b>👥 People</b><p>Invite people into a workspace, then assign them to specific projects with roles.</p></article><article><b>🌐 Network</b><p>Optional public layer for profiles, posts, hiring, showcases and portfolio links.</p></article></div></section>
-<section class="block"><div class="section-head"><h2>Today at a glance</h2><a href="/os/app/messages/">View messages</a></div><div class="glance-grid action-grid"><article class="glance-card priority"><i>🔥</i><small>Priority</small><strong>Test project hub</strong><p>Use workspace selector, project selector, tasks, private chats and whiteboard.</p><a href="/os/app/projects/production-hub/">Continue →</a></article><article class="glance-card amber"><i>🔒</i><small>Privacy</small><strong>Private by default</strong><p>Workspace showcase only exposes sections the owner turns on.</p><a href="/os/app/workspace/csorro/">Settings →</a></article><article class="glance-card green"><i>👥</i><small>People</small><strong>Assign contributors</strong><p>Add artists, editors, builders or devs into a workspace/project.</p><a href="/os/app/projects/production-hub/">Assign →</a></article><article class="glance-card blue"><i>💬</i><small>Messages</small><strong>Unified OS inbox</strong><p>DMs, workspace messages and project chats feed into one place.</p><a href="/os/app/messages/">Open →</a></article><article class="glance-card yellow"><i>🌐</i><small>Network</small><strong>Creator feed</strong><p>Post hiring, open-for-work, showcases and CSorro product updates.</p><a href="/os/app/network/">Explore →</a></article></div></section></main></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="/os/app/platform-config.js?v=052"></script><script src="/os/app/platform-client.js?v=052"></script><script src="/os/app/app.js?v=052"></script><script src="/os/app/v022.js?v=051"></script><script src="/os/app/theme-engine.js?v=051"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sorro OS v2.5 | Production Ready Mission Control</title>
+  <link rel="stylesheet" href="/os/app/app.css?v=25" />
+  <link rel="stylesheet" href="/os/app/v025.css?v=25" />
+</head>
+<body class="os21">
+  <div class="ambient"></div>
+  <div class="os-frame">
+    <aside class="rail">
+      <a class="brand" href="/">
+        <img src="/images/sorro-mark.svg" alt="CSorro mark" />
+        <span>Sorro OS</span>
+        <small>by CSorro</small>
+      </a>
+
+      <button class="workspace-switch">
+        <span class="pulse-dot"></span>
+        <b>Creator Command</b>
+        <small>RyanNotBrian workspace</small>
+      </button>
+
+      <nav class="nav-stack" aria-label="Sorro OS modules">
+        <a class="active" href="/os/app/"><i>⌘</i><span>Mission Control</span></a>
+        <a href="/os/app/projects/"><i>▧</i><span>Projects</span></a>
+        <a href="/os/app/studio/"><i>◈</i><span>Studio Review</span></a>
+        <a href="/os/app/calendar/"><i>◷</i><span>Calendar</span></a>
+        <a href="/os/app/people/"><i>◎</i><span>People</span></a>
+        <a href="/os/app/storage/"><i>▤</i><span>Files</span></a>
+        <a href="/os/app/messages/"><i>✦</i><span>Messages</span></a>
+        <a href="/os/app/settings/"><i>⚙</i><span>Settings</span></a>
+      </nav>
+
+      <section class="assistant-tile">
+        <img src="/images/sorro-os-reference.png" alt="Sorro assistant" />
+        <div>
+          <b>Sorro Assistant</b>
+          <p>Standing by to organise the workspace.</p>
+        </div>
+        <button>Open Assistant</button>
+      </section>
+    </aside>
+
+    <main class="canvas">
+      <header class="topbar">
+        <button class="menu-button">☰</button>
+        <div class="command-search"><span>Search projects, files, notes, people...</span><kbd>Ctrl K</kbd></div>
+        <button class="ghost">Sync</button>
+        <button class="notify">3</button>
+        <button class="profile">C</button>
+      </header>
+
+      <section class="os21-launch">
+      <section class="hero-console">
+        <div class="hero-copy">
+          <p class="eyebrow">Mission Control / Live workspace</p>
+          <h1>Mission Control for creative work.</h1>
+          <p>Projects, Studio Review, Files, Calendar, People, notifications and the AI Assistant now sit inside one connected Sorro OS workspace.</p>
+          <div class="hero-actions">
+            <a href="/os/app/projects/">Open Projects</a>
+            <a href="/os/app/studio/">Review Studio</a>
+            <button id="openCommand">Ask Assistant</button>
+          </div>
+        </div>
+        <div class="holo-mark">
+          <img src="/images/sorro-mark.svg" alt="Sorro OS mark" />
+          <span></span><span></span><span></span>
+        </div>
+      </section>
+      <aside class="os21-intel"><img class="assistant-face" src="/images/sorro-os-reference.png" alt="Sorro Assistant"><h3>Sorro Assistant</h3><p>The mascot stays as the OS helper. It supports onboarding, empty states, AI prompts and workspace guidance without replacing the CSorro mark.</p><a href="#commandModal" onclick="document.getElementById('commandModal').showModal();return false;">Open Assistant</a></aside>
+      </section>
+
+      <section class="os21-orbit-grid"><article><small>Identity</small><b>2.1</b><span>Theme locked</span></article><article><small>Modules</small><b>08</b><span>Connected</span></article><article><small>Reviews</small><b>03</b><span>Waiting</span></article><article><small>Workspace</small><b>Live</b><span>Mission Control</span></article></section>
+
+
+
+      <section class="v22-core-grid">
+        <article class="panel v22-command-panel">
+          <div class="panel-head"><p>CORE command layer</p><a href="#commandModal" onclick="document.getElementById('commandModal').showModal();return false;">Open</a></div>
+          <h2>Ask once. Sorro organises the work.</h2>
+          <div class="v22-command-row"><span>Brief today</span><em>3 reviews · 4 actions</em></div>
+          <div class="v22-command-row"><span>Turn notes into tasks</span><em>Studio → Projects</em></div>
+          <div class="v22-command-row"><span>Prepare client update</span><em>Ready to send</em></div>
+        </article>
+        <article class="panel v22-review-intel">
+          <div class="panel-head"><p>Studio Review intelligence</p><a href="/os/app/studio/">Open studio</a></div>
+          <div class="v22-timestamp"><b>04:32</b><span>Music change requested · shorten 38 seconds</span></div>
+          <div class="v22-timestamp"><b>08:14</b><span>Intro pacing needs a tighter cut</span></div>
+          <div class="v22-timestamp ok"><b>12:02</b><span>Outro animation approved</span></div>
+        </article>
+      </section>
+
+
+      <section class="v25-readiness-grid">
+        <article class="v25-system-card">
+          <div class="panel-head"><p>v2.5 Production readiness</p><span class="v25-pill">Checked</span></div>
+          <h2>Command palette, files, settings and polish are now connected.</h2>
+          <p>This release turns the visual prototype into a more usable operating system foundation: faster navigation, shared theme controls, file surfaces, notifications, keyboard shortcuts and cleaner release structure before the next feature sprint.</p>
+          <div class="v25-checklist">
+            <div class="v25-check"><i>✓</i><b>Universal command</b><span>Ctrl / Cmd + K now opens Sorro OS search and actions.</span></div>
+            <div class="v25-check"><i>✓</i><b>Theme engine</b><span>Neo and Midnight modes persist locally across pages.</span></div>
+            <div class="v25-check"><i>✓</i><b>Core polish</b><span>Files, notifications, settings and quick actions share the same UI language.</span></div>
+          </div>
+        </article>
+        <article class="panel v25-command-card">
+          <div class="panel-head"><p>Quick actions</p><button class="ghost" data-open-command>Open</button></div>
+          <h3>Navigate Sorro like an OS.</h3>
+          <p class="muted">Use keyboard shortcuts instead of hunting through pages.</p>
+          <div class="v25-shortcuts">
+            <button data-open-command><span>Open command palette</span><kbd>Ctrl K</kbd></button>
+            <button class="v25-toast-trigger" data-toast="Client update prepared"><span>Prepare client update</span><kbd>⌘ U</kbd></button>
+            <button class="v25-toast-trigger" data-toast="Review checklist created"><span>Create review checklist</span><kbd>⌘ R</kbd></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="status-strip">
+        <article><small>Active projects</small><strong>12</strong><span>4 need attention</span></article>
+        <article><small>Review queue</small><strong>03</strong><span>2 waiting on feedback</span></article>
+        <article><small>Team online</small><strong>18</strong><span>6 creators active</span></article>
+        <article><small>Storage</small><strong>68%</strong><span>341GB used</span></article>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="panel priority-panel">
+          <div class="panel-head"><p>Today&apos;s command stack</p><a href="/os/app/projects/">View all</a></div>
+          <div class="priority-list">
+            <label><input type="checkbox" checked><span><b>Homepage visual review</b><small>Make website and OS feel like one system.</small></span><em>Done</em></label>
+            <label><input type="checkbox"><span><b>Studio feedback pass</b><small>Check timestamp notes and send editor changes.</small></span><em>11:30</em></label>
+            <label><input type="checkbox"><span><b>Creator workspace setup</b><small>Permissions, roles, assets and project boards.</small></span><em>Today</em></label>
+            <label><input type="checkbox"><span><b>Founder page polish</b><small>Move founder story away from About.</small></span><em>Next</em></label>
+          </div>
+        </article>
+
+        <article class="panel project-panel">
+          <div class="panel-head"><p>Project orbit</p><a href="/os/app/projects/">Open hub</a></div>
+          <div class="orbit-card hot">
+            <img src="/images/ryan_logo.jpg" alt="RyanNotBrian" />
+            <div><b>MODDED WAR</b><small>Production workspace</small></div><span>73%</span>
+          </div>
+          <div class="orbit-card">
+            <img src="/images/case_hide.jpg" alt="Hide or Hunt" />
+            <div><b>Hide or Hunt</b><small>Review and upload plan</small></div><span>58%</span>
+          </div>
+          <div class="orbit-card">
+            <img src="/images/humber_podcast.jpg" alt="Hull podcast" />
+            <div><b>Hull City Podcast</b><small>Episode notes and assets</small></div><span>40%</span>
+          </div>
+        </article>
+
+        <article class="panel core-briefing">
+          <div class="core-head">
+            <img src="/images/sorro-os-reference.png" alt="Sorro OS assistant" />
+            <div><p>AI briefing</p><h2>I&apos;ve grouped the work for you.</h2></div>
+          </div>
+          <ul>
+            <li><b>Website</b><span>Theme aligned with the OS foundation.</span></li>
+            <li><b>OS</b><span>Dashboard rebuilt around Mission Control.</span></li>
+            <li><b>Brand</b><span>CSorro stays company; Sorro OS stays product.</span></li>
+          </ul>
+          <button>Generate next actions</button>
+        </article>
+
+        <article class="panel review-panel">
+          <div class="panel-head"><p>Studio Review</p><a href="/os/app/studio/">Open studio</a></div>
+          <div class="review-card"><span class="play">▶</span><div><b>Episode 42 Cut 1</b><small>4 comments at timestamp markers</small></div><em>Waiting</em></div>
+          <div class="review-card"><span class="play">▣</span><div><b>Thumbnail Concepts</b><small>2 revisions requested</small></div><em class="warn">Changes</em></div>
+          <div class="review-card"><span class="play">✓</span><div><b>Intro Animation</b><small>Approved and ready</small></div><em class="ok">Approved</em></div>
+        </article>
+
+        <article class="panel timeline-panel">
+          <div class="panel-head"><p>Live activity</p><a href="/os/app/messages/">Messages</a></div>
+          <div class="timeline"><i></i><p><b>RyanNotBrian2</b> uploaded a cut <small>2m ago</small></p></div>
+          <div class="timeline"><i></i><p><b>EliteGames</b> approved a build <small>1h ago</small></p></div>
+          <div class="timeline"><i></i><p><b>CORE</b> prepared project notes <small>2h ago</small></p></div>
+          <div class="timeline"><i></i><p><b>Client hub</b> synced permissions <small>3h ago</small></p></div>
+        </article>
+
+        <article class="panel module-panel">
+          <div class="panel-head"><p>Connected modules</p><a href="/os/app/design-system/">Design system</a></div>
+          <div class="module-cloud">
+            <span>Projects</span><span>Tasks</span><span>Studio Review</span><span>Files</span><span>People</span><span>Calendar</span><span>CRM</span><span>Invoices</span><span>Reports</span><span>AI Assistant</span>
+          </div>
+        </article>
+        <nav class="os21-system-map" aria-label="Sorro OS module map"><a href="/os/app/projects/">Projects</a><a href="/os/app/studio/">Studio Review</a><a href="/os/app/storage/">Files</a><a href="/os/app/people/">People</a><a href="/os/app/calendar/">Calendar</a><a href="/os/app/settings/">Settings</a></nav>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="command-modal" id="commandModal">
+    <form method="dialog">
+      <button class="modal-close">×</button>
+      <p class="eyebrow">CORE command</p>
+      <h2>What should Sorro organise?</h2>
+      <input placeholder="Example: prepare the next CSorro website review..." />
+      <div class="suggestions"><button>Summarise work</button><button>Build a project plan</button><button>Find blockers</button></div>
+    </form>
+  </dialog>
+  <script>
+    const modal = document.getElementById('commandModal');
+    document.getElementById('openCommand').addEventListener('click', () => modal.showModal());
+  </script>
+
+<nav class="os-command-dock" aria-label="Quick OS dock"><a href="/os/app/">Mission</a><a href="/os/app/projects/">Projects</a><a href="/os/app/studio/">Studio</a><a href="/os/app/people/">People</a><a href="/">Website</a></nav>
+<script src="/os/app/v025.js?v=25"></script>
+</body>
+</html>

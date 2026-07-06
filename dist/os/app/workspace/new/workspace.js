@@ -169,7 +169,7 @@ document.querySelectorAll(".examples button").forEach((btn) => {
 });
 
 document.getElementById("nameNext").addEventListener("click", () => {
-  workspaceName = document.getElementById("workspaceName").value || "CSorro OS";
+  workspaceName = document.getElementById("workspaceName").value || "Sorro";
   updatePreview();
   renderRecommendations();
   go(4);
@@ -178,7 +178,7 @@ document.getElementById("nameNext").addEventListener("click", () => {
 document.getElementById("buildWorkspace").addEventListener("click", async () => {
   const selected = [...document.querySelectorAll("#recommendations input:checked")].map((input) => input.value);
   const workspace = {
-    name: workspaceName || "CSorro OS",
+    name: workspaceName || "Sorro",
     type: workspaceType || "Workspace",
     preset: preset || "starter",
     customGoal,

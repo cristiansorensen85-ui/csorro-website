@@ -2,24 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Cristian Sorensen — founder of CSorro, production manager and creative operations specialist." name="description"/>
-<title>Founder | Cristian Sorensen | CSorro</title>
-<link href="/styles/global.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Cristian Sorensen — founder of CSorro, production manager and creative operations specialist."/>
+<title>Founder | Cristian Sorensen | Sorro</title>
+<link rel="stylesheet" href="/styles/global.css?v=25q"/>
+<link rel="stylesheet" href="../styles/global.css?v=25q"/>
+<link rel="stylesheet" href="/styles/founder.css?v=25q"/>
+<link rel="stylesheet" href="../styles/founder.css?v=25q"/>
 </head>
 <body>
-<header class="site-header product-header">
-<a aria-label="CSorro home" class="brand" href="/">
-<img alt="C Sorro logo" src="/images/csorro-logo.png"/>
-</a>
-<nav><a href="/#product">Product</a><a href="/#features">Features</a><a href="/#showcase">Showcase</a><a href="/founder/">Founder</a><a href="/founder/#work">Work</a><a href="/founder/#contact">Contact</a><a class="nav-cta" href="/os/app/">Launch OS</a></nav>
+<div class="site-shell founder-shell">
+<header class="site-header sorro-header">
+  <a class="brand-word sorro-brand" href="/"><img class="brand-mark sorro-mark" src="/images/sorro-mark.svg" alt="Sorro mark"><span class="brand-copy"><span class="logo-text">SORRO</span><span class="logo-sub">Operating System</span></span></a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-item"><a class="nav-link" href="/product/">Product⌄</a><div class="mega"><a href="/product/#dashboard"><strong>Dashboard</strong><span>Your whole operation at a glance.</span></a><a href="/product/#projects"><strong>Projects & Tasks</strong><span>Plan, assign and deliver creative work.</span></a><a href="/product/#studio"><strong>Studio Review</strong><span>Upload, comment, approve and request changes.</span></a><a href="/product/#storage"><strong>Storage & Assets</strong><span>Files, folders, versions and permissions.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/solutions/">Solutions⌄</a><div class="mega"><a href="/solutions/#business"><strong>Business teams</strong><span>Projects, people, CRM, reports and invoices.</span></a><a href="/solutions/#creative"><strong>Creative teams</strong><span>Production workflows, reviews and approvals.</span></a><a href="/solutions/#crm"><strong>Client work</strong><span>Contacts, updates, files and delivery history.</span></a><a href="/solutions/#custom"><strong>Custom workspaces</strong><span>Enable the modules your team needs.</span></a></div></div>
+    <div class="nav-item"><a class="nav-link" href="/resources/">Resources⌄</a><div class="mega"><a href="/resources/#guides"><strong>Guides</strong><span>Setup and operating-system thinking.</span></a><a href="/resources/#templates"><strong>Templates</strong><span>Starter workflows for teams and creators.</span></a><a href="/resources/#updates"><strong>Updates</strong><span>Roadmap, changelog and build notes.</span></a><a href="/resources/#support"><strong>Support</strong><span>Help centre and setup advice.</span></a></div></div>
+    <a class="nav-link" href="/pricing/">Pricing</a>
+    <a class="nav-link" href="/about/">About</a>
+  </nav>
+  <div class="site-actions"><a class="btn ghost" href="/os/app/login/">Sign in</a><a class="btn primary" href="/os/app/login/">Get started free</a></div>
+  <a class="btn mobile-menu" href="/os/app/login/">Start</a>
 </header>
 <main id="top" class="founder-page">
 <section class="founder-intro section-pad grid-two" id="founder">
 <div class="reveal">
 <p class="eyebrow">Meet the founder</p>
 <h2>Built from real production experience, not theory.</h2>
-<p>CSorro OS comes from years of managing creator productions, Minecraft events, technical systems, communities and media projects where work was spread across too many apps.</p>
+<p>Sorro comes from years of managing creator productions, Minecraft events, technical systems, communities and media projects where work was spread across too many apps.</p>
 <div class="button-row"><a class="btn" href="#story">Read Cristian’s story</a><a class="btn" href="#work">View case studies</a><a class="btn" href="#contact">Contact</a></div>
 </div>
 <div class="founder-card reveal delay-1"><img src="/images/contact.jpg" alt="Cristian Sorensen portrait"/><div><strong>Cristian Sorensen</strong><span>Founder of CSorro • Technical Production &amp; Operations Manager</span></div></div>
@@ -229,7 +239,7 @@
 </div>
 </div>
 <aside aria-label="Cristian Sorensen profile card" class="contact-profile">
-<img alt="" class="profile-watermark" src="/images/csorro-logo.png"/>
+<img alt="" class="profile-watermark" src="/images/sorro-mark.svg"/>
 <div class="profile-statement">
 <strong>12+ years</strong>
 <span>Building productions, communities and systems people remember.</span>
@@ -249,8 +259,8 @@
 </div>
 </section>
 </main>
-</main>
-<footer><img alt="C Sorro logo" src="/images/csorro-logo.png"/><span>© 2026 CSorro. Built by Cristian Sorensen.</span></footer>
+<footer class="footer sorro-footer"><span>Sorro OS by CSorro © 2026</span><span>The operating system for creative businesses.</span><span><a href="/about/">About</a> · <a href="/founder/">Founder</a> · <a href="/pricing/">Pricing</a></span></footer>
+</div>
 <script>
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -270,5 +280,11 @@
         });
       }
     </script>
+
+<div class="sorro-floating-assistant" aria-label="Sorro Assistant">
+  <span class="pulse"></span>
+  <img src="/images/sorro-os-reference.png" alt="Sorro Assistant">
+  <div><b>Sorro Assistant</b><span>Website and OS now share one premium identity. Open the OS to see the same theme carried through.</span><a href="/os/app/">Open Mission Control</a></div>
+</div>
 </body>
 </html>
