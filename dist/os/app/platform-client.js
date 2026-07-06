@@ -1,5 +1,5 @@
 (function(){
-  const cfg = window.SORRO_SUPABASE || {};
+  const cfg = window.CSORRO_SUPABASE || {};
   const ready = !!(cfg.url && cfg.anonKey && window.supabase);
   const status = {
     mode: ready ? 'live' : 'demo',

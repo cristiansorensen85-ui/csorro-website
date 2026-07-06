@@ -22,4 +22,4 @@ if (fs.existsSync(rootStyles)) {
   fs.mkdirSync(publicStyles, { recursive: true });
   fs.cpSync(rootStyles, publicStyles, { recursive: true });
 }
-console.log('Built Sorro V1.0 Brand Foundation static site to dist/.');
+console.log('Built Sorro static site to dist/ with marketing pages, founder styles, about repair and OS app.');

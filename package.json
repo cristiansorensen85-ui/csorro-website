@@ -1,1 +1,13 @@
-{"name":"sorro-v1-clean-review","version":"1.1.0","private":true,"scripts":{"build":"node build.js","dev":"node build.js","preview":"node build.js"},"engines":{"node":">=18"}}
+{
+  "name": "csorro-v4-polish",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js",
+    "preview": "node build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

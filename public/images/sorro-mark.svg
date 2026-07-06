@@ -1,13 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Sorro mark">
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sorro mark">
   <defs>
-    <linearGradient id="g" x1="42" y1="20" x2="214" y2="236" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6EEBFF"/><stop offset="0.52" stop-color="#3A8BFF"/><stop offset="1" stop-color="#7A5CFF"/>
+    <linearGradient id="hex" x1="112" y1="62" x2="398" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4CEBFF"/>
+      <stop offset="0.42" stop-color="#1187FF"/>
+      <stop offset="1" stop-color="#315BFF"/>
     </linearGradient>
-    <radialGradient id="r" cx="86" cy="54" r="170" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF" stop-opacity=".38"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#236BFF" flood-opacity=".35"/></filter>
+    <linearGradient id="sface" x1="154" y1="112" x2="360" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF9FF"/>
+      <stop offset="0.32" stop-color="#72E8FF"/>
+      <stop offset="0.68" stop-color="#167DFF"/>
+      <stop offset="1" stop-color="#102C68"/>
+    </linearGradient>
+    <linearGradient id="sedge" x1="150" y1="112" x2="366" y2="397" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.82"/>
+      <stop offset="0.5" stop-color="#78E9FF" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#00142F" stop-opacity="0.78"/>
+    </linearGradient>
+    <filter id="glow" x="-40" y="-40" width="592" height="592" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#168BFF" flood-opacity="0.55"/>
+      <feDropShadow dx="0" dy="28" stdDeviation="26" flood-color="#001123" flood-opacity="0.9"/>
+    </filter>
   </defs>
-  <path filter="url(#shadow)" d="M128 15 226 72v112l-98 57-98-57V72z" fill="#07131F" stroke="url(#g)" stroke-width="13" stroke-linejoin="round"/>
-  <path d="M128 29 212 78v100l-84 49-84-49V78z" fill="url(#r)" opacity=".9"/>
-  <path d="M169 77H98c-22 0-37 14-37 34 0 17 10 28 31 34l50 14c9 2 13 6 13 12 0 8-7 12-19 12H72v-26h61c6 0 9-2 9-6 0-3-3-5-10-7l-49-13c-24-7-36-19-36-38 0-23 18-38 46-38h76v22Zm-82 102h71c23 0 38-14 38-35 0-18-11-29-34-35l-50-13c-8-2-12-5-12-10 0-7 6-11 18-11h57v25h-55c-6 0-9 2-9 5 0 3 3 5 10 7l49 13c26 7 39 20 39 40 0 24-18 39-48 39H87v-25Z" fill="#F7FBFF"/>
-  <path d="M169 77H98c-22 0-37 14-37 34 0 17 10 28 31 34l50 14c9 2 13 6 13 12 0 8-7 12-19 12H72" fill="none" stroke="#7CF7FF" stroke-width="3" stroke-opacity=".32" stroke-linecap="round"/>
+  <path d="M256 38L428 137.5V336.5L256 436L84 336.5V137.5L256 38Z" fill="#081421" stroke="url(#hex)" stroke-width="22" filter="url(#glow)"/>
+  <path d="M365 139H219C179 139 151 163 151 196C151 225 169 243 207 254L296 280C323 288 337 305 337 329C337 359 311 379 270 379H138V322H269C280 322 287 318 287 311C287 305 282 301 270 297L183 272C124 255 96 224 96 178C96 123 141 87 209 87H365V139Z" fill="url(#sface)"/>
+  <path d="M147 374H294C334 374 362 350 362 316C362 287 343 269 305 258L216 232C189 224 175 209 175 186C175 156 202 136 242 136H374V193H243C232 193 225 197 225 204C225 210 230 214 242 218L329 243C388 260 416 291 416 337C416 392 371 428 303 428H147V374Z" fill="url(#sface)" opacity="0.92" transform="translate(0 -4)"/>
+  <path d="M365 139H219C179 139 151 163 151 196C151 225 169 243 207 254L296 280C323 288 337 305 337 329C337 359 311 379 270 379H138" stroke="url(#sedge)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.36"/>
 </svg>
